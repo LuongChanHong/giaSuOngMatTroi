@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+:root{
+    --bgColor:#F7F2ED;
+    --test-bgColor:seagreen;
+    --btnColor:#03CCBB;
+    --box-shadow:#c3d2ce;
+    --txt-shadow:#bdb6b9;
+    --spe-txtColor:#D51165;
+}
+html{
+    box-sizing: border-box;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    background-color: var(--bgColor);
+    /* background-color: var(--test-bgColor); */
+    font-family: 'Noto Sans', sans-serif;
+}
+body{
+    margin: 0;
+    height: 100rem;
+}
+.d-none{
+    display: none;
+}
+.d-flex{
+    display: flex;
+}
+.d-block{
+    display: block;
+}
+
+/* -----NAVBAR START----- */
+#nav-container{
+    padding: 0.5rem 1rem;
+    background-color: var(--bgColor);
+}
+#nav{
+    align-items: center;
+    justify-content: space-between;
+}
+.sticky{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 99; 
+    box-shadow: -1px 5xp 10px 0 var(--box-shadow);
+}
+.nav-logo-ctn{
+    width: 48vw;
+    justify-content: center;
+}
+.nav-logo img{
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.nav-menu svg{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.logo-txt{
+    align-content: center;
+    flex-wrap: wrap;
+    padding-left: 0.3rem;
+}
+.logo-txt p{
+    margin: 0 0.2rem;
+    color: var(--spe-txtColor);
+    font-family: "Alegreya",serif;
+    text-shadow: 3px 3px 3px var(--txt-shadow);
+}
+.nav-login-btn{
+    background-color: var(--btnColor);
+    border: none;
+    padding: 0.5rem 0.3rem;
+}
+.nav-login-btn span{
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: 0.6rem;
+}
+/* -----NAVBAR END----- */
