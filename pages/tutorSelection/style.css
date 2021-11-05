@@ -41,14 +41,14 @@ body{
     top: 0;
     left: 0;
     right: 0;
-    z-index: 99; 
+    z-index: 9999; 
 }
 #nav{
     align-items: center;
     justify-content: space-between;
 }
 .boxShadow{
-    box-shadow: -1px 5xp 10px 0 var(--box-shadow);
+    -webkit-box-shadow: -1px 5px 10px 0px var(--box-shadow);
 }
 .nav-logo-ctn{
     width: 48vw;
