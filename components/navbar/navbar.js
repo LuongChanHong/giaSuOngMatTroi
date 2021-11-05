@@ -5,8 +5,8 @@ var offsettop = navbar.offsetTop;
 
 function stickyNavbar(){
     if(window.pageYOffset > offsettop){
-        navbar.classList.add("sticky");
+        navbar.classList.add("boxShadow");
     }else{
-        navbar.classList.remove("sticky");
+        navbar.classList.remove("boxShadow");
     }
 }

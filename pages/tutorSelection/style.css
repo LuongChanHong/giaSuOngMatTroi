@@ -35,18 +35,19 @@ body{
 
 /* -----NAVBAR START----- */
 #nav-container{
-    padding: 0.5rem 1rem;
     background-color: var(--bgColor);
+    padding: 0.5rem 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99; 
 }
 #nav{
     align-items: center;
     justify-content: space-between;
 }
-.sticky{
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 99; 
+.boxShadow{
     box-shadow: -1px 5xp 10px 0 var(--box-shadow);
 }
 .nav-logo-ctn{
