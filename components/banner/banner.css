@@ -1,0 +1,190 @@
+* {
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+/* -----BANNER MOBILE START----- */
+.banner_ctt {
+  flex-direction: column;
+  row-gap: 1.8rem;
+  margin-top: 1rem;
+  background-color: var(--bgColor);
+}
+.banner {
+  flex-direction: column-reverse;
+  display: flex;
+  padding: 0 16px;
+}
+.banner_img {
+  flex-basis: 50%;
+  display: flex;
+}
+.banner_img img {
+  width: 100%;
+  object-fit: contain;
+}
+.banner_title {
+  flex-wrap: wrap;
+  justify-content: start;
+  column-gap: 0.5rem;
+}
+.banner_title,
+.banner_title p {
+  margin: 0;
+}
+.banner_txt {
+  color: var(--txtColor);
+  text-shadow: 2px 2px 5px var(--box-shadow);
+  font-weight: bold;
+}
+.banner_find_ctn {
+  flex-direction: column;
+  row-gap: 0.8rem;
+}
+.banner_srch {
+  background-color: var(--btnColor-white);
+  justify-content: space-between;
+}
+.banner_srch input {
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  outline: 1px solid transparent;
+  font-weight: bold;
+  padding: 0;
+  line-height: 1rem;
+}
+.banner_srch div {
+  justify-content: center;
+  cursor: pointer;
+}
+.banner_srch svg {
+  width: 1.3rem;
+  height: 1.3rem;
+  color: var(--txtColor);
+}
+.banner_srch,
+.banner_find {
+  padding: 0.8rem 2rem;
+}
+.banner_find {
+  background-color: var(--btnColor-green);
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+.banner_contact {
+  flex-direction: column;
+  row-gap: 0.8rem;
+}
+.banner_contact_zalo,
+.banner_contact_phone {
+  text-align: center;
+}
+.banner_contact_phone,
+.banner_contact_zalo {
+  justify-content: center;
+  column-gap: 0.5rem;
+}
+.banner_contact_zalo span {
+  color: var(--txtColor-blue);
+  font-weight: bold;
+  align-self: center;
+}
+.banner_contact_phone {
+  align-items: center;
+}
+.banner_contact_phone svg {
+  width: 2rem;
+  height: 2rem;
+}
+.banner_contact_phone svg,
+.banner_contact_phone span {
+  color: var(--spe-txtColor);
+}
+.banner_contact_phone span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+/* -----BANNER MOBILE END----- */
+@media only screen and (min-width: 530px) {
+  .banner_contact {
+    flex-direction: unset;
+    justify-content: center;
+    column-gap: 0.8rem;
+  }
+  .banner_contact_zalo {
+    display: flex;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 740px) {
+  .banner_ctn {
+    margin-top: 10vw;
+  }
+  .banner {
+    flex-direction: row;
+    padding: 0 32px;
+  }
+  .banner_title p {
+    font-size: 3.5rem;
+  }
+  .banner_find_ctn,
+  .banner_contact {
+    margin-top: 1.5rem;
+  }
+  .banner_title {
+    margin-bottom: 1.5rem;
+  }
+  .banner_txt {
+    line-height: 1.5rem;
+  }
+  .banner_find_ctn {
+    flex-direction: unset;
+  }
+  .banner_srch input {
+    width: 22vw;
+  }
+  .banner_srch,
+  .banner_find {
+    padding: 0.6rem;
+  }
+  .banner_contact {
+    flex-direction: column;
+  }
+  .banner_contact_phone,
+  .banner_contact_zalo {
+    justify-content: unset;
+  }
+  .banner_img {
+    display: flex;
+    align-self: center;
+  }
+}
+@media only screen and (min-width: 945px) {
+  .banner_contact {
+    flex-direction: row;
+    justify-content: unset;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .banner_ctn {
+    margin-top: 20vw;
+    height: 700px;
+  }
+  .banner {
+    padding: 0 48px;
+  }
+  .banner_title p {
+    font-size: 4.5rem;
+  }
+  .banner_srch,
+  .banner_find {
+    padding: 1rem;
+  }
+}
+@media only screen and (min-width: 1220px) {
+  .banner {
+    padding: 0 10vw;
+  }
+}
