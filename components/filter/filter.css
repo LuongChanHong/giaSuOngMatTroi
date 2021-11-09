@@ -5,7 +5,7 @@
 .filter_ctn {
 }
 .filter {
-  background-color: var(--btnColor-white);
+  background-color: var(--btnColor-2);
   box-shadow: -1px 5px 10px rgb(174, 197, 193);
   margin-top: 1rem;
   padding: 1.5rem;
@@ -15,7 +15,7 @@
 }
 .filter_txt {
   font-size: 1rem;
-  color: var(--btnColor-green);
+  color: var(--btnColor-1);
   font-weight: 700;
 }
 .filter .row .col {

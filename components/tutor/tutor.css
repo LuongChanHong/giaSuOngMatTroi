@@ -1,4 +1,11 @@
 /* -----TUTORS MOBILE START----- */
+.outline_none {
+  outline: 1px solid transparent;
+}
+.tutors-ctn {
+  padding: 0 16px;
+  margin-top: 2rem;
+}
 .tutors {
   display: flex;
   flex-direction: column;
@@ -10,61 +17,68 @@
     margin-top: 1.5rem;
   }
 }
-
-.tutors_head_result-number {
+.tutors_head {
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.tutors_head_num {
   flex-basis: 33.33%;
   align-self: center;
   display: flex;
   column-gap: 0.1rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-.tutors_head_result-number > div {
+.tutors_head_num > div {
   font-size: 1.5rem;
   font-weight: 700;
   align-self: center;
   padding: 0.1rem 0.4rem;
 }
-.tutors_head_result-number .title-style1 {
+.tutors_head_num .title_stl1 {
   color: var(--text-color);
 }
-.tutors_head_view-map {
+.tutors_head_loctn {
   flex-basis: 33.33%;
-  display: flex;
   justify-content: center;
+  margin-top: 0 !important;
 }
-.tutors_head_view-map > div {
-  width: fit-content;
-  display: flex;
-  column-gap: 0.5rem;
-  justify-content: center;
-  padding: 0.3rem 1rem;
+.tutors_head_loctn > div {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--speColor_3);
+}
+.tutors_head_loctn > div,
+.tutors_head_sort > div {
   cursor: pointer;
-  border: 1px dotted var(--speColor_3);
   border-radius: 20px;
+  column-gap: 0.5rem;
+  display: flex;
+  justify-content: center;
+  color: var(--text-color);
 }
-.tutors_head_view-map > div svg {
-  width: 1.8rem;
+.tutors_head_sort > div {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--btnColor-1);
 }
-.tutors_head_view-map > div span {
+.tutors_head_sort > div svg {
+  display: block;
+  width: 1.5rem;
+}
+.tutors_head_loctn > div svg {
+  display: none;
+}
+.tutors_head_loctn > div span {
   font-weight: 700;
   align-self: center;
+}
+.tutors_loctn-txt {
+  flex-direction: column;
 }
 .tutors_head_sort {
   flex-basis: 33.33%;
   align-self: center;
   display: flex;
   justify-content: right;
-}
-.tutors_head_sort > div {
-  width: fit-content;
-  display: flex;
-  column-gap: 0.5rem;
-  justify-content: center;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border: 1px solid var(--btnColor-green);
-}
-.tutors_head_sort > div svg {
-  width: 1.6rem;
 }
 .tutors_head_sort > div span {
   font-weight: 700;
@@ -76,8 +90,8 @@
 }
 .tutors_contact {
   padding: 1rem 0;
-  background-color: var(--border-color);
-  border: 1px solid var(--btnColor-green);
+  background-color: var(--bgColor_2);
+  border: 1px solid var(--btnColor-1);
 }
 
 .tutors_page-number {
@@ -95,7 +109,7 @@
 }
 .tutors_page-number > div > span {
   align-self: center;
-  color: var(--btnColor-green);
+  color: var(--btnColor-1);
 }
 .tutors_page-number svg {
   width: 1rem;
@@ -160,7 +174,7 @@
 .tutor-style1_info_tag div {
   border-radius: 20px;
   padding: 0.3rem 1rem;
-  background-color: var(--bgColor);
+  background-color: var(--bgColor_1);
 }
 .tutor-style1_info_description,
 .tutor-style1_info_tag,
@@ -184,7 +198,7 @@
   cursor: pointer;
   padding: 0.5rem 1.5rem;
   margin: 0 0.5rem;
-  background-color: var(--btnColor-green);
+  background-color: var(--btnColor-1);
   font-weight: 700;
   display: flex;
   column-gap: 0.6rem;

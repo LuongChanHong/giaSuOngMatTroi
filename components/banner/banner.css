@@ -11,7 +11,7 @@
   flex-direction: column;
   row-gap: 1.8rem;
   margin-top: 1rem;
-  background-color: var(--bgColor);
+  background-color: var(--bgColor_1);
 }
 .banner {
   flex-direction: column-reverse;
@@ -45,7 +45,7 @@
   row-gap: 0.8rem;
 }
 .banner_srch {
-  background-color: var(--btnColor-white);
+  background-color: var(--btnColor-2);
   justify-content: space-between;
 }
 .banner_srch input {
@@ -71,7 +71,7 @@
   padding: 0.8rem 1rem;
 }
 .banner_find {
-  background-color: var(--btnColor-green);
+  background-color: var(--btnColor-1);
   text-align: center;
   font-weight: bold;
   cursor: pointer;

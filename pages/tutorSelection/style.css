@@ -4,7 +4,8 @@
 
 :root {
   --test-bgColor: seagreen;
-  --bgColor: #f7f2ed;
+  --bgColor_1: #f7f2ed;
+  --bgColor_2: #ebfaf8;
 
   --txtColor_1: #363c3b;
   --txtColor_2: #3c8aff;
@@ -17,8 +18,8 @@
 
   --border-color: #e9e3dd;
 
-  --btnColor-green: #03ccbb;
-  --btnColor-white: #ffffff;
+  --btnColor-1: #03ccbb;
+  --btnColor-2: #ffffff;
 
   --box-shadow: #c3d2ce;
   --txt-shadow: #bdb6b9;
@@ -48,7 +49,7 @@ html {
   font-size: 15px;
   padding: 0;
   margin: 0;
-  background-color: var(--bgColor);
+  background-color: var(--bgColor_1);
   /* background-color: var(--test-bgColor); */
   font-family: "Noto Sans", sans-serif;
 }
