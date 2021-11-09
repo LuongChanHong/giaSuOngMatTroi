@@ -8,6 +8,9 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/components/element/element.css">
+    <link rel="stylesheet" href="/components/tutor/tutor1.css">
+    <link rel="stylesheet" href="/components/filter/filter.css">
     <link rel="stylesheet" href="/components/banner/banner.css">
     <link rel="stylesheet" href="/components/navbar/navbar.css">
     <link rel="stylesheet" href="/gridLibrary/gridBasic.css">
@@ -146,14 +149,764 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- -----BANNER END----- -->
+                <!-- -----FILTER START----- -->
+                <div class="filter_ctn grid wide">
+                    <div class="filter">
+                        <div class="row">
+                            <div class="col pc-12 tc-12 mc-12">
+                                <span class="filter_txt">(Lọc để tìm gia sư phù hợp nhất với bạn)</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col pc-2 tc-4 mc-12">
+                                <span class="filter_key">MÔN HỌC</span>
+                                <div class="select_stl1">
+                                    <span class="select_option">Tất cả môn</span>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down"
+                                        class="svg-inline--fa fa-chevron-down fa-w-14" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor"
+                                            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col pc-2 tc-4 mc-12">
+                                <span class="filter_key">LỚP/ CHỨNG CHỈ</span>
+                                <div class="select_stl1">
+                                    <span class="select_option">Tất cả lớp</span>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down"
+                                        class="svg-inline--fa fa-chevron-down fa-w-14" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor"
+                                            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col pc-2 tc-4 mc-12">
+                                <span class="filter_key">GIA SƯ LÀ</span>
+                                <div class="select_stl1">
+                                    <span class="select_option">Tất cả gia sư</span>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down"
+                                        class="svg-inline--fa fa-chevron-down fa-w-14" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor"
+                                            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col pc-2 tc-4 mc-12">
+                                <span class="filter_key">GIỚI TÍNH</span>
+                                <div class="check_box_stl1">
+                                    <div>
+                                        <div class="check_box"></div>
+                                        <div class="check_box_label">Nữ</div>
+                                    </div>
+                                    <div>
+                                        <div class="check_box"></div>
+                                        <div class="check_box_label">Nam</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col pc-2 tc-4 mc-12">
+                                <span class="filter_key">KHU VỰC</span>
+                                <div class="filter_select select_stl1">
+                                    <span class="select_option">1 kèm 1</span>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down"
+                                        class="svg-inline--fa fa-chevron-down fa-w-14" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor"
+                                            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="filter_btn_ctn col pc-2 tc-4 mc-12">
+                                <div class="btn_stl1">
+                                    <span class="button-text">Lọc tìm gia sư</span>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search"
+                                        class="svg-inline--fa fa-search fa-w-16" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path fill="currentColor"
+                                            d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- -----FILTER END----- -->
+                <!-- -----TEACHER LIST START----- -->
+                <div class="grid wide tutor-list">
+                    <div class="row tutor-list_head">
+                        <div class="col l-4 m-4 c-4 tutor-list_head_result-number">
+                            <div class="title-style1">1457</div>
+                            <div>gia sư</div>
+                        </div>
+                        <div class="col l-4 m-4 c-4 tutor-list_head_view-map">
+                            <div>
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="street-view"
+                                    class="svg-inline--fa fa-street-view fa-w-16" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                        d="M367.9 329.76c-4.62 5.3-9.78 10.1-15.9 13.65v22.94c66.52 9.34 112 28.05 112 49.65 0 30.93-93.12 56-208 56S48 446.93 48 416c0-21.6 45.48-40.3 112-49.65v-22.94c-6.12-3.55-11.28-8.35-15.9-13.65C58.87 345.34 0 378.05 0 416c0 53.02 114.62 96 256 96s256-42.98 256-96c0-37.95-58.87-70.66-144.1-86.24zM256 128c35.35 0 64-28.65 64-64S291.35 0 256 0s-64 28.65-64 64 28.65 64 64 64zm-64 192v96c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-96c17.67 0 32-14.33 32-32v-96c0-26.51-21.49-48-48-48h-11.8c-11.07 5.03-23.26 8-36.2 8s-25.13-2.97-36.2-8H208c-26.51 0-48 21.49-48 48v96c0 17.67 14.33 32 32 32z">
+                                    </path>
+                                </svg>
+                                <span>Xem trên bản đồ</span>
+                            </div>
+                        </div>
+                        <div class="col l-4 m-4 c-4 tutor-list_head_sort">
+                            <div>
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sort-amount-down"
+                                    class="svg-inline--fa fa-sort-amount-down fa-w-16" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                        d="M304 416h-64a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm-128-64h-48V48a16 16 0 0 0-16-16H80a16 16 0 0 0-16 16v304H16c-14.19 0-21.37 17.24-11.29 27.31l80 96a16 16 0 0 0 22.62 0l80-96C197.35 369.26 190.22 352 176 352zm256-192H240a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h192a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm-64 128H240a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zM496 32H240a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h256a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z">
+                                    </path>
+                                </svg>
+                                <span>Sắp xếp theo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col l-6 m-12 c-12">
+                            <!-- Tutor -->
+                            <div class="tutor-style1-container">
+                                <div class="tutor-style1">
+                                    <div class="tutor-style1_avatar">
+                                        <img src="/assets/img/tutor-1-demo.png">
+                                    </div>
+                                    <div class="tutor-style1_info">
+                                        <div class="tutor-style1_info_title">
+                                            <span class="tutor-style1_info_title_name">ThS Toán. Nguyễn Thanh Hải</span>
+                                            <span> - </span>
+                                            <span class="tutor-style1_info_title_role">GV THPT Bùi Thị Xuân, Q1</span>
+                                        </div>
+                                        <div class="tutor-style1_info_tag">
+                                            <div>GV 5 sao</div>
+                                            <div>Dạy HS giỏi</div>
+                                        </div>
+                                        <div class="tutor-style1_info_description">
+                                            Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ điểm 9-10 điểm,
+                                            đậu nguyện vọng 1 vào các trường đại học lớn như y dược, bách khoa, ngoại
+                                            thương, sư phạm,...
+                                        </div>
+                                        <div class="tutor-style1_info_bottom not-mobile">
+                                            <div class="tutor-style1_info_bottom_review">
+                                                <span class="tutor-style1_info_bottom_review_value">49</span>
+                                                <span>phản hồi</span>
+                                            </div>
+                                            <div class="tutor-style1_info_bottom_class">
+                                                <span class="tutor-style1_info_bottom_class_value">33</span>
+                                                <span>lớp đã dạy</span>
+                                            </div>
+                                            <div class="tutor-style1_info_bottom_moi-day-button">
+                                                <span>Mời</span>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="far"
+                                                    data-icon="handshake" class="svg-inline--fa fa-handshake fa-w-20"
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                                    <path fill="currentColor"
+                                                        d="M519.2 127.9l-47.6-47.6A56.252 56.252 0 0 0 432 64H205.2c-14.8 0-29.1 5.9-39.6 16.3L118 127.9H0v255.7h64c17.6 0 31.8-14.2 31.9-31.7h9.1l84.6 76.4c30.9 25.1 73.8 25.7 105.6 3.8 12.5 10.8 26 15.9 41.1 15.9 18.2 0 35.3-7.4 48.8-24 22.1 8.7 48.2 2.6 64-16.8l26.2-32.3c5.6-6.9 9.1-14.8 10.9-23h57.9c.1 17.5 14.4 31.7 31.9 31.7h64V127.9H519.2zM48 351.6c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16zm390-6.9l-26.1 32.2c-2.8 3.4-7.8 4-11.3 1.2l-23.9-19.4-30 36.5c-6 7.3-15 4.8-18 2.4l-36.8-31.5-15.6 19.2c-13.9 17.1-39.2 19.7-55.3 6.6l-97.3-88H96V175.8h41.9l61.7-61.6c2-.8 3.7-1.5 5.7-2.3H262l-38.7 35.5c-29.4 26.9-31.1 72.3-4.4 101.3 14.8 16.2 61.2 41.2 101.5 4.4l8.2-7.5 108.2 87.8c3.4 2.8 3.9 7.9 1.2 11.3zm106-40.8h-69.2c-2.3-2.8-4.9-5.4-7.7-7.7l-102.7-83.4 12.5-11.4c6.5-6 7-16.1 1-22.6L367 167.1c-6-6.5-16.1-6.9-22.6-1l-55.2 50.6c-9.5 8.7-25.7 9.4-34.6 0-9.3-9.9-8.5-25.1 1.2-33.9l65.6-60.1c7.4-6.8 17-10.5 27-10.5l83.7-.2c2.1 0 4.1.8 5.5 2.3l61.7 61.6H544v128zm48 47.7c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tutor-style1_info_bottom not-pc not-tablet">
+                                    <div class="tutor-style1_info_bottom_review">
+                                        <span class="tutor-style1_info_bottom_review_value">49</span>
+                                        <span>phản hồi</span>
+                                    </div>
+                                    <div class="tutor-style1_info_bottom_class">
+                                        <span class="tutor-style1_info_bottom_class_value">33</span>
+                                        <span>lớp đã dạy</span>
+                                    </div>
+                                    <div class="tutor-style1_info_bottom_moi-day-button">
+                                        <span>Mời</span>
+                                        <svg aria-hidden="true" focusable="false" data-prefix="far"
+                                            data-icon="handshake" class="svg-inline--fa fa-handshake fa-w-20" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                            <path fill="currentColor"
+                                                d="M519.2 127.9l-47.6-47.6A56.252 56.252 0 0 0 432 64H205.2c-14.8 0-29.1 5.9-39.6 16.3L118 127.9H0v255.7h64c17.6 0 31.8-14.2 31.9-31.7h9.1l84.6 76.4c30.9 25.1 73.8 25.7 105.6 3.8 12.5 10.8 26 15.9 41.1 15.9 18.2 0 35.3-7.4 48.8-24 22.1 8.7 48.2 2.6 64-16.8l26.2-32.3c5.6-6.9 9.1-14.8 10.9-23h57.9c.1 17.5 14.4 31.7 31.9 31.7h64V127.9H519.2zM48 351.6c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16zm390-6.9l-26.1 32.2c-2.8 3.4-7.8 4-11.3 1.2l-23.9-19.4-30 36.5c-6 7.3-15 4.8-18 2.4l-36.8-31.5-15.6 19.2c-13.9 17.1-39.2 19.7-55.3 6.6l-97.3-88H96V175.8h41.9l61.7-61.6c2-.8 3.7-1.5 5.7-2.3H262l-38.7 35.5c-29.4 26.9-31.1 72.3-4.4 101.3 14.8 16.2 61.2 41.2 101.5 4.4l8.2-7.5 108.2 87.8c3.4 2.8 3.9 7.9 1.2 11.3zm106-40.8h-69.2c-2.3-2.8-4.9-5.4-7.7-7.7l-102.7-83.4 12.5-11.4c6.5-6 7-16.1 1-22.6L367 167.1c-6-6.5-16.1-6.9-22.6-1l-55.2 50.6c-9.5 8.7-25.7 9.4-34.6 0-9.3-9.9-8.5-25.1 1.2-33.9l65.6-60.1c7.4-6.8 17-10.5 27-10.5l83.7-.2c2.1 0 4.1.8 5.5 2.3l61.7 61.6H544v128zm48 47.7c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-6 m-12 c-12">
+                            <!-- Tutor -->
+                            <div class="tutor-style1-container">
+                                <div class="tutor-style1">
+                                    <div class="tutor-style1_avatar">
+                                        <img src="/assets/img/tutor-1-demo.png">
+                                    </div>
+                                    <div class="tutor-style1_info">
+                                        <div class="tutor-style1_info_title">
+                                            <span class="tutor-style1_info_title_name">ThS Toán. Nguyễn Thanh Hải</span>
+                                            <span> - </span>
+                                            <span class="tutor-style1_info_title_role">GV THPT Bùi Thị Xuân, Q1</span>
+                                        </div>
+                                        <div class="tutor-style1_info_tag">
+                                            <div>GV 5 sao</div>
+                                            <div>Dạy HS giỏi</div>
+                                        </div>
+                                        <div class="tutor-style1_info_description">
+                                            Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ điểm 9-10 điểm,
+                                            đậu nguyện vọng 1 vào các trường đại học lớn như y dược, bách khoa, ngoại
+                                            thương, sư phạm,...
+                                        </div>
+                                        <div class="tutor-style1_info_bottom not-mobile">
+                                            <div class="tutor-style1_info_bottom_review">
+                                                <span class="tutor-style1_info_bottom_review_value">49</span>
+                                                <span>phản hồi</span>
+                                            </div>
+                                            <div class="tutor-style1_info_bottom_class">
+                                                <span class="tutor-style1_info_bottom_class_value">33</span>
+                                                <span>lớp đã dạy</span>
+                                            </div>
+                                            <div class="tutor-style1_info_bottom_moi-day-button">
+                                                <span>Mời</span>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="far"
+                                                    data-icon="handshake" class="svg-inline--fa fa-handshake fa-w-20"
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                                    <path fill="currentColor"
+                                                        d="M519.2 127.9l-47.6-47.6A56.252 56.252 0 0 0 432 64H205.2c-14.8 0-29.1 5.9-39.6 16.3L118 127.9H0v255.7h64c17.6 0 31.8-14.2 31.9-31.7h9.1l84.6 76.4c30.9 25.1 73.8 25.7 105.6 3.8 12.5 10.8 26 15.9 41.1 15.9 18.2 0 35.3-7.4 48.8-24 22.1 8.7 48.2 2.6 64-16.8l26.2-32.3c5.6-6.9 9.1-14.8 10.9-23h57.9c.1 17.5 14.4 31.7 31.9 31.7h64V127.9H519.2zM48 351.6c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16zm390-6.9l-26.1 32.2c-2.8 3.4-7.8 4-11.3 1.2l-23.9-19.4-30 36.5c-6 7.3-15 4.8-18 2.4l-36.8-31.5-15.6 19.2c-13.9 17.1-39.2 19.7-55.3 6.6l-97.3-88H96V175.8h41.9l61.7-61.6c2-.8 3.7-1.5 5.7-2.3H262l-38.7 35.5c-29.4 26.9-31.1 72.3-4.4 101.3 14.8 16.2 61.2 41.2 101.5 4.4l8.2-7.5 108.2 87.8c3.4 2.8 3.9 7.9 1.2 11.3zm106-40.8h-69.2c-2.3-2.8-4.9-5.4-7.7-7.7l-102.7-83.4 12.5-11.4c6.5-6 7-16.1 1-22.6L367 167.1c-6-6.5-16.1-6.9-22.6-1l-55.2 50.6c-9.5 8.7-25.7 9.4-34.6 0-9.3-9.9-8.5-25.1 1.2-33.9l65.6-60.1c7.4-6.8 17-10.5 27-10.5l83.7-.2c2.1 0 4.1.8 5.5 2.3l61.7 61.6H544v128zm48 47.7c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tutor-style1_info_bottom not-pc not-tablet">
+                                    <div class="tutor-style1_info_bottom_review">
+                                        <span class="tutor-style1_info_bottom_review_value">49</span>
+                                        <span>phản hồi</span>
+                                    </div>
+                                    <div class="tutor-style1_info_bottom_class">
+                                        <span class="tutor-style1_info_bottom_class_value">33</span>
+                                        <span>lớp đã dạy</span>
+                                    </div>
+                                    <div class="tutor-style1_info_bottom_moi-day-button">
+                                        <span>Mời</span>
+                                        <svg aria-hidden="true" focusable="false" data-prefix="far"
+                                            data-icon="handshake" class="svg-inline--fa fa-handshake fa-w-20" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                            <path fill="currentColor"
+                                                d="M519.2 127.9l-47.6-47.6A56.252 56.252 0 0 0 432 64H205.2c-14.8 0-29.1 5.9-39.6 16.3L118 127.9H0v255.7h64c17.6 0 31.8-14.2 31.9-31.7h9.1l84.6 76.4c30.9 25.1 73.8 25.7 105.6 3.8 12.5 10.8 26 15.9 41.1 15.9 18.2 0 35.3-7.4 48.8-24 22.1 8.7 48.2 2.6 64-16.8l26.2-32.3c5.6-6.9 9.1-14.8 10.9-23h57.9c.1 17.5 14.4 31.7 31.9 31.7h64V127.9H519.2zM48 351.6c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16zm390-6.9l-26.1 32.2c-2.8 3.4-7.8 4-11.3 1.2l-23.9-19.4-30 36.5c-6 7.3-15 4.8-18 2.4l-36.8-31.5-15.6 19.2c-13.9 17.1-39.2 19.7-55.3 6.6l-97.3-88H96V175.8h41.9l61.7-61.6c2-.8 3.7-1.5 5.7-2.3H262l-38.7 35.5c-29.4 26.9-31.1 72.3-4.4 101.3 14.8 16.2 61.2 41.2 101.5 4.4l8.2-7.5 108.2 87.8c3.4 2.8 3.9 7.9 1.2 11.3zm106-40.8h-69.2c-2.3-2.8-4.9-5.4-7.7-7.7l-102.7-83.4 12.5-11.4c6.5-6 7-16.1 1-22.6L367 167.1c-6-6.5-16.1-6.9-22.6-1l-55.2 50.6c-9.5 8.7-25.7 9.4-34.6 0-9.3-9.9-8.5-25.1 1.2-33.9l65.6-60.1c7.4-6.8 17-10.5 27-10.5l83.7-.2c2.1 0 4.1.8 5.5 2.3l61.7 61.6H544v128zm48 47.7c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col l-6 m-12 c-12">
+                            <!-- Tutor -->
+                            <div class="tutor-style1-container">
+                                <div class="tutor-style1">
+                                    <div class="tutor-style1_avatar">
+                                        <img src="/assets/img/tutor-1-demo.png">
+                                    </div>
+                                    <div class="tutor-style1_info">
+                                        <div class="tutor-style1_info_title">
+                                            <span class="tutor-style1_info_title_name">ThS Toán. Nguyễn Thanh Hải</span>
+                                            <span> - </span>
+                                            <span class="tutor-style1_info_title_role">GV THPT Bùi Thị Xuân, Q1</span>
+                                        </div>
+                                        <div class="tutor-style1_info_tag">
+                                            <div>GV 5 sao</div>
+                                            <div>Dạy HS giỏi</div>
+                                        </div>
+                                        <div class="tutor-style1_info_description">
+                                            Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ điểm 9-10 điểm,
+                                            đậu nguyện vọng 1 vào các trường đại học lớn như y dược, bách khoa, ngoại
+                                            thương, sư phạm,...
+                                        </div>
+                                        <div class="tutor-style1_info_bottom not-mobile">
+                                            <div class="tutor-style1_info_bottom_review">
+                                                <span class="tutor-style1_info_bottom_review_value">49</span>
+                                                <span>phản hồi</span>
+                                            </div>
+                                            <div class="tutor-style1_info_bottom_class">
+                                                <span class="tutor-style1_info_bottom_class_value">33</span>
+                                                <span>lớp đã dạy</span>
+                                            </div>
+                                            <div class="tutor-style1_info_bottom_moi-day-button">
+                                                <span>Mời</span>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="far"
+                                                    data-icon="handshake" class="svg-inline--fa fa-handshake fa-w-20"
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                                    <path fill="currentColor"
+                                                        d="M519.2 127.9l-47.6-47.6A56.252 56.252 0 0 0 432 64H205.2c-14.8 0-29.1 5.9-39.6 16.3L118 127.9H0v255.7h64c17.6 0 31.8-14.2 31.9-31.7h9.1l84.6 76.4c30.9 25.1 73.8 25.7 105.6 3.8 12.5 10.8 26 15.9 41.1 15.9 18.2 0 35.3-7.4 48.8-24 22.1 8.7 48.2 2.6 64-16.8l26.2-32.3c5.6-6.9 9.1-14.8 10.9-23h57.9c.1 17.5 14.4 31.7 31.9 31.7h64V127.9H519.2zM48 351.6c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16zm390-6.9l-26.1 32.2c-2.8 3.4-7.8 4-11.3 1.2l-23.9-19.4-30 36.5c-6 7.3-15 4.8-18 2.4l-36.8-31.5-15.6 19.2c-13.9 17.1-39.2 19.7-55.3 6.6l-97.3-88H96V175.8h41.9l61.7-61.6c2-.8 3.7-1.5 5.7-2.3H262l-38.7 35.5c-29.4 26.9-31.1 72.3-4.4 101.3 14.8 16.2 61.2 41.2 101.5 4.4l8.2-7.5 108.2 87.8c3.4 2.8 3.9 7.9 1.2 11.3zm106-40.8h-69.2c-2.3-2.8-4.9-5.4-7.7-7.7l-102.7-83.4 12.5-11.4c6.5-6 7-16.1 1-22.6L367 167.1c-6-6.5-16.1-6.9-22.6-1l-55.2 50.6c-9.5 8.7-25.7 9.4-34.6 0-9.3-9.9-8.5-25.1 1.2-33.9l65.6-60.1c7.4-6.8 17-10.5 27-10.5l83.7-.2c2.1 0 4.1.8 5.5 2.3l61.7 61.6H544v128zm48 47.7c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tutor-style1_info_bottom not-pc not-tablet">
+                                    <div class="tutor-style1_info_bottom_review">
+                                        <span class="tutor-style1_info_bottom_review_value">49</span>
+                                        <span>phản hồi</span>
+                                    </div>
+                                    <div class="tutor-style1_info_bottom_class">
+                                        <span class="tutor-style1_info_bottom_class_value">33</span>
+                                        <span>lớp đã dạy</span>
+                                    </div>
+                                    <div class="tutor-style1_info_bottom_moi-day-button">
+                                        <span>Mời</span>
+                                        <svg aria-hidden="true" focusable="false" data-prefix="far"
+                                            data-icon="handshake" class="svg-inline--fa fa-handshake fa-w-20" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                            <path fill="currentColor"
+                                                d="M519.2 127.9l-47.6-47.6A56.252 56.252 0 0 0 432 64H205.2c-14.8 0-29.1 5.9-39.6 16.3L118 127.9H0v255.7h64c17.6 0 31.8-14.2 31.9-31.7h9.1l84.6 76.4c30.9 25.1 73.8 25.7 105.6 3.8 12.5 10.8 26 15.9 41.1 15.9 18.2 0 35.3-7.4 48.8-24 22.1 8.7 48.2 2.6 64-16.8l26.2-32.3c5.6-6.9 9.1-14.8 10.9-23h57.9c.1 17.5 14.4 31.7 31.9 31.7h64V127.9H519.2zM48 351.6c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16zm390-6.9l-26.1 32.2c-2.8 3.4-7.8 4-11.3 1.2l-23.9-19.4-30 36.5c-6 7.3-15 4.8-18 2.4l-36.8-31.5-15.6 19.2c-13.9 17.1-39.2 19.7-55.3 6.6l-97.3-88H96V175.8h41.9l61.7-61.6c2-.8 3.7-1.5 5.7-2.3H262l-38.7 35.5c-29.4 26.9-31.1 72.3-4.4 101.3 14.8 16.2 61.2 41.2 101.5 4.4l8.2-7.5 108.2 87.8c3.4 2.8 3.9 7.9 1.2 11.3zm106-40.8h-69.2c-2.3-2.8-4.9-5.4-7.7-7.7l-102.7-83.4 12.5-11.4c6.5-6 7-16.1 1-22.6L367 167.1c-6-6.5-16.1-6.9-22.6-1l-55.2 50.6c-9.5 8.7-25.7 9.4-34.6 0-9.3-9.9-8.5-25.1 1.2-33.9l65.6-60.1c7.4-6.8 17-10.5 27-10.5l83.7-.2c2.1 0 4.1.8 5.5 2.3l61.7 61.6H544v128zm48 47.7c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-6 m-12 c-12">
+                            <!-- Tutor -->
+                            <div class="tutor-style1-container">
+                                <div class="tutor-style1">
+                                    <div class="tutor-style1_avatar">
+                                        <img src="/assets/img/tutor-1-demo.png">
+                                    </div>
+                                    <div class="tutor-style1_info">
+                                        <div class="tutor-style1_info_title">
+                                            <span class="tutor-style1_info_title_name">ThS Toán. Nguyễn Thanh Hải</span>
+                                            <span> - </span>
+                                            <span class="tutor-style1_info_title_role">GV THPT Bùi Thị Xuân, Q1</span>
+                                        </div>
+                                        <div class="tutor-style1_info_tag">
+                                            <div>GV 5 sao</div>
+                                            <div>Dạy HS giỏi</div>
+                                        </div>
+                                        <div class="tutor-style1_info_description">
+                                            Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ điểm 9-10 điểm,
+                                            đậu nguyện vọng 1 vào các trường đại học lớn như y dược, bách khoa, ngoại
+                                            thương, sư phạm,...
+                                        </div>
+                                        <div class="tutor-style1_info_bottom not-mobile">
+                                            <div class="tutor-style1_info_bottom_review">
+                                                <span class="tutor-style1_info_bottom_review_value">49</span>
+                                                <span>phản hồi</span>
+                                            </div>
+                                            <div class="tutor-style1_info_bottom_class">
+                                                <span class="tutor-style1_info_bottom_class_value">33</span>
+                                                <span>lớp đã dạy</span>
+                                            </div>
+                                            <div class="tutor-style1_info_bottom_moi-day-button">
+                                                <span>Mời</span>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="far"
+                                                    data-icon="handshake" class="svg-inline--fa fa-handshake fa-w-20"
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                                    <path fill="currentColor"
+                                                        d="M519.2 127.9l-47.6-47.6A56.252 56.252 0 0 0 432 64H205.2c-14.8 0-29.1 5.9-39.6 16.3L118 127.9H0v255.7h64c17.6 0 31.8-14.2 31.9-31.7h9.1l84.6 76.4c30.9 25.1 73.8 25.7 105.6 3.8 12.5 10.8 26 15.9 41.1 15.9 18.2 0 35.3-7.4 48.8-24 22.1 8.7 48.2 2.6 64-16.8l26.2-32.3c5.6-6.9 9.1-14.8 10.9-23h57.9c.1 17.5 14.4 31.7 31.9 31.7h64V127.9H519.2zM48 351.6c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16zm390-6.9l-26.1 32.2c-2.8 3.4-7.8 4-11.3 1.2l-23.9-19.4-30 36.5c-6 7.3-15 4.8-18 2.4l-36.8-31.5-15.6 19.2c-13.9 17.1-39.2 19.7-55.3 6.6l-97.3-88H96V175.8h41.9l61.7-61.6c2-.8 3.7-1.5 5.7-2.3H262l-38.7 35.5c-29.4 26.9-31.1 72.3-4.4 101.3 14.8 16.2 61.2 41.2 101.5 4.4l8.2-7.5 108.2 87.8c3.4 2.8 3.9 7.9 1.2 11.3zm106-40.8h-69.2c-2.3-2.8-4.9-5.4-7.7-7.7l-102.7-83.4 12.5-11.4c6.5-6 7-16.1 1-22.6L367 167.1c-6-6.5-16.1-6.9-22.6-1l-55.2 50.6c-9.5 8.7-25.7 9.4-34.6 0-9.3-9.9-8.5-25.1 1.2-33.9l65.6-60.1c7.4-6.8 17-10.5 27-10.5l83.7-.2c2.1 0 4.1.8 5.5 2.3l61.7 61.6H544v128zm48 47.7c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tutor-style1_info_bottom not-pc not-tablet">
+                                    <div class="tutor-style1_info_bottom_review">
+                                        <span class="tutor-style1_info_bottom_review_value">49</span>
+                                        <span>phản hồi</span>
+                                    </div>
+                                    <div class="tutor-style1_info_bottom_class">
+                                        <span class="tutor-style1_info_bottom_class_value">33</span>
+                                        <span>lớp đã dạy</span>
+                                    </div>
+                                    <div class="tutor-style1_info_bottom_moi-day-button">
+                                        <span>Mời</span>
+                                        <svg aria-hidden="true" focusable="false" data-prefix="far"
+                                            data-icon="handshake" class="svg-inline--fa fa-handshake fa-w-20" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                            <path fill="currentColor"
+                                                d="M519.2 127.9l-47.6-47.6A56.252 56.252 0 0 0 432 64H205.2c-14.8 0-29.1 5.9-39.6 16.3L118 127.9H0v255.7h64c17.6 0 31.8-14.2 31.9-31.7h9.1l84.6 76.4c30.9 25.1 73.8 25.7 105.6 3.8 12.5 10.8 26 15.9 41.1 15.9 18.2 0 35.3-7.4 48.8-24 22.1 8.7 48.2 2.6 64-16.8l26.2-32.3c5.6-6.9 9.1-14.8 10.9-23h57.9c.1 17.5 14.4 31.7 31.9 31.7h64V127.9H519.2zM48 351.6c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16zm390-6.9l-26.1 32.2c-2.8 3.4-7.8 4-11.3 1.2l-23.9-19.4-30 36.5c-6 7.3-15 4.8-18 2.4l-36.8-31.5-15.6 19.2c-13.9 17.1-39.2 19.7-55.3 6.6l-97.3-88H96V175.8h41.9l61.7-61.6c2-.8 3.7-1.5 5.7-2.3H262l-38.7 35.5c-29.4 26.9-31.1 72.3-4.4 101.3 14.8 16.2 61.2 41.2 101.5 4.4l8.2-7.5 108.2 87.8c3.4 2.8 3.9 7.9 1.2 11.3zm106-40.8h-69.2c-2.3-2.8-4.9-5.4-7.7-7.7l-102.7-83.4 12.5-11.4c6.5-6 7-16.1 1-22.6L367 167.1c-6-6.5-16.1-6.9-22.6-1l-55.2 50.6c-9.5 8.7-25.7 9.4-34.6 0-9.3-9.9-8.5-25.1 1.2-33.9l65.6-60.1c7.4-6.8 17-10.5 27-10.5l83.7-.2c2.1 0 4.1.8 5.5 2.3l61.7 61.6H544v128zm48 47.7c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row tutor-list_contact">
+                        <div class="col l-12 m-12 c-12">
+                            <div class="contact1_content bg-img1_content">
+                                <h2>Hỗ trợ mời gia sư mong muốn!</h2>
+                                <div class="contact-number-style1">
+                                    <div class="contact-number-style1_zalo">
+                                        <img src="/assets/img/zalo-icon.png">
+                                        <span>Tư vấn Zalo:</span>
+                                        <span>093 111 4279</span>
+                                    </div>
+                                    <div class="contact-number-style1_phone-number">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                            data-icon="phone-volume" class="svg-inline--fa fa-phone-volume fa-w-12"
+                                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                            <path fill="currentColor"
+                                                d="M97.333 506.966c-129.874-129.874-129.681-340.252 0-469.933 5.698-5.698 14.527-6.632 21.263-2.422l64.817 40.513a17.187 17.187 0 0 1 6.849 20.958l-32.408 81.021a17.188 17.188 0 0 1-17.669 10.719l-55.81-5.58c-21.051 58.261-20.612 122.471 0 179.515l55.811-5.581a17.188 17.188 0 0 1 17.669 10.719l32.408 81.022a17.188 17.188 0 0 1-6.849 20.958l-64.817 40.513a17.19 17.19 0 0 1-21.264-2.422zM247.126 95.473c11.832 20.047 11.832 45.008 0 65.055-3.95 6.693-13.108 7.959-18.718 2.581l-5.975-5.726c-3.911-3.748-4.793-9.622-2.261-14.41a32.063 32.063 0 0 0 0-29.945c-2.533-4.788-1.65-10.662 2.261-14.41l5.975-5.726c5.61-5.378 14.768-4.112 18.718 2.581zm91.787-91.187c60.14 71.604 60.092 175.882 0 247.428-4.474 5.327-12.53 5.746-17.552.933l-5.798-5.557c-4.56-4.371-4.977-11.529-.93-16.379 49.687-59.538 49.646-145.933 0-205.422-4.047-4.85-3.631-12.008.93-16.379l5.798-5.557c5.022-4.813 13.078-4.394 17.552.933zm-45.972 44.941c36.05 46.322 36.108 111.149 0 157.546-4.39 5.641-12.697 6.251-17.856 1.304l-5.818-5.579c-4.4-4.219-4.998-11.095-1.285-15.931 26.536-34.564 26.534-82.572 0-117.134-3.713-4.836-3.115-11.711 1.285-15.931l5.818-5.579c5.159-4.947 13.466-4.337 17.856 1.304z">
+                                            </path>
+                                        </svg>
+                                        <span>093 111 4279 - 098 111 5279</span>
+                                    </div>
+                                </div>
+                                <div class="contact1_content_call-back one-input-style1">
+                                    <div class="one-input-style1_input">
+                                        <span>Số điện thoại của bạn</span>
+                                        <svg></svg>
+                                    </div>
+                                    <div class="one-input-style1_button button-style1"><span>YÊU CẦU GỌI LẠI</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col l-6 m-12 c-12">
+                            <!-- Tutor -->
+                            <div class="tutor-style1-container">
+                                <div class="tutor-style1">
+                                    <div class="tutor-style1_avatar">
+                                        <img src="/assets/img/tutor-1-demo.png">
+                                    </div>
+                                    <div class="tutor-style1_info">
+                                        <div class="tutor-style1_info_title">
+                                            <span class="tutor-style1_info_title_name">ThS Toán. Nguyễn Thanh Hải</span>
+                                            <span> - </span>
+                                            <span class="tutor-style1_info_title_role">GV THPT Bùi Thị Xuân, Q1</span>
+                                        </div>
+                                        <div class="tutor-style1_info_tag">
+                                            <div>GV 5 sao</div>
+                                            <div>Dạy HS giỏi</div>
+                                        </div>
+                                        <div class="tutor-style1_info_description">
+                                            Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ điểm 9-10 điểm,
+                                            đậu nguyện vọng 1 vào các trường đại học lớn như y dược, bách khoa, ngoại
+                                            thương, sư phạm,...
+                                        </div>
+                                        <div class="tutor-style1_info_bottom not-mobile">
+                                            <div class="tutor-style1_info_bottom_review">
+                                                <span class="tutor-style1_info_bottom_review_value">49</span>
+                                                <span>phản hồi</span>
+                                            </div>
+                                            <div class="tutor-style1_info_bottom_class">
+                                                <span class="tutor-style1_info_bottom_class_value">33</span>
+                                                <span>lớp đã dạy</span>
+                                            </div>
+                                            <div class="tutor-style1_info_bottom_moi-day-button">
+                                                <span>Mời</span>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="far"
+                                                    data-icon="handshake" class="svg-inline--fa fa-handshake fa-w-20"
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                                    <path fill="currentColor"
+                                                        d="M519.2 127.9l-47.6-47.6A56.252 56.252 0 0 0 432 64H205.2c-14.8 0-29.1 5.9-39.6 16.3L118 127.9H0v255.7h64c17.6 0 31.8-14.2 31.9-31.7h9.1l84.6 76.4c30.9 25.1 73.8 25.7 105.6 3.8 12.5 10.8 26 15.9 41.1 15.9 18.2 0 35.3-7.4 48.8-24 22.1 8.7 48.2 2.6 64-16.8l26.2-32.3c5.6-6.9 9.1-14.8 10.9-23h57.9c.1 17.5 14.4 31.7 31.9 31.7h64V127.9H519.2zM48 351.6c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16zm390-6.9l-26.1 32.2c-2.8 3.4-7.8 4-11.3 1.2l-23.9-19.4-30 36.5c-6 7.3-15 4.8-18 2.4l-36.8-31.5-15.6 19.2c-13.9 17.1-39.2 19.7-55.3 6.6l-97.3-88H96V175.8h41.9l61.7-61.6c2-.8 3.7-1.5 5.7-2.3H262l-38.7 35.5c-29.4 26.9-31.1 72.3-4.4 101.3 14.8 16.2 61.2 41.2 101.5 4.4l8.2-7.5 108.2 87.8c3.4 2.8 3.9 7.9 1.2 11.3zm106-40.8h-69.2c-2.3-2.8-4.9-5.4-7.7-7.7l-102.7-83.4 12.5-11.4c6.5-6 7-16.1 1-22.6L367 167.1c-6-6.5-16.1-6.9-22.6-1l-55.2 50.6c-9.5 8.7-25.7 9.4-34.6 0-9.3-9.9-8.5-25.1 1.2-33.9l65.6-60.1c7.4-6.8 17-10.5 27-10.5l83.7-.2c2.1 0 4.1.8 5.5 2.3l61.7 61.6H544v128zm48 47.7c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tutor-style1_info_bottom not-pc not-tablet">
+                                    <div class="tutor-style1_info_bottom_review">
+                                        <span class="tutor-style1_info_bottom_review_value">49</span>
+                                        <span>phản hồi</span>
+                                    </div>
+                                    <div class="tutor-style1_info_bottom_class">
+                                        <span class="tutor-style1_info_bottom_class_value">33</span>
+                                        <span>lớp đã dạy</span>
+                                    </div>
+                                    <div class="tutor-style1_info_bottom_moi-day-button">
+                                        <span>Mời</span>
+                                        <svg aria-hidden="true" focusable="false" data-prefix="far"
+                                            data-icon="handshake" class="svg-inline--fa fa-handshake fa-w-20" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                            <path fill="currentColor"
+                                                d="M519.2 127.9l-47.6-47.6A56.252 56.252 0 0 0 432 64H205.2c-14.8 0-29.1 5.9-39.6 16.3L118 127.9H0v255.7h64c17.6 0 31.8-14.2 31.9-31.7h9.1l84.6 76.4c30.9 25.1 73.8 25.7 105.6 3.8 12.5 10.8 26 15.9 41.1 15.9 18.2 0 35.3-7.4 48.8-24 22.1 8.7 48.2 2.6 64-16.8l26.2-32.3c5.6-6.9 9.1-14.8 10.9-23h57.9c.1 17.5 14.4 31.7 31.9 31.7h64V127.9H519.2zM48 351.6c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16zm390-6.9l-26.1 32.2c-2.8 3.4-7.8 4-11.3 1.2l-23.9-19.4-30 36.5c-6 7.3-15 4.8-18 2.4l-36.8-31.5-15.6 19.2c-13.9 17.1-39.2 19.7-55.3 6.6l-97.3-88H96V175.8h41.9l61.7-61.6c2-.8 3.7-1.5 5.7-2.3H262l-38.7 35.5c-29.4 26.9-31.1 72.3-4.4 101.3 14.8 16.2 61.2 41.2 101.5 4.4l8.2-7.5 108.2 87.8c3.4 2.8 3.9 7.9 1.2 11.3zm106-40.8h-69.2c-2.3-2.8-4.9-5.4-7.7-7.7l-102.7-83.4 12.5-11.4c6.5-6 7-16.1 1-22.6L367 167.1c-6-6.5-16.1-6.9-22.6-1l-55.2 50.6c-9.5 8.7-25.7 9.4-34.6 0-9.3-9.9-8.5-25.1 1.2-33.9l65.6-60.1c7.4-6.8 17-10.5 27-10.5l83.7-.2c2.1 0 4.1.8 5.5 2.3l61.7 61.6H544v128zm48 47.7c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-6 m-12 c-12">
+                            <!-- Tutor -->
+                            <div class="tutor-style1-container">
+                                <div class="tutor-style1">
+                                    <div class="tutor-style1_avatar">
+                                        <img src="/assets/img/tutor-1-demo.png">
+                                    </div>
+                                    <div class="tutor-style1_info">
+                                        <div class="tutor-style1_info_title">
+                                            <span class="tutor-style1_info_title_name">ThS Toán. Nguyễn Thanh Hải</span>
+                                            <span> - </span>
+                                            <span class="tutor-style1_info_title_role">GV THPT Bùi Thị Xuân, Q1</span>
+                                        </div>
+                                        <div class="tutor-style1_info_tag">
+                                            <div>GV 5 sao</div>
+                                            <div>Dạy HS giỏi</div>
+                                        </div>
+                                        <div class="tutor-style1_info_description">
+                                            Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ điểm 9-10 điểm,
+                                            đậu nguyện vọng 1 vào các trường đại học lớn như y dược, bách khoa, ngoại
+                                            thương, sư phạm,...
+                                        </div>
+                                        <div class="tutor-style1_info_bottom not-mobile">
+                                            <div class="tutor-style1_info_bottom_review">
+                                                <span class="tutor-style1_info_bottom_review_value">49</span>
+                                                <span>phản hồi</span>
+                                            </div>
+                                            <div class="tutor-style1_info_bottom_class">
+                                                <span class="tutor-style1_info_bottom_class_value">33</span>
+                                                <span>lớp đã dạy</span>
+                                            </div>
+                                            <div class="tutor-style1_info_bottom_moi-day-button">
+                                                <span>Mời</span>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="far"
+                                                    data-icon="handshake" class="svg-inline--fa fa-handshake fa-w-20"
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                                    <path fill="currentColor"
+                                                        d="M519.2 127.9l-47.6-47.6A56.252 56.252 0 0 0 432 64H205.2c-14.8 0-29.1 5.9-39.6 16.3L118 127.9H0v255.7h64c17.6 0 31.8-14.2 31.9-31.7h9.1l84.6 76.4c30.9 25.1 73.8 25.7 105.6 3.8 12.5 10.8 26 15.9 41.1 15.9 18.2 0 35.3-7.4 48.8-24 22.1 8.7 48.2 2.6 64-16.8l26.2-32.3c5.6-6.9 9.1-14.8 10.9-23h57.9c.1 17.5 14.4 31.7 31.9 31.7h64V127.9H519.2zM48 351.6c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16zm390-6.9l-26.1 32.2c-2.8 3.4-7.8 4-11.3 1.2l-23.9-19.4-30 36.5c-6 7.3-15 4.8-18 2.4l-36.8-31.5-15.6 19.2c-13.9 17.1-39.2 19.7-55.3 6.6l-97.3-88H96V175.8h41.9l61.7-61.6c2-.8 3.7-1.5 5.7-2.3H262l-38.7 35.5c-29.4 26.9-31.1 72.3-4.4 101.3 14.8 16.2 61.2 41.2 101.5 4.4l8.2-7.5 108.2 87.8c3.4 2.8 3.9 7.9 1.2 11.3zm106-40.8h-69.2c-2.3-2.8-4.9-5.4-7.7-7.7l-102.7-83.4 12.5-11.4c6.5-6 7-16.1 1-22.6L367 167.1c-6-6.5-16.1-6.9-22.6-1l-55.2 50.6c-9.5 8.7-25.7 9.4-34.6 0-9.3-9.9-8.5-25.1 1.2-33.9l65.6-60.1c7.4-6.8 17-10.5 27-10.5l83.7-.2c2.1 0 4.1.8 5.5 2.3l61.7 61.6H544v128zm48 47.7c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tutor-style1_info_bottom not-pc not-tablet">
+                                    <div class="tutor-style1_info_bottom_review">
+                                        <span class="tutor-style1_info_bottom_review_value">49</span>
+                                        <span>phản hồi</span>
+                                    </div>
+                                    <div class="tutor-style1_info_bottom_class">
+                                        <span class="tutor-style1_info_bottom_class_value">33</span>
+                                        <span>lớp đã dạy</span>
+                                    </div>
+                                    <div class="tutor-style1_info_bottom_moi-day-button">
+                                        <span>Mời</span>
+                                        <svg aria-hidden="true" focusable="false" data-prefix="far"
+                                            data-icon="handshake" class="svg-inline--fa fa-handshake fa-w-20" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                            <path fill="currentColor"
+                                                d="M519.2 127.9l-47.6-47.6A56.252 56.252 0 0 0 432 64H205.2c-14.8 0-29.1 5.9-39.6 16.3L118 127.9H0v255.7h64c17.6 0 31.8-14.2 31.9-31.7h9.1l84.6 76.4c30.9 25.1 73.8 25.7 105.6 3.8 12.5 10.8 26 15.9 41.1 15.9 18.2 0 35.3-7.4 48.8-24 22.1 8.7 48.2 2.6 64-16.8l26.2-32.3c5.6-6.9 9.1-14.8 10.9-23h57.9c.1 17.5 14.4 31.7 31.9 31.7h64V127.9H519.2zM48 351.6c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16zm390-6.9l-26.1 32.2c-2.8 3.4-7.8 4-11.3 1.2l-23.9-19.4-30 36.5c-6 7.3-15 4.8-18 2.4l-36.8-31.5-15.6 19.2c-13.9 17.1-39.2 19.7-55.3 6.6l-97.3-88H96V175.8h41.9l61.7-61.6c2-.8 3.7-1.5 5.7-2.3H262l-38.7 35.5c-29.4 26.9-31.1 72.3-4.4 101.3 14.8 16.2 61.2 41.2 101.5 4.4l8.2-7.5 108.2 87.8c3.4 2.8 3.9 7.9 1.2 11.3zm106-40.8h-69.2c-2.3-2.8-4.9-5.4-7.7-7.7l-102.7-83.4 12.5-11.4c6.5-6 7-16.1 1-22.6L367 167.1c-6-6.5-16.1-6.9-22.6-1l-55.2 50.6c-9.5 8.7-25.7 9.4-34.6 0-9.3-9.9-8.5-25.1 1.2-33.9l65.6-60.1c7.4-6.8 17-10.5 27-10.5l83.7-.2c2.1 0 4.1.8 5.5 2.3l61.7 61.6H544v128zm48 47.7c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col l-6 m-12 c-12">
+                            <!-- Tutor -->
+                            <div class="tutor-style1-container">
+                                <div class="tutor-style1">
+                                    <div class="tutor-style1_avatar">
+                                        <img src="/assets/img/tutor-1-demo.png">
+                                    </div>
+                                    <div class="tutor-style1_info">
+                                        <div class="tutor-style1_info_title">
+                                            <span class="tutor-style1_info_title_name">ThS Toán. Nguyễn Thanh Hải</span>
+                                            <span> - </span>
+                                            <span class="tutor-style1_info_title_role">GV THPT Bùi Thị Xuân, Q1</span>
+                                        </div>
+                                        <div class="tutor-style1_info_tag">
+                                            <div>GV 5 sao</div>
+                                            <div>Dạy HS giỏi</div>
+                                        </div>
+                                        <div class="tutor-style1_info_description">
+                                            Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ điểm 9-10 điểm,
+                                            đậu nguyện vọng 1 vào các trường đại học lớn như y dược, bách khoa, ngoại
+                                            thương, sư phạm,...
+                                        </div>
+                                        <div class="tutor-style1_info_bottom not-mobile">
+                                            <div class="tutor-style1_info_bottom_review">
+                                                <span class="tutor-style1_info_bottom_review_value">49</span>
+                                                <span>phản hồi</span>
+                                            </div>
+                                            <div class="tutor-style1_info_bottom_class">
+                                                <span class="tutor-style1_info_bottom_class_value">33</span>
+                                                <span>lớp đã dạy</span>
+                                            </div>
+                                            <div class="tutor-style1_info_bottom_moi-day-button">
+                                                <span>Mời</span>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="far"
+                                                    data-icon="handshake" class="svg-inline--fa fa-handshake fa-w-20"
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                                    <path fill="currentColor"
+                                                        d="M519.2 127.9l-47.6-47.6A56.252 56.252 0 0 0 432 64H205.2c-14.8 0-29.1 5.9-39.6 16.3L118 127.9H0v255.7h64c17.6 0 31.8-14.2 31.9-31.7h9.1l84.6 76.4c30.9 25.1 73.8 25.7 105.6 3.8 12.5 10.8 26 15.9 41.1 15.9 18.2 0 35.3-7.4 48.8-24 22.1 8.7 48.2 2.6 64-16.8l26.2-32.3c5.6-6.9 9.1-14.8 10.9-23h57.9c.1 17.5 14.4 31.7 31.9 31.7h64V127.9H519.2zM48 351.6c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16zm390-6.9l-26.1 32.2c-2.8 3.4-7.8 4-11.3 1.2l-23.9-19.4-30 36.5c-6 7.3-15 4.8-18 2.4l-36.8-31.5-15.6 19.2c-13.9 17.1-39.2 19.7-55.3 6.6l-97.3-88H96V175.8h41.9l61.7-61.6c2-.8 3.7-1.5 5.7-2.3H262l-38.7 35.5c-29.4 26.9-31.1 72.3-4.4 101.3 14.8 16.2 61.2 41.2 101.5 4.4l8.2-7.5 108.2 87.8c3.4 2.8 3.9 7.9 1.2 11.3zm106-40.8h-69.2c-2.3-2.8-4.9-5.4-7.7-7.7l-102.7-83.4 12.5-11.4c6.5-6 7-16.1 1-22.6L367 167.1c-6-6.5-16.1-6.9-22.6-1l-55.2 50.6c-9.5 8.7-25.7 9.4-34.6 0-9.3-9.9-8.5-25.1 1.2-33.9l65.6-60.1c7.4-6.8 17-10.5 27-10.5l83.7-.2c2.1 0 4.1.8 5.5 2.3l61.7 61.6H544v128zm48 47.7c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tutor-style1_info_bottom not-pc not-tablet">
+                                    <div class="tutor-style1_info_bottom_review">
+                                        <span class="tutor-style1_info_bottom_review_value">49</span>
+                                        <span>phản hồi</span>
+                                    </div>
+                                    <div class="tutor-style1_info_bottom_class">
+                                        <span class="tutor-style1_info_bottom_class_value">33</span>
+                                        <span>lớp đã dạy</span>
+                                    </div>
+                                    <div class="tutor-style1_info_bottom_moi-day-button">
+                                        <span>Mời</span>
+                                        <svg aria-hidden="true" focusable="false" data-prefix="far"
+                                            data-icon="handshake" class="svg-inline--fa fa-handshake fa-w-20" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                            <path fill="currentColor"
+                                                d="M519.2 127.9l-47.6-47.6A56.252 56.252 0 0 0 432 64H205.2c-14.8 0-29.1 5.9-39.6 16.3L118 127.9H0v255.7h64c17.6 0 31.8-14.2 31.9-31.7h9.1l84.6 76.4c30.9 25.1 73.8 25.7 105.6 3.8 12.5 10.8 26 15.9 41.1 15.9 18.2 0 35.3-7.4 48.8-24 22.1 8.7 48.2 2.6 64-16.8l26.2-32.3c5.6-6.9 9.1-14.8 10.9-23h57.9c.1 17.5 14.4 31.7 31.9 31.7h64V127.9H519.2zM48 351.6c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16zm390-6.9l-26.1 32.2c-2.8 3.4-7.8 4-11.3 1.2l-23.9-19.4-30 36.5c-6 7.3-15 4.8-18 2.4l-36.8-31.5-15.6 19.2c-13.9 17.1-39.2 19.7-55.3 6.6l-97.3-88H96V175.8h41.9l61.7-61.6c2-.8 3.7-1.5 5.7-2.3H262l-38.7 35.5c-29.4 26.9-31.1 72.3-4.4 101.3 14.8 16.2 61.2 41.2 101.5 4.4l8.2-7.5 108.2 87.8c3.4 2.8 3.9 7.9 1.2 11.3zm106-40.8h-69.2c-2.3-2.8-4.9-5.4-7.7-7.7l-102.7-83.4 12.5-11.4c6.5-6 7-16.1 1-22.6L367 167.1c-6-6.5-16.1-6.9-22.6-1l-55.2 50.6c-9.5 8.7-25.7 9.4-34.6 0-9.3-9.9-8.5-25.1 1.2-33.9l65.6-60.1c7.4-6.8 17-10.5 27-10.5l83.7-.2c2.1 0 4.1.8 5.5 2.3l61.7 61.6H544v128zm48 47.7c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-6 m-12 c-12">
+                            <!-- Tutor -->
+                            <div class="tutor-style1-container">
+                                <div class="tutor-style1">
+                                    <div class="tutor-style1_avatar">
+                                        <img src="/assets/img/tutor-1-demo.png">
+                                    </div>
+                                    <div class="tutor-style1_info">
+                                        <div class="tutor-style1_info_title">
+                                            <span class="tutor-style1_info_title_name">ThS Toán. Nguyễn Thanh Hải</span>
+                                            <span> - </span>
+                                            <span class="tutor-style1_info_title_role">GV THPT Bùi Thị Xuân, Q1</span>
+                                        </div>
+                                        <div class="tutor-style1_info_tag">
+                                            <div>GV 5 sao</div>
+                                            <div>Dạy HS giỏi</div>
+                                        </div>
+                                        <div class="tutor-style1_info_description">
+                                            Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ điểm 9-10 điểm,
+                                            đậu nguyện vọng 1 vào các trường đại học lớn như y dược, bách khoa, ngoại
+                                            thương, sư phạm,...
+                                        </div>
+                                        <div class="tutor-style1_info_bottom not-mobile">
+                                            <div class="tutor-style1_info_bottom_review">
+                                                <span class="tutor-style1_info_bottom_review_value">49</span>
+                                                <span>phản hồi</span>
+                                            </div>
+                                            <div class="tutor-style1_info_bottom_class">
+                                                <span class="tutor-style1_info_bottom_class_value">33</span>
+                                                <span>lớp đã dạy</span>
+                                            </div>
+                                            <div class="tutor-style1_info_bottom_moi-day-button">
+                                                <span>Mời</span>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="far"
+                                                    data-icon="handshake" class="svg-inline--fa fa-handshake fa-w-20"
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                                    <path fill="currentColor"
+                                                        d="M519.2 127.9l-47.6-47.6A56.252 56.252 0 0 0 432 64H205.2c-14.8 0-29.1 5.9-39.6 16.3L118 127.9H0v255.7h64c17.6 0 31.8-14.2 31.9-31.7h9.1l84.6 76.4c30.9 25.1 73.8 25.7 105.6 3.8 12.5 10.8 26 15.9 41.1 15.9 18.2 0 35.3-7.4 48.8-24 22.1 8.7 48.2 2.6 64-16.8l26.2-32.3c5.6-6.9 9.1-14.8 10.9-23h57.9c.1 17.5 14.4 31.7 31.9 31.7h64V127.9H519.2zM48 351.6c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16zm390-6.9l-26.1 32.2c-2.8 3.4-7.8 4-11.3 1.2l-23.9-19.4-30 36.5c-6 7.3-15 4.8-18 2.4l-36.8-31.5-15.6 19.2c-13.9 17.1-39.2 19.7-55.3 6.6l-97.3-88H96V175.8h41.9l61.7-61.6c2-.8 3.7-1.5 5.7-2.3H262l-38.7 35.5c-29.4 26.9-31.1 72.3-4.4 101.3 14.8 16.2 61.2 41.2 101.5 4.4l8.2-7.5 108.2 87.8c3.4 2.8 3.9 7.9 1.2 11.3zm106-40.8h-69.2c-2.3-2.8-4.9-5.4-7.7-7.7l-102.7-83.4 12.5-11.4c6.5-6 7-16.1 1-22.6L367 167.1c-6-6.5-16.1-6.9-22.6-1l-55.2 50.6c-9.5 8.7-25.7 9.4-34.6 0-9.3-9.9-8.5-25.1 1.2-33.9l65.6-60.1c7.4-6.8 17-10.5 27-10.5l83.7-.2c2.1 0 4.1.8 5.5 2.3l61.7 61.6H544v128zm48 47.7c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tutor-style1_info_bottom not-pc not-tablet">
+                                    <div class="tutor-style1_info_bottom_review">
+                                        <span class="tutor-style1_info_bottom_review_value">49</span>
+                                        <span>phản hồi</span>
+                                    </div>
+                                    <div class="tutor-style1_info_bottom_class">
+                                        <span class="tutor-style1_info_bottom_class_value">33</span>
+                                        <span>lớp đã dạy</span>
+                                    </div>
+                                    <div class="tutor-style1_info_bottom_moi-day-button">
+                                        <span>Mời</span>
+                                        <svg aria-hidden="true" focusable="false" data-prefix="far"
+                                            data-icon="handshake" class="svg-inline--fa fa-handshake fa-w-20" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                            <path fill="currentColor"
+                                                d="M519.2 127.9l-47.6-47.6A56.252 56.252 0 0 0 432 64H205.2c-14.8 0-29.1 5.9-39.6 16.3L118 127.9H0v255.7h64c17.6 0 31.8-14.2 31.9-31.7h9.1l84.6 76.4c30.9 25.1 73.8 25.7 105.6 3.8 12.5 10.8 26 15.9 41.1 15.9 18.2 0 35.3-7.4 48.8-24 22.1 8.7 48.2 2.6 64-16.8l26.2-32.3c5.6-6.9 9.1-14.8 10.9-23h57.9c.1 17.5 14.4 31.7 31.9 31.7h64V127.9H519.2zM48 351.6c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16zm390-6.9l-26.1 32.2c-2.8 3.4-7.8 4-11.3 1.2l-23.9-19.4-30 36.5c-6 7.3-15 4.8-18 2.4l-36.8-31.5-15.6 19.2c-13.9 17.1-39.2 19.7-55.3 6.6l-97.3-88H96V175.8h41.9l61.7-61.6c2-.8 3.7-1.5 5.7-2.3H262l-38.7 35.5c-29.4 26.9-31.1 72.3-4.4 101.3 14.8 16.2 61.2 41.2 101.5 4.4l8.2-7.5 108.2 87.8c3.4 2.8 3.9 7.9 1.2 11.3zm106-40.8h-69.2c-2.3-2.8-4.9-5.4-7.7-7.7l-102.7-83.4 12.5-11.4c6.5-6 7-16.1 1-22.6L367 167.1c-6-6.5-16.1-6.9-22.6-1l-55.2 50.6c-9.5 8.7-25.7 9.4-34.6 0-9.3-9.9-8.5-25.1 1.2-33.9l65.6-60.1c7.4-6.8 17-10.5 27-10.5l83.7-.2c2.1 0 4.1.8 5.5 2.3l61.7 61.6H544v128zm48 47.7c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row tutor-list_page-number not-tablet not-mobile">
+                        <div class="tutor-list_page-number_button">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-left"
+                                class="svg-inline--fa fa-angle-left fa-w-8" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                <path fill="currentColor"
+                                    d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div><span>1</span></div>
+                        <div><span>2</span></div>
+                        <div><span>3</span></div>
+                        <div><span>...</span></div>
+                        <div><span>388</span></div>
+                        <div class="tutor-list_page-number_button">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right"
+                                class="svg-inline--fa fa-angle-right fa-w-8" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                <path fill="currentColor"
+                                    d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="row tutor-list_page-number not-pc">
+                        <div class="tutor-list_page-number_button">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-left"
+                                class="svg-inline--fa fa-angle-left fa-w-8" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                <path fill="currentColor"
+                                    d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div><span>Trang</span><span>2</span><span>trong số</span><span>388</span></div>
+                        <div class="tutor-list_page-number_button">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right"
+                                class="svg-inline--fa fa-angle-right fa-w-8" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                <path fill="currentColor"
+                                    d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="tutor-list_page-number_end-page-button">
+                            <span>Trang cuối</span>
+                            <svg style="width: 1.7rem" aria-hidden="true" focusable="false" data-prefix="fas"
+                                data-icon="angle-double-right" class="svg-inline--fa fa-angle-double-right fa-w-14"
+                                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor"
+                                    d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- -----TEACHER LIST END----- -->
             </div>
         </div>
         <footer class="footer_ctn">
             <div class="footer"></div>
         </footer>
     </div>
+    <script src="/components/element/element.js"></script>
     <script src="/components/navbar/navbar.js"></script>
 </body>
 

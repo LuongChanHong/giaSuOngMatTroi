@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+/* -----FILTER MOBILE START----- */
+.filter_ctn {
+}
+.filter {
+  background-color: var(--btnColor-white);
+  box-shadow: -1px 5px 10px rgb(174, 197, 193);
+  margin-top: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.filter_txt {
+  font-size: 1rem;
+  color: var(--btnColor-green);
+  font-weight: 700;
+}
+.filter .row .col {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.3rem;
+}
+.filter .row .col .filter_key,
+.filter .row .col .select_option,
+.filter .row .col .check_box_label,
+.filter .row .col .button_text {
+  font-size: 0.85rem;
+}
+.filter_key {
+  color: var(--text-color);
+  font-weight: 600;
+}
+.row {
+  row-gap: 1rem;
+}
+.check_box_stl1 {
+  padding: 0.7rem 1rem;
+}
+.check_box_stl1,
+.select_stl1 {
+  margin-top: 0.5rem;
+}
+.check_box_stl1 .check_box {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.filter_btn_ctn {
+  align-self: flex-end;
+}
+.btn_stl1 {
+  padding: 0.9rem;
+}
+.filter_ctn .row .col {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* -----FILTER MOBILE END----- */
+
+/* -----FILTER PC START----- */
+@media only screen and (min-width: 1240px) {
+  .filter_ctn {
+    padding: 0 48px !important;
+  }
+}
+/* -----FILTER PC END----- */

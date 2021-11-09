@@ -12,6 +12,7 @@
   --txtColor: #363c3b;
   --txtColor-blue: #3c8aff;
   --spe-txtColor: #d51165;
+  --border-color: #e9e3dd;
 }
 html {
   box-sizing: border-box;

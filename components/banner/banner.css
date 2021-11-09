@@ -4,6 +4,9 @@
   font-family: "Nunito", sans-serif;
 }
 /* -----BANNER MOBILE START----- */
+.banner_ctn {
+  margin-top: 5rem;
+}
 .banner_ctt {
   flex-direction: column;
   row-gap: 1.8rem;
@@ -65,7 +68,7 @@
 }
 .banner_srch,
 .banner_find {
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 1rem;
 }
 .banner_find {
   background-color: var(--btnColor-green);
@@ -105,8 +108,11 @@
 .banner_contact_phone span {
   text-decoration: underline;
   font-weight: bold;
+  cursor: pointer;
 }
 /* -----BANNER MOBILE END----- */
+
+/* -----BANNER TABLET START----- */
 @media only screen and (min-width: 530px) {
   .banner_contact {
     flex-direction: unset;
@@ -170,7 +176,7 @@
 @media only screen and (min-width: 1024px) {
   .banner_ctn {
     margin-top: 20vw;
-    height: 700px;
+    height: 500px;
   }
   .banner {
     padding: 0 48px;
@@ -183,8 +189,12 @@
     padding: 1rem;
   }
 }
+/* -----BANNER TABLET END----- */
+
+/* -----BANNER PC START----- */
 @media only screen and (min-width: 1220px) {
   .banner {
     padding: 0 10vw;
   }
 }
+/* -----BANNER PC END----- */
