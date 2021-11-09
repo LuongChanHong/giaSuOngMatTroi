@@ -2,7 +2,7 @@
 .outline_none {
   outline: 1px solid transparent;
 }
-.tutors-ctn {
+.tutors_ctn {
   padding: 0 16px;
   margin-top: 2rem;
 }
@@ -20,6 +20,7 @@
     margin-top: 1.5rem;
   }
 }
+/* -----TUTOR HEADER START----- */
 .tutors_head {
   align-items: center;
   margin-bottom: 2rem;
@@ -87,7 +88,7 @@
   font-weight: 700;
   align-self: center;
 }
-
+/* -----TUTOR HEADER END----- */
 .tutors_contact .contact1_content {
   padding: 0;
 }
@@ -137,7 +138,7 @@
   padding: 0 1rem;
 }
 
-/* Tutor Box Style 1 */
+/* -----TUTOR CARD START----- */
 .tutor_ctn {
   display: flex;
   flex-direction: column;
@@ -159,8 +160,8 @@
 }
 .tutor_img img {
   width: 30%;
-  margin: 0.5rem 0 0 0.5rem;
-  border-radius: 20px;
+  margin: 4vw 0 0 4vw;
+  border-top-left-radius: 20px;
   justify-self: center;
   align-self: center;
 }
@@ -174,7 +175,7 @@
 }
 .tutor_title {
   flex-wrap: wrap;
-  margin: 1rem 0 0 7rem;
+  margin: 1rem 0 0 33vw;
 }
 .tutor_title_name {
   font-weight: 700;
@@ -257,22 +258,80 @@
   border-radius: 20px;
   cursor: pointer;
 }
+/* -----TUTOR CARD END----- */
+
+@media only screen and (min-width: 330px) {
+  .tutor_img {
+    position: unset;
+  }
+  .tutor_img img {
+    width: 100%;
+  }
+  .tutor_info {
+    flex-basis: 60%;
+    padding: 0.5rem;
+  }
+  .tutor_img img,
+  .tutor_tags,
+  .tutor_title {
+    margin: 0;
+  }
+}
+
 /* -----TUTORS MOBILE END----- */
 
-/*>=PC low resolution - 1024px*/
-@media only screen and (min-width: 64em) {
+/* -----TUTORS TABLET START----- */
+@media only screen and (min-width: 530px) {
+  .tutor_out_bottom {
+    justify-content: space-around;
+  }
+  .tutor_out_btn {
+    display: flex;
+    justify-content: center;
+    width: 25vw;
+  }
+}
+
+@media only screen and (min-width: 740px) {
+  .tutors_ctn {
+    padding: 0 32px;
+  }
+  .tutor_img img {
+    border-bottom-left-radius: 20px;
+  }
+  .tutor_stl {
+    border-radius: 20px;
+  }
+  .tutor_invite_btn {
+    align-items: center;
+  }
+  .tutor_class,
+  .tutor_review {
+    justify-content: center;
+    column-gap: 0.3rem;
+  }
+  .tutor_invite_btn svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+/* -----TUTORS TABLET END----- */
+
+/*>=PC low resolution - 64em*/
+@media only screen and (min-width: 1024px) {
   .tutor_out_bottom.not-pc {
     display: none;
   }
 }
-/*Tablet - PC low resolution - 740px-1023px*/
-@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+/*Tablet - PC low resolution - 46.25em-63.9375em*/
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
   .tutor_out_bottom.not-tablet {
     display: none;
   }
 }
-/*<= Mobile - <=739px*/
-@media only screen and (max-width: 46.1875em) {
+/*<= Mobile - <=46.1875em*/
+@media only screen and (max-width: 739px) {
   .tutor_out_bottom.not-mobile {
     display: none;
   }
