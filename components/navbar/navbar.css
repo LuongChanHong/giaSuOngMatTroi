@@ -1,233 +1,233 @@
 /* -----NAVBAR MOBILE START----- */
-#nav_ctn{
-    background-color: var(--bgColor);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999; 
+#nav_ctn {
+  background-color: var(--bgColor);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
 }
-.nav{
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 16px 1rem 16px;
+.nav {
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 16px 1rem 16px;
 }
-.boxShadow{
-    -webkit-box-shadow: -1px 5px 10px 0px var(--box-shadow);
+.boxShadow {
+  -webkit-box-shadow: -1px 5px 10px 0px var(--box-shadow);
 }
-.nav_logo_ctn{
-    width: 33vw;
-    justify-content: center;
-    cursor: pointer;
+.nav_logo_ctn {
+  width: 33vw;
+  justify-content: center;
+  cursor: pointer;
 }
-.nav_logo img{
-    width: 3.5rem;
-    height: 3.5rem;
-    display: none;
+.nav_logo img {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: none;
 }
-.nav_menu_btn{
-    background-color: var(--btnColor-green);
+.nav_menu_btn {
+  background-color: var(--btnColor-green);
 }
-.nav_menu_btn svg{
-    width: 1rem;
-    height: 1rem;
+.nav_menu_btn svg {
+  width: 1rem;
+  height: 1rem;
 }
 .nav_login_btn,
-.nav_menu_btn{
-    border: none;
-    padding: 0.5rem 0.3rem;
-    width: 5.5rem;
-    justify-content: space-around;
-    cursor: pointer;
+.nav_menu_btn {
+  border: none;
+  padding: 0.5rem 0.3rem;
+  width: 5.5rem;
+  justify-content: space-around;
+  cursor: pointer;
 }
-.nav_login_btn{
-    background-color: var(--btnColor-white);
+.nav_login_btn {
+  background-color: var(--btnColor-white);
 }
 .nav_menu_btn span,
-.nav_login_btn span{
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: bold;
-    font-size: 0.8rem;
+.nav_login_btn span {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: bold;
+  font-size: 0.8rem;
 }
-.logo_txt{
-    align-content: center;
-    flex-wrap: wrap;
-    padding: 0 0.3rem;
-    justify-content: space-around;
+.logo_txt {
+  align-content: center;
+  flex-wrap: wrap;
+  padding: 0 0.3rem;
+  justify-content: space-around;
 }
-.logo_txt p{
-    margin: 0 0.2rem;
-    color: var(--spe-txtColor);
-    font-family: "Alegreya",serif;
-    text-shadow: 3px 3px 3px var(--txt-shadow);
+.logo_txt p {
+  margin: 0 0.2rem;
+  color: var(--speColor_1);
+  font-family: "Alegreya", serif;
+  text-shadow: 3px 3px 3px var(--txt-shadow);
 }
 
-.nav_phone_icn{
-    display: flex;
-    align-items: center;
+.nav_phone_icn {
+  display: flex;
+  align-items: center;
 }
-.nav_phone_icn svg{
-    width: 2.5rem;
-    height: 2.5rem;
+.nav_phone_icn svg {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 .nav_phone_icn svg,
-.nav_phone_num{
-    color: var(--spe-txtColor);
+.nav_phone_num {
+  color: var(--speColor_1);
 }
-.nav_phone_num p{
-    margin: 0;
-    font-weight: bold;
+.nav_phone_num p {
+  margin: 0;
+  font-weight: bold;
 }
 
 /* -----NAVBAR MOBILE END----- */
 
 /* -----NAVBAR TABLET START----- */
-@media only screen and (min-width: 530px){
-    .nav_logo img,
-    .logo_txt{
-        display: block;
-    }
-    .logo_txt{
-        line-height: 1.5rem;
-        padding-top: 0.3rem;
-    }
-    .nav_logo_ctn{
-        width: fit-content;
-    }
+@media only screen and (min-width: 530px) {
+  .nav_logo img,
+  .logo_txt {
+    display: block;
+  }
+  .logo_txt {
+    line-height: 1.5rem;
+    padding-top: 0.3rem;
+  }
+  .nav_logo_ctn {
+    width: fit-content;
+  }
 }
-@media only screen and (min-width: 740px) and (max-width:1023px){
-    .nav{
-        padding: 1rem 32px 1rem 32px;
-    }
-    .nav_phone{
-        display: flex;
-        width: 9rem;
-        justify-content: space-between;
-    }
-    .nav_menu_btn,
-    .nav_login_btn{
-        padding: 0.5rem 0.8rem;
-        width: 6.5rem;
-    }
-    .option_ctn{
-        display: none;
-    }
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+  .nav {
+    padding: 1rem 32px 1rem 32px;
+  }
+  .nav_phone {
+    display: flex;
+    width: 9rem;
+    justify-content: space-between;
+  }
+  .nav_menu_btn,
+  .nav_login_btn {
+    padding: 0.5rem 0.8rem;
+    width: 6.5rem;
+  }
+  .option_ctn {
+    display: none;
+  }
 }
 /* -----NAVBAR TABLET END----- */
 
 /* -----NAVBAR PC START----- */
-@media only screen and (min-width: 1024px){
-    .nav{
-        padding: 1rem 48px 1rem 48px;
-    }
-    .nav_menu_btn{
-        display: none;
-    }
-    .nav_logo_ctn{
-        width: 14rem;
-    }
-    .nav_logo img{
-        width: 4rem;
-        height: 4rem;
-    }
-    .logo_txt{
-        width: 14rem;
-    }
-    .logo_txt p{
-        font-size: 1.5rem;
-        margin-top: 0.2rem;
-    }
-    .nav_login{
-        flex-basis: 12%;
-    }
-    .nav_login_btn{
-        background-color: var(--btnColor-green);
-        width: fit-content;
-        padding: 1rem;
-    }
-    .nav_phone{
-        display: flex;
-        flex-basis: 15%;
-    }
-    .nav_phone_icn{
-        width: 3rem;
-        height: 3rem;
-    }
-    .nav_phone_num p{
-        padding-top: 0.2rem;
-    }
-    .option_ctn{
-        display: block;
-        flex-basis: 45%;
-    }
-    .option_item{
-        width: fit-content;
-        align-self: center;
-    }
-    .option{
-        justify-content: center;
-        column-gap: 0.7rem;
-        padding: 0.2rem;
-    }
-    .option a{
-        text-decoration: none;
-        color: var(--txtColor);
-        font-family: 'Noto Sans', sans-serif;
-        font-weight: bold;
-    }
-    .option_srch{
-        background-color: var(--btnColor-green);
-        color: var(--txtColor);
-    }
-    .option_join{
-        border: 1px solid var(--spe-txtColor);
-        color: var(--spe-txtColor);
-    }
-    .option_join,
-    .option_srch{
-        border-radius: 2rem;
-        align-items: center;
-        cursor: pointer;
-        padding: 0.5rem 1.2rem;
-        font-weight: bold;
-    }
-    .option_join svg,
-    .option_srch svg{
-        margin-right: 0.5rem;
-    }
-    .option_srch svg{
-        width: 1rem;
-        height: 1rem;
-    }
-    .option_join svg{
-        width: 1.2rem;
-        height: 1.2rem;
-    }
+@media only screen and (min-width: 1024px) {
+  .nav {
+    padding: 1rem 48px 1rem 48px;
+  }
+  .nav_menu_btn {
+    display: none;
+  }
+  .nav_logo_ctn {
+    width: 14rem;
+  }
+  .nav_logo img {
+    width: 4rem;
+    height: 4rem;
+  }
+  .logo_txt {
+    width: 14rem;
+  }
+  .logo_txt p {
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
+  }
+  .nav_login {
+    flex-basis: 12%;
+  }
+  .nav_login_btn {
+    background-color: var(--btnColor-green);
+    width: fit-content;
+    padding: 1rem;
+  }
+  .nav_phone {
+    display: flex;
+    flex-basis: 15%;
+  }
+  .nav_phone_icn {
+    width: 3rem;
+    height: 3rem;
+  }
+  .nav_phone_num p {
+    padding-top: 0.2rem;
+  }
+  .option_ctn {
+    display: block;
+    flex-basis: 45%;
+  }
+  .option_item {
+    width: fit-content;
+    align-self: center;
+  }
+  .option {
+    justify-content: center;
+    column-gap: 0.7rem;
+    padding: 0.2rem;
+  }
+  .option a {
+    text-decoration: none;
+    color: var(--txtColor_1);
+    font-family: "Noto Sans", sans-serif;
+    font-weight: bold;
+  }
+  .option_srch {
+    background-color: var(--btnColor-green);
+    color: var(--txtColor_1);
+  }
+  .option_join {
+    border: 1px solid var(--speColor_1);
+    color: var(--speColor_1);
+  }
+  .option_join,
+  .option_srch {
+    border-radius: 2rem;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem 1.2rem;
+    font-weight: bold;
+  }
+  .option_join svg,
+  .option_srch svg {
+    margin-right: 0.5rem;
+  }
+  .option_srch svg {
+    width: 1rem;
+    height: 1rem;
+  }
+  .option_join svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
 }
-@media only screen and (min-width: 1300px){
-    .nav_logo_ctn{
-        flex-basis: 22%;
-        justify-content: unset;
-    }
-    .nav_phone{
-        flex-basis: 12%;
-    }
-    .option_ctn{
-        flex-basis: 55%;
-    }
-    .nav_login{
-        flex-basis: 9%;
-    }
-    .logo_txt{
-        display: flex;
-    }
+@media only screen and (min-width: 1300px) {
+  .nav_logo_ctn {
+    flex-basis: 22%;
+    justify-content: unset;
+  }
+  .nav_phone {
+    flex-basis: 12%;
+  }
+  .option_ctn {
+    flex-basis: 55%;
+  }
+  .nav_login {
+    flex-basis: 9%;
+  }
+  .logo_txt {
+    display: flex;
+  }
 }
-@media only screen and (min-width: 1399px){
-    .option_ctn{
-        display: flex;
-    }
-    .option_ctn{
-        flex-basis: 67%;
-    }
+@media only screen and (min-width: 1399px) {
+  .option_ctn {
+    display: flex;
+  }
+  .option_ctn {
+    flex-basis: 67%;
+  }
 }
 /* -----NAVBAR PC END----- */

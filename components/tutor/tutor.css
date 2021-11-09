@@ -1,0 +1,216 @@
+/* -----TUTORS MOBILE START----- */
+.tutors {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+/*<= Mobile - <=1023px*/
+@media only screen and (max-width: 63.9375em) {
+  .tutors .row .col:nth-child(2) {
+    margin-top: 1.5rem;
+  }
+}
+
+.tutors_head_result-number {
+  flex-basis: 33.33%;
+  align-self: center;
+  display: flex;
+  column-gap: 0.1rem;
+}
+.tutors_head_result-number > div {
+  font-size: 1.5rem;
+  font-weight: 700;
+  align-self: center;
+  padding: 0.1rem 0.4rem;
+}
+.tutors_head_result-number .title-style1 {
+  color: var(--text-color);
+}
+.tutors_head_view-map {
+  flex-basis: 33.33%;
+  display: flex;
+  justify-content: center;
+}
+.tutors_head_view-map > div {
+  width: fit-content;
+  display: flex;
+  column-gap: 0.5rem;
+  justify-content: center;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+  border: 1px dotted var(--speColor_3);
+  border-radius: 20px;
+}
+.tutors_head_view-map > div svg {
+  width: 1.8rem;
+}
+.tutors_head_view-map > div span {
+  font-weight: 700;
+  align-self: center;
+}
+.tutors_head_sort {
+  flex-basis: 33.33%;
+  align-self: center;
+  display: flex;
+  justify-content: right;
+}
+.tutors_head_sort > div {
+  width: fit-content;
+  display: flex;
+  column-gap: 0.5rem;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: 1px solid var(--btnColor-green);
+}
+.tutors_head_sort > div svg {
+  width: 1.6rem;
+}
+.tutors_head_sort > div span {
+  font-weight: 700;
+  align-self: center;
+}
+
+.tutors_contact .contact1_content {
+  padding: 0;
+}
+.tutors_contact {
+  padding: 1rem 0;
+  background-color: var(--border-color);
+  border: 1px solid var(--btnColor-green);
+}
+
+.tutors_page-number {
+  display: flex;
+  justify-content: center;
+  column-gap: 1rem;
+  /* display: none; */
+}
+.tutors_page-number > div {
+  display: flex;
+  column-gap: 0.2rem;
+  justify-content: center;
+  align-content: center;
+  cursor: pointer;
+}
+.tutors_page-number > div > span {
+  align-self: center;
+  color: var(--btnColor-green);
+}
+.tutors_page-number svg {
+  width: 1rem;
+}
+.tutors_page-number_button,
+.tutors_page-number_end-page-button {
+  color: var(--text-color);
+  background-image: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255),
+    rgb(240, 246, 245)
+  );
+  border: 1px solid var(--border-color-for-background-color);
+}
+.tutors_page-number_button {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.tutors_page-number_end-page-button {
+  width: fit-content;
+  height: 2.5rem;
+  padding: 0 1rem;
+}
+
+/* Tutor Box Style 1 */
+.tutor-style1-container {
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--box-shadow1);
+}
+.tutor-style1 {
+  background-color: white;
+  display: flex;
+}
+.tutor-style1_avatar {
+  flex-basis: 40%;
+  display: flex;
+}
+.tutor-style1_avatar img {
+  width: 100%;
+  justify-self: center;
+  align-self: center;
+}
+.tutor-style1_info {
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  align-self: center;
+  padding: 0.5rem;
+}
+.tutor-style1_info_title_name {
+  font-weight: 700;
+}
+.tutor-style1_info_title_role {
+  color: var(--speColor_2);
+}
+.tutor-style1_info_tag {
+  display: flex;
+  column-gap: 0.5rem;
+}
+.tutor-style1_info_tag div {
+  border-radius: 20px;
+  padding: 0.3rem 1rem;
+  background-color: var(--bgColor);
+}
+.tutor-style1_info_description,
+.tutor-style1_info_tag,
+.tutor-style1_info_bottom {
+  color: var(--text-color);
+}
+.tutor-style1_info_bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.tutor-style1_info_bottom div {
+  flex-basis: 33.33%;
+  align-self: center;
+}
+.tutor-style1_info_bottom_review_value,
+.tutor-style1_info_bottom_class_value {
+  font-weight: 700;
+}
+.tutor-style1_info_bottom_moi-day-button {
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  margin: 0 0.5rem;
+  background-color: var(--btnColor-green);
+  font-weight: 700;
+  display: flex;
+  column-gap: 0.6rem;
+  align-content: center;
+  justify-content: center;
+}
+.tutor-style1_info_bottom_moi-day-button svg {
+  width: 1.5rem;
+}
+/* -----TUTORS MOBILE END----- */
+
+/*>=PC low resolution - 1024px*/
+@media only screen and (min-width: 64em) {
+  .tutor-style1_info_bottom.not-pc {
+    display: none;
+  }
+}
+/*Tablet - PC low resolution - 740px-1023px*/
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  .tutor-style1_info_bottom.not-tablet {
+    display: none;
+  }
+}
+/*<= Mobile - <=739px*/
+@media only screen and (max-width: 46.1875em) {
+  .tutor-style1_info_bottom.not-mobile {
+    display: none;
+  }
+}

@@ -36,7 +36,7 @@
   margin: 0;
 }
 .banner_txt {
-  color: var(--txtColor);
+  color: var(--txtColor_1);
   text-shadow: 2px 2px 5px var(--box-shadow);
   font-weight: bold;
 }
@@ -64,7 +64,7 @@
 .banner_srch svg {
   width: 1.3rem;
   height: 1.3rem;
-  color: var(--txtColor);
+  color: var(--txtColor_1);
 }
 .banner_srch,
 .banner_find {
@@ -90,7 +90,7 @@
   column-gap: 0.5rem;
 }
 .banner_contact_zalo span {
-  color: var(--txtColor-blue);
+  color: var(--txtColor_2);
   font-weight: bold;
   align-self: center;
 }
@@ -103,7 +103,7 @@
 }
 .banner_contact_phone svg,
 .banner_contact_phone span {
-  color: var(--spe-txtColor);
+  color: var(--speColor_1);
 }
 .banner_contact_phone span {
   text-decoration: underline;

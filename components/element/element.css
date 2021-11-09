@@ -9,7 +9,7 @@
 }
 .btn_stl1 svg {
   width: 1.3rem;
-  color: var(--txtColor);
+  color: var(--txtColor_1);
 }
 .btn_stl1 {
   background-color: var(--btnColor-green);
@@ -103,7 +103,7 @@
   -ms-transform: skewX(-10deg);
   transform: skewX(-10deg);
   z-index: -1;
-  background-color: var(--special-color-2);
+  background-color: var(--speColor_3);
 }
 
 /* One Input Style 1 */

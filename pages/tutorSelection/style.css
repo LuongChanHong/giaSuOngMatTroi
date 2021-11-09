@@ -3,16 +3,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
 
 :root {
-  --bgColor: #f7f2ed;
   --test-bgColor: seagreen;
+  --bgColor: #f7f2ed;
+
+  --txtColor_1: #363c3b;
+  --txtColor_2: #3c8aff;
+  --txtColor-3: #a15a79;
+
+  --speColor_1: #d51165;
+  --speColor_2: #a56e01;
+  --speColor_3: #ffac00;
+  --speColor_4: #ffa4cb;
+
+  --border-color: #e9e3dd;
+
   --btnColor-green: #03ccbb;
   --btnColor-white: #ffffff;
+
   --box-shadow: #c3d2ce;
   --txt-shadow: #bdb6b9;
-  --txtColor: #363c3b;
-  --txtColor-blue: #3c8aff;
-  --spe-txtColor: #d51165;
+
+  --background-color: #f7f2ed;
+  --backgroun-color1: #ebfaf8;
+  --nav-background: #f7f2ed;
+  --special-color-1: #03ccbb;
+  --special-text-1: #039c90;
+  --special-color-2: #ffac00;
+  --special-text-2: #a56e01;
+  --special-color-3: #ffa4cb;
+  --special-text-3: #a15a79;
+  --logo-color: #d51165;
+  --text-color: #555452;
+  --text-color-2: #181357;
+  --text-color-clear: #000000;
+  --text-color-special-1: #00c2b2;
   --border-color: #e9e3dd;
+  --border-color-for-background-color: #b9b5b0;
+
+  --shadow-color1: rgb(174, 197, 193);
+  --box-shadow1: -1px 5px 10px var(--shadow-color1);
 }
 html {
   box-sizing: border-box;
