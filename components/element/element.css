@@ -107,10 +107,10 @@
 }
 
 /* One Input Style 1 */
-.one-input-style1 {
+.one_input_stl1 {
   display: flex;
 }
-.one-input-style1_input {
+.one_input_stl1_ipt {
   flex-basis: 63%;
   background-color: white;
   font-size: 1rem;
@@ -120,43 +120,43 @@
   display: flex;
   justify-content: space-between;
 }
-.one-input-style1_input svg {
+.one_input_stl1_ipt svg {
   align-self: center;
   width: 1.2rem;
   height: 1.2rem;
   color: var(--text-color);
 }
-.one-input-style1_button {
+.one_input_stl1_btn {
   flex-basis: 40%;
   display: flex;
   justify-content: center;
 }
-.one-input-style1_button span {
+.one_input_stl1_btn span {
   align-self: center;
   font-weight: 700;
 }
 /* >Mobile - 740px */
 @media only screen and (min-width: 46.1876em) {
-  .one-input-style1 {
+  .one_input_stl1 {
     width: 450px;
   }
 }
 /*Tablet - PC low resolution - 740px-1023px*/
 @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
-  .one-input-style1 {
+  .one_input_stl1 {
     width: 400px;
   }
 }
 /*<= Mobile - <=739px*/
 @media only screen and (max-width: 46.1875em) {
-  .one-input-style1 {
+  .one_input_stl1 {
     flex-direction: column;
     row-gap: 1rem;
   }
-  .one-input-style1_input {
+  .one_input_stl1_ipt {
     flex-basis: 100%;
   }
-  .one-input-style1_button {
+  .one_input_stl1_btn {
     flex-basis: 100%;
     font-size: 1rem;
     font-weight: 700;
@@ -165,68 +165,68 @@
 }
 /*<= Mobile 490px - <=490px*/
 @media only screen and (max-width: 30.625em) {
-  .one-input-style1 {
+  .one_input_stl1 {
     flex-direction: column;
     row-gap: 0.8rem;
   }
-  .one-input-style1_input {
+  .one_input_stl1_ipt {
     font-size: 1rem;
     padding: 0.8rem 1.5rem;
   }
-  .one-input-style1_button {
+  .one_input_stl1_btn {
     font-size: 1rem;
     padding: 0.8rem 1.5rem;
   }
 }
 
 /* CONTACT NUMBER STYLE 1 */
-.contact-number-style1 {
+.contact_num_stl1 {
   font-size: 1rem;
   font-weight: 700;
   display: flex;
   column-gap: 1.5rem;
 }
-.contact-number-style1 > div {
+.contact_num_stl1 > div {
   display: flex;
   column-gap: 0.5rem;
   cursor: pointer;
 }
-.contact-number-style1 div span {
+.contact_num_stl1 div span {
   align-self: center;
 }
-.contact-number-style1_zalo {
+.contact_num_stl1_zalo {
   color: #3c8aff;
 }
-.contact-number-style1_phone-number {
+.contact_numstl1_phone {
   color: var(--logo-color);
 }
-.contact-number-style1_phone-number svg {
+.contact_numstl1_phone svg {
   align-self: center;
   width: 1.4rem;
   height: 1.4rem;
 }
-.contact-number-style1_phone-number span {
+.contact_numstl1_phone span {
   text-decoration: underline;
 }
 /*Tablet - Tablet 910px - 740px-945px*/
 @media only screen and (min-width: 46.25em) and (max-width: 59.0625em) {
-  .contact-number-style1 {
+  .contact_num_stl1 {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
   }
-  .contact-number-style1_phone-number {
+  .contact_numstl1_phone {
     padding-left: 6px;
   }
 }
 /*<= Mobile 490px - <=490px*/
 @media only screen and (max-width: 30.625em) {
-  .contact-number-style1 {
+  .contact_num_stl1 {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
   }
-  .contact-number-style1 div {
+  .contact_num_stl1 div {
     justify-content: center;
   }
 }

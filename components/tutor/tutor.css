@@ -17,13 +17,7 @@
 .tutor_card {
   margin-bottom: 1rem;
 }
-/*<= Mobile - <=1023px*/
-@media only screen and (max-width: 63.9375em) {
-  .tutors .row .col:nth-child(2) {
-    margin-top: 1.5rem;
-  }
-}
-/* -----TUTOR HEADER START----- */
+/* TUTOR HEADER START */
 .tutors_head {
   align-items: center;
   margin-bottom: 2rem;
@@ -91,16 +85,21 @@
   font-weight: 700;
   align-self: center;
 }
-/* -----TUTOR HEADER END----- */
-.tutors_contact .contact1_content {
+.tutors_contact {
   padding: 0;
 }
 .tutors_contact {
-  padding: 1rem 0;
+  padding: 2rem 0;
   background-color: var(--bgColor_2);
   border: 1px solid var(--btnColor_1);
+  border-radius: 20px;
 }
-
+.contact_ctt h2 {
+  text-align: center;
+  font-size: 2rem;
+  text-shadow: 3px 3px 3px rgb(202 202 202);
+  margin: 0;
+}
 .tutors_page-number {
   display: flex;
   justify-content: center;
@@ -141,7 +140,7 @@
   padding: 0 1rem;
 }
 
-/* -----TUTOR CARD START----- */
+/* TUTOR CARD START */
 .tutor_ctn {
   display: flex;
   flex-direction: column;
@@ -204,7 +203,7 @@
   color: var(--text-color);
 }
 .tutor_bottom {
-  display: flex;
+  display: none;
   justify-content: space-between;
 }
 .tutor_bottom div {
@@ -233,6 +232,7 @@
 .tutor_out_bottom {
   justify-content: space-between;
   padding: 0.8rem;
+  display: flex;
 }
 .tutor_out_btn span,
 .tutor_out_btn svg,
@@ -261,8 +261,41 @@
   border-radius: 20px;
   cursor: pointer;
 }
-/* -----TUTOR CARD END----- */
+/* TUTOR CARD END */
 
+/* TUTOR CONTACT START */
+.contact_phone_ipt input {
+  width: -webkit-fill-available;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+}
+.contact_ctt {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  justify-content: center;
+  align-content: center;
+  padding: 0 1rem;
+}
+.contact_num_ctn {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.contact_num_stl1_zalo span,
+.contact_numstl1_phone span {
+  align-self: center;
+}
+.contact_num_ctn .contact_num_stl1_zalo,
+.contact_num_ctn .contact_numstl1_phone {
+  display: flex;
+  column-gap: 0.3rem;
+  font-weight: bold;
+  justify-content: center;
+}
+/* TUTOR CONTACT END */
 @media only screen and (min-width: 330px) {
   .tutor_img {
     position: unset;
@@ -279,8 +312,8 @@
   .tutor_title {
     margin: 0;
   }
+  /* TUTOR HEADER START */
 }
-
 /* -----TUTORS MOBILE END----- */
 
 /* -----TUTORS TABLET START----- */
@@ -308,15 +341,16 @@
   .tutors_head_sort {
     justify-content: center;
   }
+  .contact_num_ctn,
+  .contact_back {
+    padding: 0 15vw;
+  }
 }
 
 @media only screen and (min-width: 740px) {
   .tutors_ctn {
     padding: 0 32px;
     margin-top: 2rem;
-  }
-  .tutor_bottom {
-    display: flex;
   }
   .tutor_img img {
     border-bottom-left-radius: 20px;
@@ -339,6 +373,13 @@
   .tutors_head_num {
     flex-wrap: nowrap;
     display: flex !important;
+  }
+  .contact_num_ctn,
+  .contact_back {
+    padding: 0;
+  }
+  .contact_back {
+    align-self: center;
   }
 }
 
@@ -371,6 +412,20 @@
     width: 2rem;
     height: 2rem;
   }
+  .tutor_bottom {
+    display: flex;
+  }
+  .tutor_out_bottom {
+    display: none;
+  }
+  .contact_num_ctn {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1rem;
+  }
+  .tutors_contact_ctn {
+    padding: 0 -8px;
+  }
 }
 @media only screen and (min-width: 1300px) {
   .tutors_ctn {
@@ -378,22 +433,3 @@
   }
 }
 /* -----TUTORS PC END----- */
-
-/*>=PC low resolution - 64em*/
-@media only screen and (min-width: 1024px) {
-  .tutor_out_bottom.not-pc {
-    display: none;
-  }
-}
-/*Tablet - PC low resolution - 46.25em-63.9375em*/
-@media only screen and (min-width: 740px) and (max-width: 1023px) {
-  .tutor_out_bottom.not-tablet {
-    display: none;
-  }
-}
-/*<= Mobile - <=46.1875em*/
-@media only screen and (max-width: 739px) {
-  .tutor_out_bottom.not-mobile {
-    display: none;
-  }
-}
