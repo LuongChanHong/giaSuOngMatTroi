@@ -45,7 +45,7 @@
   row-gap: 0.8rem;
 }
 .banner_srch {
-  background-color: var(--btnColor-2);
+  background-color: var(--btnColor_2);
   justify-content: space-between;
 }
 .banner_srch input {
@@ -71,7 +71,7 @@
   padding: 0.8rem 1rem;
 }
 .banner_find {
-  background-color: var(--btnColor-1);
+  background-color: var(--btnColor_1);
   text-align: center;
   font-weight: bold;
   cursor: pointer;

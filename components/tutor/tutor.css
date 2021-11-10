@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 /* -----TUTORS MOBILE START----- */
 .outline_none {
   outline: 1px solid transparent;
@@ -49,7 +52,7 @@
 }
 .tutors_head_loctn > div {
   padding: 0.5rem 0.8rem;
-  border: 1px solid var(--speColor_3);
+  background-color: var(--speColor_3);
 }
 .tutors_head_loctn > div,
 .tutors_head_sort > div {
@@ -62,7 +65,7 @@
 }
 .tutors_head_sort > div {
   padding: 0.5rem 1rem;
-  border: 1px solid var(--btnColor-1);
+  background-color: var(--btnColor_1);
 }
 .tutors_head_sort > div svg {
   display: block;
@@ -95,7 +98,7 @@
 .tutors_contact {
   padding: 1rem 0;
   background-color: var(--bgColor_2);
-  border: 1px solid var(--btnColor-1);
+  border: 1px solid var(--btnColor_1);
 }
 
 .tutors_page-number {
@@ -113,7 +116,7 @@
 }
 .tutors_page-number > div > span {
   align-self: center;
-  color: var(--btnColor-1);
+  color: var(--btnColor_1);
 }
 .tutors_page-number svg {
   width: 1rem;
@@ -217,7 +220,7 @@
   cursor: pointer;
   padding: 0.5rem 1.5rem;
   margin: 0 0.5rem;
-  background-color: var(--btnColor-1);
+  background-color: var(--btnColor_1);
   font-weight: 700;
   display: flex;
   column-gap: 0.6rem;
@@ -253,7 +256,7 @@
   column-gap: 0.2rem;
 }
 .tutor_out_btn {
-  background-color: var(--btnColor-1);
+  background-color: var(--btnColor_1);
   padding: 0.5rem 0.8rem;
   border-radius: 20px;
   cursor: pointer;
@@ -290,11 +293,30 @@
     justify-content: center;
     width: 25vw;
   }
+  .tutor_bottom {
+    display: none;
+  }
+  .tutors_head_num {
+    justify-content: center;
+  }
+  .tutors_head_loctn > div svg {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    align-self: center;
+  }
+  .tutors_head_sort {
+    justify-content: center;
+  }
 }
 
 @media only screen and (min-width: 740px) {
   .tutors_ctn {
     padding: 0 32px;
+    margin-top: 2rem;
+  }
+  .tutor_bottom {
+    display: flex;
   }
   .tutor_img img {
     border-bottom-left-radius: 20px;
@@ -314,9 +336,48 @@
     width: 1.5rem;
     height: 1.5rem;
   }
+  .tutors_head_num {
+    flex-wrap: nowrap;
+    display: flex !important;
+  }
 }
 
 /* -----TUTORS TABLET END----- */
+
+/* -----TUTORS PC START----- */
+@media only screen and (min-width: 1024px) {
+  .tutors_ctn {
+    padding: 0 40px;
+  }
+  .tutors_head_num div {
+    font-size: 2rem;
+  }
+  .tutors_loctn-txt {
+    flex-direction: row;
+    column-gap: 0.2rem;
+  }
+  .tutors_head_sort div span,
+  .tutors_loctn-txt span {
+    font-size: 1.2rem;
+  }
+  .tutors_head_loctn div {
+    padding: 0.5rem;
+  }
+  .tutors_head_sort div {
+    padding: 0.8rem 0;
+  }
+  .tutors_head_sort div svg,
+  .tutors_head_loctn div svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .tutors_ctn {
+    padding: 0 48px;
+  }
+}
+/* -----TUTORS PC END----- */
 
 /*>=PC low resolution - 64em*/
 @media only screen and (min-width: 1024px) {

@@ -26,7 +26,7 @@
   display: none;
 }
 .nav_menu_btn {
-  background-color: var(--btnColor-1);
+  background-color: var(--btnColor_1);
 }
 .nav_menu_btn svg {
   width: 1rem;
@@ -41,7 +41,7 @@
   cursor: pointer;
 }
 .nav_login_btn {
-  background-color: var(--btnColor-2);
+  background-color: var(--btnColor_2);
 }
 .nav_menu_btn span,
 .nav_login_btn span {
@@ -141,7 +141,7 @@
     flex-basis: 12%;
   }
   .nav_login_btn {
-    background-color: var(--btnColor-1);
+    background-color: var(--btnColor_1);
     width: fit-content;
     padding: 1rem;
   }
@@ -176,7 +176,7 @@
     font-weight: bold;
   }
   .option_srch {
-    background-color: var(--btnColor-1);
+    background-color: var(--btnColor_1);
     color: var(--txtColor_1);
   }
   .option_join {

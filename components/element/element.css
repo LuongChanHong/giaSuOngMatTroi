@@ -5,14 +5,14 @@
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  border: 0.5px solid var(--btnColor-1);
+  border: 0.5px solid var(--btnColor_1);
 }
 .btn_stl1 svg {
   width: 1.3rem;
   color: var(--txtColor_1);
 }
 .btn_stl1 {
-  background-color: var(--btnColor-1);
+  background-color: var(--btnColor_1);
   cursor: pointer;
 }
 .btn_stl1:hover {
@@ -37,7 +37,7 @@
 }
 .select_stl1:hover {
   cursor: pointer;
-  border: 1px solid var(--btnColor-1);
+  border: 1px solid var(--btnColor_1);
   transition: 0.5s;
 }
 
@@ -56,7 +56,7 @@
 }
 .check_box_stl1:hover {
   cursor: pointer;
-  border: 1px solid var(--btnColor-1);
+  border: 1px solid var(--btnColor_1);
   transition: 0.5s;
 }
 .check_box_stl1 div {
@@ -73,11 +73,11 @@
   align-self: center;
 }
 .check_box_stl1 div:hover > .check_box {
-  border: 0.5px solid var(--btnColor-1);
+  border: 0.5px solid var(--btnColor_1);
   transition: 0.5s;
 }
 .check_box_stl1 div:active > .check_box {
-  background-color: var(--btnColor-1);
+  background-color: var(--btnColor_1);
   color: black;
   transition: 0.5s;
 }
@@ -289,7 +289,7 @@
   align-self: center;
   width: 1.4rem;
   height: 1.4rem;
-  color: var(--btnColor-1);
+  color: var(--btnColor_1);
   transition: all 0.25s;
 }
 .show-and-hide-style1 .show-and-hide_content_item_content {
