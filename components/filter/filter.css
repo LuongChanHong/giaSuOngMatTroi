@@ -59,7 +59,7 @@
 /* -----FILTER MOBILE END----- */
 
 /* -----FILTER PC START----- */
-@media only screen and (min-width: 1240px) {
+@media only screen and (min-width: 1240px) and (max-width: 1400px) {
   .filter_ctn {
     padding: 0 48px !important;
   }
