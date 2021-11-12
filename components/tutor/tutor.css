@@ -85,60 +85,48 @@
   font-weight: 700;
   align-self: center;
 }
-.tutors_contact {
-  padding: 0;
+/* TUTOR HEADER END */
+
+/* PAGE NUMBER BUTTON START */
+.t_page_num {
+  display: none;
 }
-.tutors_contact {
-  padding: 2rem 0;
-  background-color: var(--bgColor_2);
-  border: 1px solid var(--btnColor_1);
-  border-radius: 20px;
-}
-.contact_ctt h2 {
-  text-align: center;
-  font-size: 2rem;
-  text-shadow: 3px 3px 3px rgb(202 202 202);
-  margin: 0;
-}
-.tutors_page-number {
+.tutor_page_num {
   display: flex;
   justify-content: center;
   column-gap: 1rem;
-  /* display: none; */
+  display: none;
 }
-.tutors_page-number > div {
+.tutor_page_num > div {
   display: flex;
   column-gap: 0.2rem;
   justify-content: center;
   align-content: center;
   cursor: pointer;
 }
-.tutors_page-number > div > span {
+.tutor_page_num > div > span {
   align-self: center;
-  color: var(--btnColor_1);
+  color: var(--text-color);
 }
-.tutors_page-number svg {
+.tutor_page_num svg {
   width: 1rem;
 }
-.tutors_page-number_button,
-.tutors_page-number_end-page-button {
+.tutor_page_btn,
+.tutors_page_end_btn {
   color: var(--text-color);
-  background-image: linear-gradient(
-    to bottom,
-    rgb(255, 255, 255),
-    rgb(240, 246, 245)
-  );
-  border: 1px solid var(--border-color-for-background-color);
+  background-color: var(--btnColor_1);
+  border-radius: 10px;
 }
-.tutors_page-number_button {
+.tutor_page_btn {
   width: 2.5rem;
   height: 2.5rem;
 }
-.tutors_page-number_end-page-button {
+.tutors_page_end_btn {
   width: fit-content;
   height: 2.5rem;
   padding: 0 1rem;
 }
+/* PAGE NUMBER BUTTON END */
 
 /* TUTOR CARD START */
 .tutor_ctn {
@@ -162,7 +150,7 @@
 }
 .tutor_img img {
   width: 30%;
-  margin: 4vw 0 0 4vw;
+  margin: 0.8rem 0 0 0.8rem;
   border-top-left-radius: 20px;
   justify-self: center;
   align-self: center;
@@ -177,7 +165,7 @@
 }
 .tutor_title {
   flex-wrap: wrap;
-  margin: 1rem 0 0 33vw;
+  margin: 1vw 0 0 33vw;
 }
 .tutor_title_name {
   font-weight: 700;
@@ -186,7 +174,7 @@
   color: var(--speColor_2);
 }
 .tutor_tags {
-  margin-top: 1rem;
+  margin-top: 1.8rem;
   display: flex;
   column-gap: 0.5rem;
   row-gap: 0.2rem;
@@ -253,7 +241,7 @@
 .tutor_out_review,
 .tutor_out_class {
   align-items: center;
-  column-gap: 0.2rem;
+  column-gap: 0.3rem;
 }
 .tutor_out_btn {
   background-color: var(--btnColor_1);
@@ -264,12 +252,30 @@
 /* TUTOR CARD END */
 
 /* TUTOR CONTACT START */
+.tutors_contact_ctn {
+  margin-bottom: 1rem;
+}
 .contact_phone_ipt input {
   width: -webkit-fill-available;
   padding: 1rem;
   font-size: 1rem;
   font-weight: bold;
   border: none;
+}
+.tutors_contact {
+  padding: 0;
+}
+.tutors_contact {
+  padding: 2rem 0;
+  background-color: var(--bgColor_2);
+  border: 1px solid var(--btnColor_1);
+  border-radius: 20px;
+}
+.contact_ctt h2 {
+  text-align: center;
+  font-size: 2rem;
+  text-shadow: 3px 3px 3px rgb(202 202 202);
+  margin: 0;
 }
 .contact_ctt {
   display: flex;
@@ -296,7 +302,25 @@
   justify-content: center;
 }
 /* TUTOR CONTACT END */
-@media only screen and (min-width: 330px) {
+/* -----TUTORS MOBILE START----- */
+@media only screen and (min-width: 340px) and (max-width: 409px) {
+  .tutor_tags {
+    margin-top: 0;
+    margin-left: 33vw;
+  }
+  .tutor_tags {
+    margin-left: 33vw;
+  }
+  .tutor_intro {
+    /* margin-top: 10vw; */
+  }
+}
+@media only screen and (min-width: 380px) and (max-width: 409px) {
+  .tutor_intro {
+    margin-top: 3rem;
+  }
+}
+@media only screen and (min-width: 410px) and (max-width: 440px) {
   .tutor_img {
     position: unset;
   }
@@ -312,7 +336,25 @@
   .tutor_title {
     margin: 0;
   }
-  /* TUTOR HEADER START */
+  .tutor_img img {
+    border-top-left-radius: unset;
+  }
+}
+@media only screen and (min-width: 441px) {
+  .tutor_img {
+    position: unset;
+  }
+  .tutor_img img {
+    width: 100%;
+  }
+  .tutor_tags,
+  .tutor_title,
+  .tutor_img img {
+    margin: 0;
+  }
+  .tutor_info {
+    flex-basis: 60%;
+  }
 }
 /* -----TUTORS MOBILE END----- */
 
@@ -387,6 +429,9 @@
 
 /* -----TUTORS PC START----- */
 @media only screen and (min-width: 1024px) {
+  .tutor_img img {
+    border-radius: unset;
+  }
   .tutors_ctn {
     padding: 0 40px;
   }
@@ -415,6 +460,7 @@
   .tutor_bottom {
     display: flex;
   }
+  .m_page_num,
   .tutor_out_bottom {
     display: none;
   }
@@ -425,6 +471,9 @@
   }
   .tutors_contact_ctn {
     padding: 0 -8px;
+  }
+  .t_page_num {
+    display: block;
   }
 }
 @media only screen and (min-width: 1300px) {
