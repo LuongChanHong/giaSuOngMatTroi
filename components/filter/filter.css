@@ -52,9 +52,54 @@
   padding-left: 4px;
   padding-right: 4px;
 }
-.activeSelect {
+.activeOutline {
   outline: 5px solid var(--btnColor_1);
 }
+.activeBg {
+  background-color: var(--btnColor_1);
+}
+.select_case {
+  background-color: var(--btnColor_2);
+  border: 1px solid var(--btnColor_1);
+  position: absolute;
+  row-gap: unset;
+  /* display: flex; */
+  flex-direction: column;
+  width: 75%;
+  height: 10rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.select_case::-webkit-scrollbar {
+  width: 3px;
+}
+
+.select_case::-webkit-scrollbar-thumb {
+  background-color: var(--speColor_5);
+}
+.select_item span {
+  padding: 1rem;
+  font-weight: bold;
+}
+.select_case_ctn {
+  display: none;
+}
+@media only screen and (min-width: 320px) {
+  .select_case {
+    width: 85%;
+  }
+}
+@media only screen and (min-width: 530px) {
+  .select_case {
+    width: 83%;
+  }
+}
+@media only screen and (min-width: 630px) {
+  .select_case {
+    width: 85%;
+  }
+}
+
 /* -----FILTER MOBILE END----- */
 
 /* -----FILTER PC START----- */

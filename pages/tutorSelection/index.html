@@ -161,11 +161,13 @@
                             </div>
                         </div>
                         <div class="row">
+                            <!-- subject filter start -->
                             <div class="col pc-2 tc-4 mc-12">
                                 <span class="filter_key">MÔN HỌC</span>
-                                <div id="subject" class="select_item_ctn" onclick="activeSelect(subject)">
+                                <div id="filter_subject" class="select_item_ctn"
+                                    onclick="activeFilterBtn(filter_subject),showOptionList(subject_option)">
                                     <div class="select_stl1">
-                                        <span class="select_option">Tất cả môn</span>
+                                        <span id="subject_stl" class="select_option">Tất cả môn</span>
                                         <svg aria-hidden="true" focusable="false" data-prefix="fas"
                                             data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14"
                                             role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -175,10 +177,44 @@
                                         </svg>
                                     </div>
                                 </div>
+                                <!-- option start -->
+                                <div id="subject_option" class="select_case_ctn">
+                                    <div class="select_case">
+                                        <!-- option -->
+                                        <div id="subject_all"
+                                            class="select_item select_option col pc-12 tc-12 mc-12 activeBg"
+                                            onclick="activeFilterSubject(subject_all),document.getElementById('subject_stl').innerHTML='Tất cả môn'">
+                                            <span>Tất
+                                                cả
+                                                môn</span>
+                                        </div>
+                                        <!-- option -->
+                                        <div id="subject_math" class="select_item select_option col pc-12 tc-12 mc-12"
+                                            onclick="activeFilterSubject(subject_math),document.getElementById('subject_stl').innerHTML='Toán'">
+                                            <span>Toán</span>
+                                        </div>
+                                        <!-- option -->
+                                        <div id="subject_physic" class="select_item select_option col pc-12 tc-12 mc-12"
+                                            onclick="activeFilterSubject(subject_physic),document.getElementById('subject_stl').innerHTML='Lí'">
+                                            <span>Lí</span>
+                                        </div>
+                                        <!-- option -->
+                                        <div id="subject_chemis" class="select_item select_option col pc-12 tc-12 mc-12"
+                                            onclick="activeFilterSubject(subject_chemis),document.getElementById('subject_stl').innerHTML='Hóa'">
+                                            <span>Hóa</span>
+                                        </div>
+                                        <!-- option -->
+                                    </div>
+                                </div>
+                                <!-- option end -->
                             </div>
+                            <!-- subject filter end -->
+
+                            <!-- certificate filter start -->
                             <div class="col pc-2 tc-4 mc-12">
                                 <span class="filter_key">LỚP/ CHỨNG CHỈ</span>
-                                <div id="certifi" class="select_item_ctn" onclick="activeSelect(certifi)">
+                                <div id="filter_certifi" class="select_item_ctn"
+                                    onclick="activeFilterBtn(filter_certifi)">
                                     <div class="select_stl1">
                                         <span class="select_option">Tất cả lớp</span>
                                         <svg aria-hidden="true" focusable="false" data-prefix="fas"
@@ -191,9 +227,12 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- certificate filter end -->
+
+                            <!-- tutor career filter start -->
                             <div class="col pc-2 tc-4 mc-12">
                                 <span class="filter_key">GIA SƯ LÀ</span>
-                                <div id="tutorCareer" class="select_item_ctn" onclick="activeSelect(tutorCareer)">
+                                <div id="tutorCareer" class="select_item_ctn" onclick="activeFilterBtn(tutorCareer)">
                                     <div class="select_stl1">
                                         <span class="select_option">Tất cả gia sư</span>
                                         <svg aria-hidden="true" focusable="false" data-prefix="fas"
@@ -206,6 +245,9 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- tutor career filter end -->
+
+                            <!-- gender filter start -->
                             <div class="col pc-2 tc-4 mc-12">
                                 <span class="filter_key">GIỚI TÍNH</span>
                                 <div class="check_box_stl1">
@@ -219,9 +261,13 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- gender filter end -->
+
+                            <!-- section filter start -->
                             <div class="col pc-2 tc-4 mc-12">
                                 <span class="filter_key">KHU VỰC</span>
-                                <div id="tutorSection" class="select_item_ctn" onclick="activeSelect(tutorSection)">
+                                <div id="filter_section" class="select_item_ctn"
+                                    onclick="activeFilterBtn(filter_section)">
                                     <div class="filter_select select_stl1">
                                         <span class="select_option">1 kèm 1</span>
                                         <svg aria-hidden="true" focusable="false" data-prefix="fas"
@@ -234,6 +280,9 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- section filter end -->
+
+                            <!-- tutor filter button start -->
                             <div class="filter_btn_ctn col pc-2 tc-4 mc-12">
                                 <div class="btn_stl1">
                                     <span class="button-text">Lọc gia sư</span>
@@ -246,6 +295,7 @@
                                     </svg>
                                 </div>
                             </div>
+                            <!-- tutor filter button end -->
                         </div>
                     </div>
                 </div>

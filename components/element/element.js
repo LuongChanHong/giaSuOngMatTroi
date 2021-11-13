@@ -23,11 +23,29 @@
 // }
 
 // ACTIVE EFFECT JS
-function activeSelect(seclectedId) {
+function activeFilterBtn(seclectedId) {
   var classArray = document.getElementsByClassName("select_item_ctn");
   for (var i = 0; i < classArray.length; i++) {
-    classArray[i].classList.remove("activeSelect");
+    classArray[i].classList.remove("activeOutline");
   }
-  seclectedId.classList.add("activeSelect");
+  seclectedId.classList.add("activeOutline");
   //   console.log("element", seclectedId);
+}
+
+function activeFilterSubject(seclectedId) {
+  var classArray = document.getElementsByClassName("select_item");
+  for (var i = 0; i < classArray.length; i++) {
+    classArray[i].classList.remove("activeBg");
+  }
+  seclectedId.classList.add("activeBg");
+}
+
+var isClicked = false;
+function showOptionList(id) {
+  isClicked = !isClicked;
+  if (isClicked) {
+    document.getElementById(id).style.display = "block";
+  } else {
+    document.getElementById(id).style.display = "none";
+  }
 }
