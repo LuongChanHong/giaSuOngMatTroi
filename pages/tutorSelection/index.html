@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/components/banner/banner.css">
     <link rel="stylesheet" href="/components/navbar/navbar.css">
     <link rel="stylesheet" href="/gridLibrary/gridBasic.css">
+
 </head>
 
 <body>
@@ -162,41 +163,47 @@
                         <div class="row">
                             <div class="col pc-2 tc-4 mc-12">
                                 <span class="filter_key">MÔN HỌC</span>
-                                <div class="select_stl1">
-                                    <span class="select_option">Tất cả môn</span>
-                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down"
-                                        class="svg-inline--fa fa-chevron-down fa-w-14" role="img"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                        <path fill="currentColor"
-                                            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
-                                        </path>
-                                    </svg>
+                                <div id="subject" class="select_item_ctn" onclick="activeSelect(subject)">
+                                    <div class="select_stl1">
+                                        <span class="select_option">Tất cả môn</span>
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                            data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14"
+                                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                            <path fill="currentColor"
+                                                d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
+                                            </path>
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col pc-2 tc-4 mc-12">
                                 <span class="filter_key">LỚP/ CHỨNG CHỈ</span>
-                                <div class="select_stl1">
-                                    <span class="select_option">Tất cả lớp</span>
-                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down"
-                                        class="svg-inline--fa fa-chevron-down fa-w-14" role="img"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                        <path fill="currentColor"
-                                            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
-                                        </path>
-                                    </svg>
+                                <div id="certifi" class="select_item_ctn" onclick="activeSelect(certifi)">
+                                    <div class="select_stl1">
+                                        <span class="select_option">Tất cả lớp</span>
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                            data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14"
+                                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                            <path fill="currentColor"
+                                                d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
+                                            </path>
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col pc-2 tc-4 mc-12">
                                 <span class="filter_key">GIA SƯ LÀ</span>
-                                <div class="select_stl1">
-                                    <span class="select_option">Tất cả gia sư</span>
-                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down"
-                                        class="svg-inline--fa fa-chevron-down fa-w-14" role="img"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                        <path fill="currentColor"
-                                            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
-                                        </path>
-                                    </svg>
+                                <div id="tutorCareer" class="select_item_ctn" onclick="activeSelect(tutorCareer)">
+                                    <div class="select_stl1">
+                                        <span class="select_option">Tất cả gia sư</span>
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                            data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14"
+                                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                            <path fill="currentColor"
+                                                d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
+                                            </path>
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col pc-2 tc-4 mc-12">
@@ -214,20 +221,22 @@
                             </div>
                             <div class="col pc-2 tc-4 mc-12">
                                 <span class="filter_key">KHU VỰC</span>
-                                <div class="filter_select select_stl1">
-                                    <span class="select_option">1 kèm 1</span>
-                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down"
-                                        class="svg-inline--fa fa-chevron-down fa-w-14" role="img"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                        <path fill="currentColor"
-                                            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
-                                        </path>
-                                    </svg>
+                                <div id="tutorSection" class="select_item_ctn" onclick="activeSelect(tutorSection)">
+                                    <div class="filter_select select_stl1">
+                                        <span class="select_option">1 kèm 1</span>
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                            data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14"
+                                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                            <path fill="currentColor"
+                                                d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
+                                            </path>
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
                             <div class="filter_btn_ctn col pc-2 tc-4 mc-12">
                                 <div class="btn_stl1">
-                                    <span class="button-text">Lọc tìm gia sư</span>
+                                    <span class="button-text">Lọc gia sư</span>
                                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search"
                                         class="svg-inline--fa fa-search fa-w-16" role="img"
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -1037,6 +1046,7 @@
     </div>
     <script src="/components/element/element.js"></script>
     <script src="/components/navbar/navbar.js"></script>
+
 </body>
 
 </html>
