@@ -69,6 +69,7 @@
   height: 10rem;
   overflow-x: hidden;
   overflow-y: scroll;
+  z-index: 9;
 }
 .select_case::-webkit-scrollbar {
   width: 3px;
@@ -99,7 +100,21 @@
     width: 85%;
   }
 }
-
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+  .select_case {
+    width: 13.2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .select_case {
+    width: 9.7rem;
+  }
+}
+@media only screen and (min-width: 1240px) {
+  .select_case {
+    width: 12.5rem;
+  }
+}
 /* -----FILTER MOBILE END----- */
 
 /* -----FILTER PC START----- */

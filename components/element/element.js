@@ -104,8 +104,8 @@ document
   .getElementById("filter_subject")
   .addEventListener("click", function () {
     hideAllOptionList("subject_option");
-    activeElement("filter_subject", "select_item_ctn", "activeOutline");
     showOptionList("subject_option");
+    activeElement("filter_subject", "select_item_ctn", "activeOutline");
   });
 // Options - start
 document.getElementById("subject_all").addEventListener("click", function () {
