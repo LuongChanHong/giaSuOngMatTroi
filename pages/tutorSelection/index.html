@@ -162,10 +162,10 @@
                         </div>
                         <div class="row">
                             <!-- subject filter start -->
+                            <!-- onclick="filterButtonSeclect(filter_subject,'subject_option')" -->
                             <div class="col pc-2 tc-4 mc-12">
                                 <span class="filter_key">MÔN HỌC</span>
-                                <div id="filter_subject" class="select_item_ctn"
-                                    onclick="activeFilterBtn(filter_subject),showOptionList(subject_option)">
+                                <div id="filter_subject" class="select_item_ctn">
                                     <div class="select_stl1">
                                         <span id="subject_stl" class="select_option">Tất cả môn</span>
                                         <svg aria-hidden="true" focusable="false" data-prefix="fas"
@@ -182,25 +182,21 @@
                                     <div class="select_case">
                                         <!-- option -->
                                         <div id="subject_all"
-                                            class="select_item select_option col pc-12 tc-12 mc-12 activeBg"
-                                            onclick="activeFilterSubject(subject_all),document.getElementById('subject_stl').innerHTML='Tất cả môn'">
-                                            <span>Tất
-                                                cả
-                                                môn</span>
+                                            class="select_item select_option col pc-12 tc-12 mc-12 activeBg">
+                                            <span>Tất cả môn</span>
                                         </div>
                                         <!-- option -->
-                                        <div id="subject_math" class="select_item select_option col pc-12 tc-12 mc-12"
-                                            onclick="activeFilterSubject(subject_math),document.getElementById('subject_stl').innerHTML='Toán'">
+                                        <div id="subject_math" class=" select_item select_option col pc-12 tc-12 mc-12">
                                             <span>Toán</span>
                                         </div>
                                         <!-- option -->
-                                        <div id="subject_physic" class="select_item select_option col pc-12 tc-12 mc-12"
-                                            onclick="activeFilterSubject(subject_physic),document.getElementById('subject_stl').innerHTML='Lí'">
+                                        <div id="subject_physic"
+                                            class="select_item select_option col pc-12 tc-12 mc-12">
                                             <span>Lí</span>
                                         </div>
                                         <!-- option -->
-                                        <div id="subject_chemis" class="select_item select_option col pc-12 tc-12 mc-12"
-                                            onclick="activeFilterSubject(subject_chemis),document.getElementById('subject_stl').innerHTML='Hóa'">
+                                        <div id="subject_chemis"
+                                            class="select_item select_option col pc-12 tc-12 mc-12">
                                             <span>Hóa</span>
                                         </div>
                                         <!-- option -->
@@ -211,12 +207,11 @@
                             <!-- subject filter end -->
 
                             <!-- certificate filter start -->
-                            <div class="col pc-2 tc-4 mc-12">
+                            <div class=" col pc-2 tc-4 mc-12">
                                 <span class="filter_key">LỚP/ CHỨNG CHỈ</span>
-                                <div id="filter_certifi" class="select_item_ctn"
-                                    onclick="activeFilterBtn(filter_certifi)">
+                                <div id="filter_certifi" class="select_item_ctn">
                                     <div class="select_stl1">
-                                        <span class="select_option">Tất cả lớp</span>
+                                        <span id="certifi_stl" class="select_option">Tất cả lớp</span>
                                         <svg aria-hidden="true" focusable="false" data-prefix="fas"
                                             data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14"
                                             role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -226,15 +221,39 @@
                                         </svg>
                                     </div>
                                 </div>
+                                <!-- option start -->
+                                <div id="certifi_option" class="select_case_ctn">
+                                    <div class="select_case">
+                                        <!-- option -->
+                                        <div id="certifi_all"
+                                            class="select_item select_option col pc-12 tc-12 mc-12 activeBg">
+                                            <span>Tất cả chứng chỉ</span>
+                                        </div>
+                                        <!-- option -->
+                                        <div id="certifi_1" class="select_item select_option col pc-12 tc-12 mc-12">
+                                            <span>Chứng chỉ 1</span>
+                                        </div>
+                                        <!-- option -->
+                                        <div id="certifi_2" class="select_item select_option col pc-12 tc-12 mc-12">
+                                            <span>Chứng chỉ 2</span>
+                                        </div>
+                                        <!-- option -->
+                                        <div id="certifi_3" class="select_item select_option col pc-12 tc-12 mc-12">
+                                            <span>Chứng chỉ 3</span>
+                                        </div>
+                                        <!-- option -->
+                                    </div>
+                                </div>
+                                <!-- option end -->
                             </div>
                             <!-- certificate filter end -->
 
                             <!-- tutor career filter start -->
                             <div class="col pc-2 tc-4 mc-12">
                                 <span class="filter_key">GIA SƯ LÀ</span>
-                                <div id="tutorCareer" class="select_item_ctn" onclick="activeFilterBtn(tutorCareer)">
+                                <div id="filter_tutorCareer" class="select_item_ctn">
                                     <div class="select_stl1">
-                                        <span class="select_option">Tất cả gia sư</span>
+                                        <span id="career_stl" class="select_option">Tất cả gia sư</span>
                                         <svg aria-hidden="true" focusable="false" data-prefix="fas"
                                             data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14"
                                             role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -244,6 +263,30 @@
                                         </svg>
                                     </div>
                                 </div>
+                                <!-- option start -->
+                                <div id="tutorCareer_option" class="select_case_ctn">
+                                    <div class="select_case">
+                                        <!-- option -->
+                                        <div id="career_all"
+                                            class="select_item select_option col pc-12 tc-12 mc-12 activeBg">
+                                            <span>Tất cả gia sư</span>
+                                        </div>
+                                        <!-- option -->
+                                        <div id="career_teach" class="select_item select_option col pc-12 tc-12 mc-12">
+                                            <span>Giáo viên</span>
+                                        </div>
+                                        <!-- option -->
+                                        <div id="career_stud" class="select_item select_option col pc-12 tc-12 mc-12">
+                                            <span>Sinh viên</span>
+                                        </div>
+                                        <!-- option -->
+                                        <div id="career_mast" class="select_item select_option col pc-12 tc-12 mc-12">
+                                            <span>Thạc sĩ</span>
+                                        </div>
+                                        <!-- option -->
+                                    </div>
+                                </div>
+                                <!-- option end -->
                             </div>
                             <!-- tutor career filter end -->
 
@@ -266,10 +309,9 @@
                             <!-- section filter start -->
                             <div class="col pc-2 tc-4 mc-12">
                                 <span class="filter_key">KHU VỰC</span>
-                                <div id="filter_section" class="select_item_ctn"
-                                    onclick="activeFilterBtn(filter_section)">
+                                <div id="filter_section" class="select_item_ctn">
                                     <div class="filter_select select_stl1">
-                                        <span class="select_option">1 kèm 1</span>
+                                        <span id="section_stl" class="select_option">1 kèm 1</span>
                                         <svg aria-hidden="true" focusable="false" data-prefix="fas"
                                             data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14"
                                             role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -279,6 +321,26 @@
                                         </svg>
                                     </div>
                                 </div>
+                                <!-- option start -->
+                                <div id="section_option" class="select_case_ctn">
+                                    <div class="select_case">
+                                        <!-- option -->
+                                        <div id="section_1on1"
+                                            class="select_item select_option col pc-12 tc-12 mc-12 activeBg">
+                                            <span>1 kèm 1</span>
+                                        </div>
+                                        <!-- option -->
+                                        <div id="section_10on1" class="select_item select_option col pc-12 tc-12 mc-12">
+                                            <span>10 kèm 1</span>
+                                        </div>
+                                        <!-- option -->
+                                        <div id="section_1on10" class="select_item select_option col pc-12 tc-12 mc-12">
+                                            <span>1 kèm 10</span>
+                                        </div>
+                                        <!-- option -->
+                                    </div>
+                                </div>
+                                <!-- option end -->
                             </div>
                             <!-- section filter end -->
 
@@ -359,9 +421,11 @@
                                                 <div>Dạy HS giỏi</div>
                                             </div>
                                             <div class="tutor_intro">
-                                                Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ điểm 9-10
+                                                Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ
+                                                điểm 9-10
                                                 điểm,
-                                                đậu nguyện vọng 1 vào các trường đại học lớn như y dược, bách khoa,
+                                                đậu nguyện vọng 1 vào các trường đại học lớn như y dược,
+                                                bách khoa,
                                                 ngoại
                                                 thương, sư phạm,...
                                             </div>
@@ -431,9 +495,11 @@
                                                 <div>Dạy HS giỏi</div>
                                             </div>
                                             <div class="tutor_intro">
-                                                Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ điểm 9-10
+                                                Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ
+                                                điểm 9-10
                                                 điểm,
-                                                đậu nguyện vọng 1 vào các trường đại học lớn như y dược, bách khoa,
+                                                đậu nguyện vọng 1 vào các trường đại học lớn như y dược,
+                                                bách khoa,
                                                 ngoại
                                                 thương, sư phạm,...
                                             </div>
@@ -505,9 +571,11 @@
                                                 <div>Dạy HS giỏi</div>
                                             </div>
                                             <div class="tutor_intro">
-                                                Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ điểm 9-10
+                                                Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ
+                                                điểm 9-10
                                                 điểm,
-                                                đậu nguyện vọng 1 vào các trường đại học lớn như y dược, bách khoa,
+                                                đậu nguyện vọng 1 vào các trường đại học lớn như y dược,
+                                                bách khoa,
                                                 ngoại
                                                 thương, sư phạm,...
                                             </div>
@@ -577,9 +645,11 @@
                                                 <div>Dạy HS giỏi</div>
                                             </div>
                                             <div class="tutor_intro">
-                                                Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ điểm 9-10
+                                                Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ
+                                                điểm 9-10
                                                 điểm,
-                                                đậu nguyện vọng 1 vào các trường đại học lớn như y dược, bách khoa,
+                                                đậu nguyện vọng 1 vào các trường đại học lớn như y dược,
+                                                bách khoa,
                                                 ngoại
                                                 thương, sư phạm,...
                                             </div>
@@ -662,7 +732,8 @@
                                                 <input class="outline_none" type="text"
                                                     placeholder="Số điện thoại của bạn">
                                             </div>
-                                            <div class="one_input_stl1_btn btn_stl1 outline_none"><span>YÊU CẦU GỌI
+                                            <div class="one_input_stl1_btn btn_stl1 outline_none"><span>YÊU
+                                                    CẦU GỌI
                                                     LẠI</span>
                                             </div>
                                         </div>
@@ -693,9 +764,11 @@
                                                 <div>Dạy HS giỏi</div>
                                             </div>
                                             <div class="tutor_intro">
-                                                Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ điểm 9-10
+                                                Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ
+                                                điểm 9-10
                                                 điểm,
-                                                đậu nguyện vọng 1 vào các trường đại học lớn như y dược, bách khoa,
+                                                đậu nguyện vọng 1 vào các trường đại học lớn như y dược,
+                                                bách khoa,
                                                 ngoại
                                                 thương, sư phạm,...
                                             </div>
@@ -765,9 +838,11 @@
                                                 <div>Dạy HS giỏi</div>
                                             </div>
                                             <div class="tutor_intro">
-                                                Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ điểm 9-10
+                                                Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ
+                                                điểm 9-10
                                                 điểm,
-                                                đậu nguyện vọng 1 vào các trường đại học lớn như y dược, bách khoa,
+                                                đậu nguyện vọng 1 vào các trường đại học lớn như y dược,
+                                                bách khoa,
                                                 ngoại
                                                 thương, sư phạm,...
                                             </div>
@@ -839,9 +914,11 @@
                                                 <div>Dạy HS giỏi</div>
                                             </div>
                                             <div class="tutor_intro">
-                                                Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ điểm 9-10
+                                                Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ
+                                                điểm 9-10
                                                 điểm,
-                                                đậu nguyện vọng 1 vào các trường đại học lớn như y dược, bách khoa,
+                                                đậu nguyện vọng 1 vào các trường đại học lớn như y dược,
+                                                bách khoa,
                                                 ngoại
                                                 thương, sư phạm,...
                                             </div>
@@ -911,9 +988,11 @@
                                                 <div>Dạy HS giỏi</div>
                                             </div>
                                             <div class="tutor_intro">
-                                                Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ điểm 9-10
+                                                Rất nhiều học sinh của tôi đã thi đại học môn toán trong phổ
+                                                điểm 9-10
                                                 điểm,
-                                                đậu nguyện vọng 1 vào các trường đại học lớn như y dược, bách khoa,
+                                                đậu nguyện vọng 1 vào các trường đại học lớn như y dược,
+                                                bách khoa,
                                                 ngoại
                                                 thương, sư phạm,...
                                             </div>
@@ -1006,7 +1085,8 @@
                                         </path>
                                     </svg>
                                 </div>
-                                <div><span>Trang</span><span>2</span><span>trong số</span><span>388</span></div>
+                                <div><span>Trang</span><span>2</span><span>trong số</span><span>388</span>
+                                </div>
                                 <div class="tutor_page_btn">
                                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right"
                                         class="svg-inline--fa fa-angle-right fa-w-8" role="img"
@@ -1061,11 +1141,13 @@
                                 <div><span>Tiêu chí làm việc</span></div>
                             </div>
                             <div>
-                                <div><span>Học Gia sư là phải TIẾN BỘ hơn học tại các lớp học đông.</span></div>
+                                <div><span>Học Gia sư là phải TIẾN BỘ hơn học tại các lớp học đông.</span>
+                                </div>
                                 <div><span>Chỉ hợp tác với gia sư giỏi để giữ uy của trung tâm.</span></div>
                                 <div><span>Học phí hợp lý với chất lượng.</span></div>
                                 <div><span>Tư vấn tận tình - miễn phí mọi vấn đề.</span></div>
-                                <div><span>Gửi gia sư chất lượng nhanh chóng khắp Tp. Hồ Chí Minh và Hà Nội.</span>
+                                <div><span>Gửi gia sư chất lượng nhanh chóng khắp Tp. Hồ Chí Minh và Hà
+                                        Nội.</span>
                                 </div>
                             </div>
                         </div>
@@ -1075,14 +1157,16 @@
                             </div>
                             <div>
                                 <div><span>TPHCM:</span><span>45 đường 20, P11, Q6</span></div>
-                                <div><span>Hà Nội:</span><span>238/1 Hoàng Quốc Việt, Cầu Giấy (gần ĐH Sư phạm Hà Nội
+                                <div><span>Hà Nội:</span><span>238/1 Hoàng Quốc Việt, Cầu Giấy (gần ĐH Sư
+                                        phạm Hà Nội
                                         1)</span>
                                 </div>
                                 <div><span>Hotline:</span><span>093 111 4279 - 098 111 5279</span></div>
                                 <div><span>Giờ làm việc:</span><span>7:00 – 21h, T2 – CN</span></div>
                                 <div><span>Email:</span><span>giasuomt@gmail.com</span></div>
                                 <div>
-                                    <span>Socials: fb, youtube, pinterest, instagram, linkedin,twitter, soundcloud,
+                                    <span>Socials: fb, youtube, pinterest, instagram, linkedin,twitter,
+                                        soundcloud,
                                         tumblr,...</span>
 
                                 </div>
