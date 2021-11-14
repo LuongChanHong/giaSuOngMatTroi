@@ -7,20 +7,52 @@
 // pattern
 
 // VALIRABLE
-var isClicked = false;
 
 // SHOW AND HIDE OPTION LIST - START
 function showOptionList(id) {
-  isClicked = !isClicked;
-  if (isClicked) {
+  if (document.getElementById(id).style.display == "none") {
     document.getElementById(id).style.display = "block";
   } else {
     document.getElementById(id).style.display = "none";
   }
 }
 
+function hideAllOptionList(showId) {
+  var subject = document.getElementById("subject_option");
+  var certifi = document.getElementById("certifi_option");
+  var tutorCareer = document.getElementById("tutorCareer_option");
+  var section = document.getElementById("section_option");
+  switch (showId) {
+    case "subject_option":
+      certifi.style.display = "none";
+      tutorCareer.style.display = "none";
+      section.style.display = "none";
+      break;
+    case "certifi_option":
+      subject.style.display = "none";
+      tutorCareer.style.display = "none";
+      section.style.display = "none";
+      break;
+    case "tutorCareer_option":
+      certifi.style.display = "none";
+      subject.style.display = "none";
+      section.style.display = "none";
+      break;
+    case "section_option":
+      certifi.style.display = "none";
+      tutorCareer.style.display = "none";
+      subject.style.display = "none";
+      break;
+    default:
+      certifi.style.display = "none";
+      tutorCareer.style.display = "none";
+      subject.style.display = "none";
+      section.style.display = "none";
+      break;
+  }
+}
+
 function hideOptionList(id) {
-  isClicked = false;
   document.getElementById(id).style.display = "none";
 }
 // SHOW AND HIDE OPTION LIST - END
@@ -71,6 +103,7 @@ function section_option_click(optionID) {
 document
   .getElementById("filter_subject")
   .addEventListener("click", function () {
+    hideAllOptionList("subject_option");
     activeElement("filter_subject", "select_item_ctn", "activeOutline");
     showOptionList("subject_option");
   });
@@ -101,6 +134,7 @@ document
 document
   .getElementById("filter_certifi")
   .addEventListener("click", function () {
+    hideAllOptionList("certifi_option");
     activeElement("filter_certifi", "select_item_ctn", "activeOutline");
     showOptionList("certifi_option");
   });
@@ -127,6 +161,7 @@ document.getElementById("certifi_3").addEventListener("click", function () {
 document
   .getElementById("filter_tutorCareer")
   .addEventListener("click", function () {
+    hideAllOptionList("tutorCareer_option");
     activeElement("filter_tutorCareer", "select_item_ctn", "activeOutline");
     showOptionList("tutorCareer_option");
   });
@@ -153,6 +188,7 @@ document.getElementById("career_mast").addEventListener("click", function () {
 document
   .getElementById("filter_section")
   .addEventListener("click", function () {
+    hideAllOptionList("section_option");
     activeElement("filter_section", "select_item_ctn", "activeOutline");
     showOptionList("section_option");
   });
