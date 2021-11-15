@@ -7,6 +7,7 @@
 // pattern
 
 // VALIRABLE
+let isChecked = false;
 
 // SHOW AND HIDE OPTION LIST - START
 function showOptionList(id) {
@@ -207,4 +208,30 @@ document.getElementById("section_1on10").addEventListener("click", function () {
 
 // Options - end
 // Section button filter - end
+
+// Genger check box filter - start
+function handle(activeId, iconId) {
+  let hasClass = document
+    .getElementById(activeId)
+    .classList.contains("activeBg");
+  let display = document.getElementById(iconId).style.display;
+  if (hasClass == false && display == "none") {
+    document.getElementById(activeId).classList.add("activeBg");
+    document.getElementById(iconId).style.display = "block";
+  } else {
+    document.getElementById(activeId).classList.remove("activeBg");
+    document.getElementById(iconId).style.display = "none";
+  }
+}
+
+document.getElementById("filter_female").addEventListener("click", function () {
+  handle("filter_female", "female_check_icn");
+  console.log("RUN");
+});
+document.getElementById("filter_male").addEventListener("click", function () {
+  handle("filter_male", "male_check_icn");
+  console.log("RUN");
+});
+
+// Gneger check box filter - end
 // EACH FILTER BUTTON HANDELER - END
