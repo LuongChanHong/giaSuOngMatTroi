@@ -69,12 +69,19 @@ function activeElement(seclectId, classNameList, styleClassName) {
 }
 // ACTIVE EFFECT - END
 
+// Turn off outline clicked - start
+function turnOffOutline(id, displayId) {
+  document.getElementById(id).classList.replace("activeOutline", "none");
+}
+// Turn off outline clicked - end
+
 // Handle filter option item click event - start
 function subject_option_click(optionID) {
   activeElement(optionID, "select_item", "activeBg");
   hideOptionList("subject_option");
   document.getElementById("subject_stl").innerHTML =
     document.getElementById(optionID).innerHTML;
+  turnOffOutline("filter_subject");
 }
 
 function sertifi_option_click(optionID) {
@@ -82,6 +89,7 @@ function sertifi_option_click(optionID) {
   hideOptionList("certifi_option");
   document.getElementById("certifi_stl").innerHTML =
     document.getElementById(optionID).innerHTML;
+  turnOffOutline("filter_certifi");
 }
 
 function career_option_click(optionID) {
@@ -89,6 +97,7 @@ function career_option_click(optionID) {
   hideOptionList("tutorCareer_option");
   document.getElementById("career_stl").innerHTML =
     document.getElementById(optionID).innerHTML;
+  turnOffOutline("filter_tutorCareer");
 }
 
 function section_option_click(optionID) {
@@ -96,11 +105,13 @@ function section_option_click(optionID) {
   hideOptionList("section_option");
   document.getElementById("section_stl").innerHTML =
     document.getElementById(optionID).innerHTML;
+  turnOffOutline("filter_section");
 }
 // Handle filter option item click event - end
 
 // EACH FILTER BUTTON HANDELER - START
 // Subject button filter - start
+let flag = false;
 document
   .getElementById("filter_subject")
   .addEventListener("click", function () {
@@ -206,6 +217,12 @@ document.getElementById("section_1on10").addEventListener("click", function () {
   section_option_click("section_1on10");
 });
 
+document
+  .getElementById("section_10on10")
+  .addEventListener("click", function () {
+    section_option_click("section_10on10");
+  });
+
 // Options - end
 // Section button filter - end
 
@@ -226,11 +243,9 @@ function handle(activeId, iconId) {
 
 document.getElementById("filter_female").addEventListener("click", function () {
   handle("filter_female", "female_check_icn");
-  console.log("RUN");
 });
 document.getElementById("filter_male").addEventListener("click", function () {
   handle("filter_male", "male_check_icn");
-  console.log("RUN");
 });
 
 // Gneger check box filter - end
