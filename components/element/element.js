@@ -70,8 +70,15 @@ function activeElement(seclectId, classNameList, styleClassName) {
 // ACTIVE EFFECT - END
 
 // Turn off outline clicked - start
-function turnOffOutline(id, displayId) {
+function turnOffOutline(id) {
   document.getElementById(id).classList.replace("activeOutline", "none");
+}
+
+function turnOffAllOutline() {
+  turnOffOutline("filter_subject");
+  turnOffOutline("filter_certifi");
+  turnOffOutline("filter_tutorCareer");
+  turnOffOutline("filter_section");
 }
 // Turn off outline clicked - end
 
@@ -228,6 +235,7 @@ document
 
 // Genger check box filter - start
 function handle(activeId, iconId) {
+  let value = "";
   let hasClass = document
     .getElementById(activeId)
     .classList.contains("activeBg");
@@ -243,9 +251,13 @@ function handle(activeId, iconId) {
 
 document.getElementById("filter_female").addEventListener("click", function () {
   handle("filter_female", "female_check_icn");
+  hideAllOptionList("all");
+  turnOffAllOutline();
 });
 document.getElementById("filter_male").addEventListener("click", function () {
   handle("filter_male", "male_check_icn");
+  hideAllOptionList("all");
+  turnOffAllOutline();
 });
 
 // Gneger check box filter - end

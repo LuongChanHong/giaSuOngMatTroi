@@ -52,16 +52,11 @@
   padding-left: 4px;
   padding-right: 4px;
 }
+.check_box_stl1,
 .select_item_ctn {
   margin-top: 0.3rem;
 }
-.activeOutline {
-  outline: 5px solid var(--btnColor_1);
-}
-.activeBg {
-  background-color: var(--btnColor_1);
-  border: unset;
-}
+
 .select_case {
   background-color: var(--btnColor_2);
   border: 1px solid var(--btnColor_1);

@@ -1,3 +1,13 @@
+/* ACTIVE STYLE - START */
+.activeOutline {
+  outline: 5px solid var(--btnColor_1);
+}
+.activeBg {
+  background-color: var(--btnColor_1);
+  border: unset;
+}
+/* ACTIVE STYLE - END */
+
 /* Buttom Style 1 */
 .btn_stl1 {
   color: black;
