@@ -13,7 +13,7 @@
   padding: 1rem 16px 1rem 16px;
 }
 .boxShadow {
-  -webkit-box-shadow: -1px 5px 10px 0px var(--box-shadow);
+  -webkit-box-shadow: -1px 5px 10px 0px var(--box_shadow);
 }
 .nav_logo_ctn {
   width: 33vw;
@@ -59,7 +59,7 @@
   margin: 0 0.2rem;
   color: var(--speColor_1);
   font-family: "Alegreya", serif;
-  text-shadow: 3px 3px 3px var(--txt-shadow);
+  text-shadow: 3px 3px 3px var(--txt_shadow);
 }
 
 .nav_phone_icn {

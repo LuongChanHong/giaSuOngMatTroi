@@ -132,7 +132,7 @@
 .tutor_ctn {
   display: flex;
   flex-direction: column;
-  box-shadow: var(--box-shadow1);
+  box-shadow: var(--box_shadow);
   border-radius: 20px;
 }
 .tutor_stl {

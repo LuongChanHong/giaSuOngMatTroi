@@ -6,6 +6,7 @@
   --test-bgColor: seagreen;
   --bgColor_1: #f7f2ed;
   --bgColor_2: #ebfaf8;
+  --bgColor_3: #f5f5f5;
 
   --txtColor_1: #363c3b;
   --txtColor_2: #3c8aff;
@@ -17,13 +18,13 @@
   --speColor_4: #ffa4cb;
   --speColor_5: #037c72;
 
-  --border-color: #e9e3dd;
+  --border_color: #e9e3dd;
 
   --btnColor_1: #03ccbb;
   --btnColor_2: #ffffff;
 
-  --box-shadow: #c3d2ce;
-  --txt-shadow: #bdb6b9;
+  --box_shadow: #c3d2ce;
+  --txt_shadow: #bdb6b9;
 
   --background-color: #f7f2ed;
   --backgroun-color1: #ebfaf8;
@@ -50,13 +51,7 @@ html {
   font-size: 15px;
   padding: 0;
   margin: 0;
-  background-color: var(--bgColor_1);
-  /* background-color: var(--test-bgColor); */
   font-family: "Noto Sans", sans-serif;
-}
-body {
-  margin: 0;
-  height: 100rem;
 }
 .d_none {
   display: none;

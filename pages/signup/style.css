@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+.signupBody {
+  margin: 0;
+  background-color: var(--bgColor_3);
+  /* background-color: var(--test-bgColor); */
+}
+/* -----SIGNUP MOBILE START----- */
+.signup_top_bar {
+  width: 100%;
+  height: 8px;
+  background-color: var(--speColor_4);
+}
+.signup_logo_ctn {
+  display: none;
+}
+.signup_card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.signup_wrapper {
+  margin-top: 2rem;
+  padding: 1rem;
+}
+.signup_header_btns {
+  align-items: center;
+}
+
+.signup_title {
+  display: flex;
+  justify-content: center;
+}
+.signup_signin_btn {
+  display: flex;
+  justify-content: end;
+}
+.btn_stl2 {
+  width: 5.6rem;
+}
+.signup_title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.signup_form p {
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.password_ctn {
+  position: relative;
+}
+.signup_pass_btn {
+  position: absolute;
+  right: 1rem;
+  top: calc(50% - 0.5rem);
+  background-color: var(--btnColor_2);
+  border: unset;
+  color: var(--txtColor_1);
+}
+.btn_stl1 span,
+.btn_stl1 {
+  width: 100%;
+}
+.signup_terms {
+  text-align: center;
+  margin: 1rem;
+}
+.signup_terms a {
+  text-decoration: unset;
+  color: var(--speColor_5);
+}
+.signup_terms a:hover {
+  color: var(--btnColor_1);
+}
+/* -----SIGNUP MOBILE END----- */
+
+/* -----SIGNUP TABLET START----- */
+@media only screen and (min-width: 710px) {
+  .signup_terms,
+  .signup_wrapper {
+    width: 420px;
+    margin: 0 auto;
+  }
+  .signup_ctt {
+    padding-top: 2.5rem;
+  }
+  .signup_terms {
+    padding: 0 4rem;
+  }
+  .signup_logo_ctn {
+    display: flex;
+    column-gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .logo_txt {
+    column-gap: 0.3rem;
+  }
+  .logo_txt p {
+    color: var(--speColor_1);
+    font-family: "Alegreya", serif;
+    text-shadow: 3px 3px 3px var(--txt_shadow);
+    font-size: 1.2rem;
+  }
+  .input_stl2,
+  .btn_stl2,
+  .signup_wrapper {
+    border: 1px solid var(--border_color);
+  }
+  .signup_wrapper {
+    background-color: var(--btnColor_2);
+  }
+  .signup_terms {
+    margin-top: 1rem;
+  }
+  .input_stl2 {
+    height: 3rem;
+  }
+}
+/* -----SIGNUP TABLET END----- */

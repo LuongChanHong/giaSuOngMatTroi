@@ -37,7 +37,7 @@
 }
 .banner_txt {
   color: var(--txtColor_1);
-  text-shadow: 2px 2px 5px var(--box-shadow);
+  text-shadow: 2px 2px 5px var(--box_shadow);
   font-weight: bold;
 }
 .banner_find_ctn {
