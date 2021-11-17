@@ -132,7 +132,7 @@
 .tutor_ctn {
   display: flex;
   flex-direction: column;
-  box-shadow: var(--box_shadow);
+  box-shadow: 0px 3px 6px var(--box_shadow);
   border-radius: 20px;
 }
 .tutor_stl {
@@ -219,8 +219,11 @@
 }
 .tutor_out_bottom {
   justify-content: space-between;
+  background-color: var(--bgColor_3);
   padding: 0.8rem;
   display: flex;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 .tutor_out_btn span,
 .tutor_out_btn svg,
@@ -256,7 +259,7 @@
   margin-bottom: 1rem;
 }
 .contact_phone_ipt input {
-  width: -webkit-fill-available;
+  width: 100%;
   padding: 1rem;
   font-size: 1rem;
   font-weight: bold;
@@ -394,12 +397,6 @@
     padding: 0 32px;
     margin-top: 2rem;
   }
-  .tutor_img img {
-    border-bottom-left-radius: 20px;
-  }
-  .tutor_stl {
-    border-radius: 20px;
-  }
   .tutor_invite_btn {
     align-items: center;
   }
@@ -434,6 +431,9 @@
   }
   .tutors_ctn {
     padding: 0 40px;
+  }
+  .tutor_stl {
+    border-radius: 20px;
   }
   .tutors_head_num div {
     font-size: 2rem;

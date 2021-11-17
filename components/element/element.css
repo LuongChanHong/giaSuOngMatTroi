@@ -85,7 +85,7 @@
 .check_box_stl1 .check_box {
   width: 1.6rem;
   height: 1.6rem;
-  border: 0.5px solid var(--border-color);
+  border: 0.5px solid var(--border_color);
   padding: 0.2rem;
 }
 .check_box_stl1 .check_box_label {

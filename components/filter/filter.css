@@ -80,6 +80,9 @@
   padding: 1rem;
   font-weight: bold;
 }
+.select_item:hover {
+  background-color: var(--btnColor_1);
+}
 .select_case_ctn {
   display: none;
 }
@@ -90,7 +93,6 @@
 .check_box svg {
   width: 1rem;
   height: 1rem;
-  display: none;
 }
 .select_item_ctn,
 .check_box_stl1 {

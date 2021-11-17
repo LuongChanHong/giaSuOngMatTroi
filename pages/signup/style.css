@@ -12,8 +12,23 @@
   height: 8px;
   background-color: var(--speColor_4);
 }
+.signup_ctt {
+  padding-top: 1rem;
+}
 .signup_logo_ctn {
-  display: none;
+  display: flex;
+  column-gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+.logo_txt {
+  column-gap: 0.3rem;
+}
+.logo_txt p {
+  color: var(--speColor_1);
+  font-family: "Alegreya", serif;
+  text-shadow: 3px 3px 3px var(--txt_shadow);
+  font-size: 1.2rem;
 }
 .signup_card {
   display: flex;
@@ -21,7 +36,6 @@
   row-gap: 1rem;
 }
 .signup_wrapper {
-  margin-top: 2rem;
   padding: 1rem;
 }
 .signup_header_btns {
@@ -90,20 +104,10 @@
     padding: 0 4rem;
   }
   .signup_logo_ctn {
-    display: flex;
-    column-gap: 0.5rem;
-    align-items: center;
-    justify-content: center;
     margin-bottom: 1rem;
   }
-  .logo_txt {
-    column-gap: 0.3rem;
-  }
-  .logo_txt p {
-    color: var(--speColor_1);
-    font-family: "Alegreya", serif;
-    text-shadow: 3px 3px 3px var(--txt_shadow);
-    font-size: 1.2rem;
+  .signup_wrapper {
+    margin-top: 2rem;
   }
   .input_stl2,
   .btn_stl2,
