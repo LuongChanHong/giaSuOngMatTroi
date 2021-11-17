@@ -19,7 +19,7 @@ function showOptionList(element) {
 }
 // function showOptionList(id) {
 //   if (document.getElementById(id).style.display == "none") {
-//     document.getElementById(id).style.display = "block";
+//     document.getElementById(id).style.display = "block"
 //   } else {
 //     document.getElementById(id).style.display = "none";
 //   }
@@ -32,38 +32,38 @@ function hideAllOptionList(className) {
     filter_select.style.display = "none";
   }
 }
-  // var subject = document.getElementById("subject_option");
-  // var certifi = document.getElementById("certifi_option");
-  // var tutorCareer = document.getElementById("tutorCareer_option");
-  // var section = document.getElementById("section_option");
-  // switch (className) {
-  //   case "subject_option":
-  //     certifi.style.display = "none";
-  //     tutorCareer.style.display = "none";
-  //     section.style.display = "none";
-  //     break;
-  //   case "certifi_option":
-  //     subject.style.display = "none";
-  //     tutorCareer.style.display = "none";
-  //     section.style.display = "none";
-  //     break;
-  //   case "tutorCareer_option":
-  //     certifi.style.display = "none";
-  //     subject.style.display = "none";
-  //     section.style.display = "none";
-  //     break;
-  //   case "section_option":
-  //     certifi.style.display = "none";
-  //     tutorCareer.style.display = "none";
-  //     subject.style.display = "none";
-  //     break;
-  //   default:
-  //     certifi.style.display = "none";
-  //     tutorCareer.style.display = "none";
-  //     subject.style.display = "none";
-  //     section.style.display = "none";
-  //     break;
-  // }
+// var subject = document.getElementById("subject_option");
+// var certifi = document.getElementById("certifi_option");
+// var tutorCareer = document.getElementById("tutorCareer_option");
+// var section = document.getElementById("section_option");
+// switch (className) {
+//   case "subject_option":
+//     certifi.style.display = "none";
+//     tutorCareer.style.display = "none";
+//     section.style.display = "none";
+//     break;
+//   case "certifi_option":
+//     subject.style.display = "none";
+//     tutorCareer.style.display = "none";
+//     section.style.display = "none";
+//     break;
+//   case "tutorCareer_option":
+//     certifi.style.display = "none";
+//     subject.style.display = "none";
+//     section.style.display = "none";
+//     break;
+//   case "section_option":
+//     certifi.style.display = "none";
+//     tutorCareer.style.display = "none";
+//     subject.style.display = "none";
+//     break;
+//   default:
+//     certifi.style.display = "none";
+//     tutorCareer.style.display = "none";
+//     subject.style.display = "none";
+//     section.style.display = "none";
+//     break;
+// }
 //}
 
 function hideOptionList(element) {
@@ -117,9 +117,11 @@ function turnOffAllOutline() {
 function option_click(element) {
   activeElement(element, "select_item", "activeBg"); //Tô màu option được chọn
   let option_list = element.parentElement.parentElement;
-  let filter_select = option_list.parentElement.getElementsByClassName("select_item_ctn")[0];
+  let filter_select =
+    option_list.parentElement.getElementsByClassName("select_item_ctn")[0];
   hideOptionList(option_list); //Ẩn đi select
-  filter_select.getElementsByClassName("select_option")[0].innerHTML = element.innerHTML;  //Bỏ text được chọn vào select title
+  filter_select.getElementsByClassName("select_option")[0].innerHTML =
+    element.innerHTML; //Bỏ text được chọn vào select title
   turnOffOutline(filter_select); //Bỏ đi outline
 }
 // function subject_option_click(optionID) {
@@ -159,7 +161,7 @@ function option_click(element) {
 // Subject button filter - start
 let flag = false;
 let filter_selects = document.getElementsByClassName("select_item_ctn");
-for(let i = 0; i < filter_selects.length; i++) {
+for (let i = 0; i < filter_selects.length; i++) {
   let filter_select = filter_selects[i];
   filter_select.addEventListener("click", function () {
     hideAllOptionList("select_case_ctn");
@@ -176,8 +178,8 @@ for(let i = 0; i < filter_selects.length; i++) {
 //     activeElement("filter_subject", "select_item_ctn", "activeOutline");
 //   });
 // Options - start
-let select_items = document.getElementsByClassName("select_item")
-for(let i = 0; i < select_items.length; i++) {
+let select_items = document.getElementsByClassName("select_item");
+for (let i = 0; i < select_items.length; i++) {
   let select_item = select_items[i];
   select_item.addEventListener("click", function () {
     option_click(select_item);
@@ -316,7 +318,7 @@ function handle(element) {
 // }
 
 let check_boxs = document.getElementsByClassName("check_box");
-for(let i = 0; i < check_boxs.length; i++) {
+for (let i = 0; i < check_boxs.length; i++) {
   let check_box = check_boxs[i];
   check_box.addEventListener("click", function () {
     handle(check_box);
