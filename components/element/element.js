@@ -7,7 +7,6 @@
 // pattern
 
 // VALIRABLE
-let isChecked = false;
 
 // SHOW AND HIDE OPTION LIST - START
 function showOptionList(element) {
@@ -290,6 +289,10 @@ for (let i = 0; i < select_items.length; i++) {
 // Section button filter - end
 
 // Genger check box filter - start
+let check_boxs = document.getElementsByClassName("check_box");
+let isAllUnCheck = true;
+let isUnCheck = true;
+
 function handle(element) {
   let tick_icon = element.getElementsByTagName("svg")[0];
   let hasClass = element.classList.contains("activeBg");
@@ -316,16 +319,37 @@ function handle(element) {
 //     document.getElementById(iconId).style.display = "none";
 //   }
 // }
-
-let check_boxs = document.getElementsByClassName("check_box");
+// If all 2 genger check box unchecked, autoCheck() will check all
+function autoCheck() {
+  for (let i = 0; i < check_boxs.length; i++) {
+    let check_box = check_boxs[i];
+    let isHide = check_box.getElementsByTagName("svg")[0].style.display;
+    if (isHide == "block") {
+      isUnCheck = false;
+    }
+    isAllUnCheck = isAllUnCheck && isUnCheck;
+  }
+  if (isAllUnCheck) {
+    setTimeout(function () {
+      for (let i = 0; i < check_boxs.length; i++) {
+        check_boxs[i].getElementsByTagName("svg")[0].style.display = "block";
+        check_boxs[i].classList.add("activeBg");
+      }
+    }, 500);
+  }
+  isAllUnCheck = true;
+  isUnCheck = true;
+}
 for (let i = 0; i < check_boxs.length; i++) {
   let check_box = check_boxs[i];
   check_box.addEventListener("click", function () {
     handle(check_box);
     hideAllOptionList("all");
     turnOffAllOutline();
+    autoCheck();
   });
 }
+
 // document.getElementById("filter_female").addEventListener("click", function () {
 //   handle("filter_female", "female_check_icn");
 //   hideAllOptionList("all");
@@ -337,5 +361,5 @@ for (let i = 0; i < check_boxs.length; i++) {
 //   turnOffAllOutline();
 // });
 
-// Gneger check box filter - end
+// Genger check box filter - end
 // EACH FILTER BUTTON HANDELER - END
