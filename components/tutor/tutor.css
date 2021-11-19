@@ -476,6 +476,12 @@
     display: block;
   }
 }
+@media only screen and (min-width: 1240px) {
+  .tutor_img img {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+}
 @media only screen and (min-width: 1300px) {
   .tutors_ctn {
     padding: 0 48px;

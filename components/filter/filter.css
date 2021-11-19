@@ -97,9 +97,9 @@
 .select_item:hover {
   background-color: var(--btnColor_1);
 }
-.select_case_ctn {
+/* .select_case_ctn {
   display: none;
-}
+} */
 .check_box_stl1 div:active > .check_box {
   transition: 0s;
 }

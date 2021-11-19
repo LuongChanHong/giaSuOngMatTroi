@@ -80,21 +80,16 @@ for (let i = 0; i < filter_selects.length; i++) {
   let filter_select = filter_selects[i];
   filter_select.addEventListener("click", function () {
     hideAllOptionList("select_case_ctn");
-    if (isOptionListShow == false) {
+    if (!isOptionListShow) {
       showOptionList(filter_select.nextElementSibling);
       isOptionListShow = true;
+      // console.log("isOptionListShow =>", isOptionListShow);
     } else {
       hideOptionList(filter_select.nextElementSibling);
       isOptionListShow = false;
+      // console.log("isOptionListShow =>", isOptionListShow);
     }
     activeElement(filter_select, "select_item_ctn", "activeFilter");
-    // let dropdown =
-    //   filter_select.parentElement.getElementsByClassName("select_case_ctn")[0];
-    // let ddDisplay = dropdown.style.display;
-    // if (ddDisplay == "block") {
-    //   hideOptionList(dropdown);
-    // }
-    // console.log("ddDisplay:", ddDisplay);
   });
 }
 let select_items = document.getElementsByClassName("select_item");
@@ -158,3 +153,21 @@ for (let i = 0; i < check_boxs.length; i++) {
 }
 // GENGER CHECKBOX FILTER - END
 // EACH FILTER BUTTON HANDELER - END
+
+// UNACTIVE ALL FILTER WHEN CLICK OUTSIDE - START
+document.addEventListener("click", function (evt) {
+  var filterItem = document.getElementsByClassName("filter")[0],
+    targetElement = evt.target;
+  do {
+    if (targetElement == filterItem) {
+      // console.log("click inside");
+      return;
+    }
+    // Go up the DOM
+    targetElement = targetElement.parentNode;
+  } while (targetElement);
+  // console.log("click outside");
+  hideAllOptionList("select_case_ctn");
+  turnAllUnactive();
+});
+// UNACTIVE ALL FILTER WHEN CLICK OUTSIDE - END
