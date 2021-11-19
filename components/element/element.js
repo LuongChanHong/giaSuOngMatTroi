@@ -7,18 +7,23 @@
 // pattern
 
 // VALIRABLE
+let isOptionListShow = false;
 
 // SHOW AND HIDE OPTION LIST - START
+// function showOptionList(element) {
+//   if (element.style.display == "block") {
+//     element.style.display = "none";
+//     console.log("element.style.display => none");
+//   } else if (element.style.display == "none") {
+//     element.style.display = "block";
+//     console.log("element.style.display => block");
+//   }
+//   console.log("element.style.display:", element.style.display);
+// }
 function showOptionList(element) {
-  if (element.style.display == "none") {
-    element.style.display = "block";
-    console.log("element.style.display => block");
-  } else if (element.style.display == "block") {
-    element.style.display = "none";
-    console.log("element.style.display => none");
-  }
-  console.log("element.style.display:", element.style.display);
+  element.style.display = "block";
 }
+
 function hideAllOptionList(className) {
   let filter_selects = document.getElementsByClassName(className);
   for (let i = 0; i < filter_selects.length; i++) {
@@ -65,6 +70,7 @@ function option_click(element) {
   filter_select.getElementsByClassName("select_option")[0].innerHTML =
     element.innerHTML; //Bỏ text được chọn vào select title
   turnUnactive(filter_select); //Bỏ đi outline
+  isOptionListShow = false; // Đánh dấu option list đã đóng
 }
 // FILTER OPTION ITEM CLICK HANDLER - END
 
@@ -74,7 +80,13 @@ for (let i = 0; i < filter_selects.length; i++) {
   let filter_select = filter_selects[i];
   filter_select.addEventListener("click", function () {
     hideAllOptionList("select_case_ctn");
-    showOptionList(filter_select.nextElementSibling);
+    if (isOptionListShow == false) {
+      showOptionList(filter_select.nextElementSibling);
+      isOptionListShow = true;
+    } else {
+      hideOptionList(filter_select.nextElementSibling);
+      isOptionListShow = false;
+    }
     activeElement(filter_select, "select_item_ctn", "activeFilter");
     // let dropdown =
     //   filter_select.parentElement.getElementsByClassName("select_case_ctn")[0];
@@ -139,7 +151,7 @@ for (let i = 0; i < check_boxs.length; i++) {
   let check_box = check_boxs[i];
   check_box.addEventListener("click", function () {
     handle(check_box);
-    hideAllOptionList("all");
+    hideAllOptionList("select_case_ctn");
     turnAllUnactive();
     autoCheck();
   });
