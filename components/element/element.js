@@ -319,7 +319,7 @@ function handle(element) {
 //     document.getElementById(iconId).style.display = "none";
 //   }
 // }
-// If all 2 genger check box unchecked, autoCheck() will check all
+// If all 2 genger check box unchecked, autoCheck() will check them all
 function autoCheck() {
   for (let i = 0; i < check_boxs.length; i++) {
     let check_box = check_boxs[i];
@@ -327,9 +327,10 @@ function autoCheck() {
     if (isHide == "block") {
       isUnCheck = false;
     }
-    isAllUnCheck = isAllUnCheck && isUnCheck;
+    isAllUnCheck = isAllUnCheck && isUnCheck; // general status of 2 check box
   }
   if (isAllUnCheck) {
+    // check all when all of them unchecked
     setTimeout(function () {
       for (let i = 0; i < check_boxs.length; i++) {
         check_boxs[i].getElementsByTagName("svg")[0].style.display = "block";
