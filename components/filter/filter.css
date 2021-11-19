@@ -56,7 +56,21 @@
 .select_item_ctn {
   margin-top: 0.3rem;
 }
-
+.select_stl1 {
+  border: unset;
+}
+.select_stl1:hover {
+  cursor: pointer;
+  border: unset;
+  transition: unset;
+}
+.select_item_ctn {
+  border: 0.5px solid var(--border-color);
+}
+.select_item_ctn:hover {
+  border: 1px solid var(--btnColor_1);
+  /* transition: 0.5s; */
+}
 .select_case {
   background-color: var(--btnColor_2);
   border: 1px solid var(--btnColor_1);

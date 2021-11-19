@@ -12,9 +12,12 @@
 function showOptionList(element) {
   if (element.style.display == "none") {
     element.style.display = "block";
-  } else {
+    console.log("element.style.display => block");
+  } else if (element.style.display == "block") {
     element.style.display = "none";
+    console.log("element.style.display => none");
   }
+  console.log("element.style.display:", element.style.display);
 }
 function hideAllOptionList(className) {
   let filter_selects = document.getElementsByClassName(className);
@@ -40,14 +43,14 @@ function activeElement(element, classNameList, styleClassName) {
 // ACTIVE EFFECT - END
 
 // TURN OFF OUTLINE CLICK - START
-function turnOffOutline(element) {
-  element.classList.replace("activeOutline", "none");
+function turnUnactive(element) {
+  element.classList.replace("activeFilter", "none");
 }
-function turnOffAllOutline() {
+function turnAllUnactive() {
   let filter_selects = document.getElementsByClassName("select_item_ctn");
   for (let i = 0; i < filter_selects.length; i++) {
     let filter_select = filter_selects[i];
-    turnOffOutline(filter_select);
+    turnUnactive(filter_select);
   }
 }
 // TURN OFF OUTLINE CLICK - END
@@ -61,7 +64,7 @@ function option_click(element) {
   hideOptionList(option_list); //Ẩn đi select
   filter_select.getElementsByClassName("select_option")[0].innerHTML =
     element.innerHTML; //Bỏ text được chọn vào select title
-  turnOffOutline(filter_select); //Bỏ đi outline
+  turnUnactive(filter_select); //Bỏ đi outline
 }
 // FILTER OPTION ITEM CLICK HANDLER - END
 
@@ -73,6 +76,13 @@ for (let i = 0; i < filter_selects.length; i++) {
     hideAllOptionList("select_case_ctn");
     showOptionList(filter_select.nextElementSibling);
     activeElement(filter_select, "select_item_ctn", "activeFilter");
+    // let dropdown =
+    //   filter_select.parentElement.getElementsByClassName("select_case_ctn")[0];
+    // let ddDisplay = dropdown.style.display;
+    // if (ddDisplay == "block") {
+    //   hideOptionList(dropdown);
+    // }
+    // console.log("ddDisplay:", ddDisplay);
   });
 }
 let select_items = document.getElementsByClassName("select_item");
@@ -86,8 +96,8 @@ for (let i = 0; i < select_items.length; i++) {
 
 // GENGER CHECKBOX FILTER - START
 let check_boxs = document.getElementsByClassName("check_box");
-let isAllUnCheck = true;
-let isUnCheck = true;
+let isAllUnCheck = false;
+let isUnCheck = "";
 
 function handle(element) {
   let tick_icon = element.getElementsByTagName("svg")[0];
@@ -108,10 +118,12 @@ function autoCheck() {
     let isHide = check_box.getElementsByTagName("svg")[0].style.display;
     if (isHide == "block") {
       isUnCheck = false;
+    } else {
+      isUnCheck = true;
     }
     isAllUnCheck = isAllUnCheck && isUnCheck; // general status of 2 check box
   }
-  if (isAllUnCheck) {
+  if (isAllUnCheck == true) {
     // check all when all of them unchecked
     setTimeout(function () {
       for (let i = 0; i < check_boxs.length; i++) {
@@ -128,7 +140,7 @@ for (let i = 0; i < check_boxs.length; i++) {
   check_box.addEventListener("click", function () {
     handle(check_box);
     hideAllOptionList("all");
-    turnOffAllOutline();
+    turnAllUnactive();
     autoCheck();
   });
 }
