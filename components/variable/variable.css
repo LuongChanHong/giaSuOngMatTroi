@@ -22,11 +22,13 @@
   --border_color_2: #000000;
 
   --btnColor_1: #03ccbb;
+  --btnColor_hover_1: #50dacf;
   --btnColor_2: #ffffff;
 
   --box_shadow: #c3d2ce;
   --txt_shadow: #bdb6b9;
 
+  /* DEMO PAGE COLOR */
   --background-color: #f7f2ed;
   --backgroun-color1: #ebfaf8;
   --nav-background: #f7f2ed;

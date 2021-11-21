@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+:root {
+  /* --this-background-color: #f5f7fc; */
+  --this-background-color: var(--bgColor_1);
+  /* --this-background-color-hover: #e0e2e7; */
+  --this-background-color-hover: var(--border_color);
+  --this-color: black;
+}
+
+/* -----TUTOR PROFILE MOBILE START ----- */
+.profile_header_ctn {
+  background-color: var(--this-background-color);
+  display: flex;
+  justify-content: center;
+}
+.profile_header {
+  /* flex-basis: 960px; */
+  width: 100%;
+}
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/* -----HEADER BANNER START ----- */
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+.head_banner {
+  position: relative;
+  background-image: url("/assets/img/banner-tutor-profile-demo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 21rem;
+  width: 100%;
+  /* border-radius: 0 0 15px 15px; */
+}
+.head_banner_edit {
+  position: absolute;
+  right: -12.5rem;
+  bottom: 3.5rem;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  font-size: 1rem;
+  background-color: var(--this-background-color);
+  color: var(--this-color);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.head_banner_edit:hover {
+  background-color: var(--this-background-color-hover);
+}
+.head_banner_edit svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* height: 178px;
+  width: 178px; */
+.head_banner_avt {
+  position: absolute;
+  background-image: url("/assets/img/sun-sunglasses.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* border-radius: 50%; */
+  height: 10rem;
+  width: 10rem;
+  top: 60%;
+  left: 5%;
+  border: 5px solid var(--this-background-color);
+  cursor: pointer;
+}
+.banner_avt_blur {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+}
+.banner_avt_blur:hover {
+  background: rgba(255, 255, 255, 0.096);
+}
+.banner_avt_edit {
+  position: absolute;
+  right: -15px;
+  bottom: -15px;
+  background-color: var(--this-background-color);
+  /* background-color: #2e8b57; */
+  font-size: 0.2rem;
+  color: var(--this-color);
+  transform: rotate(45deg);
+  padding: 8px;
+}
+.banner_avt_edit svg {
+  height: 1rem;
+  width: 1rem;
+  transform: rotate(-45deg);
+}
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/* -----HEADER BANNER END----- */
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+.head_title {
+  display: flex;
+}
+.head_title_l {
+  flex-basis: 25%;
+}
+.head_title_r {
+  flex-basis: 25%;
+  text-align: center;
+  align-self: center;
+}
+.title_r_ttl {
+  font-size: 1.4rem;
+  margin-right: 2px;
+}
+.title_r_point {
+  font-size: 2rem;
+}
+.title_r_icn {
+  font-size: 1rem;
+  color: blue;
+}
+
+.head_title_m {
+  flex-basis: 50%;
+  text-align: center;
+}
+.title_m_name {
+  font-size: 2.6rem;
+  color: var(--this-color);
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+.title_m_intro {
+  font-size: 1.4rem;
+  color: var(--this-color);
+  padding-bottom: 5px;
+}
+
+.head_menu {
+  display: flex;
+  padding-bottom: 5px;
+}
+.head_menu_item {
+  font-size: 1.3rem;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.head_menu_item:hover {
+  background-color: var(--this-background-color-hover);
+}
+.head_menu_btn {
+  font-size: 1.3rem;
+  padding: 1rem 1.6rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0.5rem 0.2rem;
+}
+.head_menu_btn i {
+  margin-right: 0.6rem;
+}
+#button-follow {
+  margin-left: auto;
+  /* background-color: #d5d7db; */
+  background-color: var(--btnColor_2);
+}
+#button-follow:hover {
+  background-color: var(--this-background-color-hover);
+}
+#button-invite {
+  background-color: var(--btnColor_1);
+  /* color: whitesmoke; */
+}
+#button-invite:hover {
+  background-color: var(--btnColor_hover_1);
+}
+/* -----TUTOR PROFILE MOBILE END ----- */

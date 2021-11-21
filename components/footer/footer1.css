@@ -1,3 +1,6 @@
+.footer_ctn {
+  background-color: var(--bgColor_1);
+}
 .footer {
   background-image: url(/assets/img/background-footer-1.png);
   background-repeat: no-repeat;
