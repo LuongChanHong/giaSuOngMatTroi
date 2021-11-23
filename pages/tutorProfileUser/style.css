@@ -220,6 +220,9 @@ svg {
   .head_menu_btns {
     display: flex;
   }
+  .head_banner {
+    height: 36vw;
+  }
   .head_menu_btn {
     flex-basis: 50%;
     justify-content: center;
@@ -247,7 +250,7 @@ svg {
   .head_banner_avt {
     height: 178px;
     width: 178px;
-    top: 40%;
+    top: 60%;
   }
   .title_intro_ctn {
     align-items: center;
@@ -265,3 +268,27 @@ svg {
   }
 }
 /* -----TUTOR PROFILE TABLET END ----- */
+
+/* -----TUTOR PROFILE PC START ----- */
+@media only screen and (min-width: 1024px) {
+  .head_content_ctn {
+    padding: 0 48px;
+  }
+  .head_banner_avt {
+    top: 72%;
+    left: 48px;
+  }
+  .banner_edit_ctn {
+    right: 48px;
+  }
+  .head_menu {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .head_menu_btn {
+    padding: 1rem 1.6rem;
+    flex-basis: unset;
+  }
+}
+/* -----TUTOR PROFILE PC END ----- */
