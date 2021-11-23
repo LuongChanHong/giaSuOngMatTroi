@@ -47,8 +47,8 @@ svg {
 }
 .banner_edit_ctn {
   position: absolute;
-  bottom: 0.5rem;
-  right: 16px;
+  bottom: 10.5rem;
+  right: 0;
 }
 .banner_edit {
   display: flex;
@@ -67,21 +67,19 @@ svg {
 .banner_edit span {
   display: none;
 }
-.head_banner_avt {
+.head_avt {
   position: absolute;
   background-image: url("/assets/img/sun-sunglasses.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* border-radius: 50%; */
   height: 150px;
   width: 150px;
-  top: 60%;
-  left: 16px;
+  bottom: 52%;
   border: 5px solid var(--this-background-color);
   cursor: pointer;
 }
-.banner_avt_blur {
+.head_avt_blur {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -90,10 +88,10 @@ svg {
   margin: auto;
   border-radius: 50%;
 }
-.banner_avt_blur:hover {
+.head_avt_blur:hover {
   background: rgba(255, 255, 255, 0.096);
 }
-.banner_avt_edit {
+.head_avt_edit {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -113,6 +111,7 @@ svg {
   display: flex;
   flex-direction: column;
   margin-top: 1rem;
+  position: relative;
 }
 .title_intro_ctn {
   text-align: center;
@@ -120,7 +119,7 @@ svg {
 }
 .title_point,
 .title_point_ttl,
-.title_tutor_name,
+.head_basic_name,
 .title_intro_dst {
   font-family: "Mitr", sans-serif;
 }
@@ -139,7 +138,7 @@ svg {
   width: 1rem;
   height: 1rem;
 }
-.title_tutor_name {
+.head_basic_name {
   font-size: 1.2rem;
   text-align: left;
   margin-left: 10.5rem;
@@ -211,7 +210,7 @@ svg {
 /* -----TUTOR PROFILE TABLET START ----- */
 @media only screen and (min-width: 530px) {
   .title_point,
-  .title_tutor_name {
+  .head_basic_name {
     font-size: 1.5rem;
   }
   .title_intro_ctn {
@@ -221,7 +220,13 @@ svg {
     display: flex;
   }
   .head_banner {
-    height: 36vw;
+    height: 35vw;
+  }
+  .head_avt {
+    bottom: 16vw;
+  }
+  .banner_edit_ctn {
+    bottom: 115%;
   }
   .head_menu_btn {
     flex-basis: 50%;
@@ -229,7 +234,7 @@ svg {
   }
 }
 @media only screen and (min-width: 740px) {
-  .title_tutor_name {
+  .head_basic_name {
     font-size: 1.8rem;
   }
   .mobile_menu_items {
@@ -243,20 +248,23 @@ svg {
   .tablet_menu_items {
     justify-content: space-evenly;
   }
-  .banner_avt_edit svg {
+  .avt_edit svg {
     width: 1.5rem;
     height: 1.5rem;
   }
-  .head_banner_avt {
+  .head_avt {
     height: 178px;
     width: 178px;
-    top: 60%;
+    bottom: 6vw;
+  }
+  .banner_edit_ctn {
+    bottom: 125%;
   }
   .title_intro_ctn {
     align-items: center;
     margin-top: 4vw;
   }
-  .title_tutor_name {
+  .head_basic_name {
     margin-left: 12.5rem;
   }
   .title_point_ctn,
@@ -265,6 +273,7 @@ svg {
   }
   .title_intro_dst {
     flex-basis: 50%;
+    font-size: 1.2rem;
   }
 }
 /* -----TUTOR PROFILE TABLET END ----- */
@@ -272,23 +281,40 @@ svg {
 /* -----TUTOR PROFILE PC START ----- */
 @media only screen and (min-width: 1024px) {
   .head_content_ctn {
-    padding: 0 48px;
+    padding: 0 80px;
   }
-  .head_banner_avt {
-    top: 72%;
-    left: 48px;
-  }
-  .banner_edit_ctn {
-    right: 48px;
+  .head_banner {
+    height: 20rem;
   }
   .head_menu {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
+  .head_avt {
+    bottom: 3vw;
+  }
   .head_menu_btn {
     padding: 1rem 1.6rem;
     flex-basis: unset;
   }
+}
+@media only screen and (min-width: 1100px) {
+  /* .head_content_ctn {
+    width: 984px;
+    margin: 0 auto;
+  } */
+}
+@media only screen and (min-width: 1200px) {
+  .head_content_ctn {
+    width: 984px;
+    padding: unset;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  /* .head_content_ctn {
+    width: 1200px;
+  } */
 }
 /* -----TUTOR PROFILE PC END ----- */
