@@ -269,7 +269,7 @@ hr {
 }
 .body_l_about .value {
   flex-basis: 60%;
-  color: var(--text-for-background-color);
+  color: var(--txtColor_1);
 }
 .body_l_about_tag {
   flex-wrap: wrap;
@@ -312,6 +312,7 @@ hr {
 }
 .event_ctt_body {
   font-size: 1rem;
+  color: var(--txtColor_1);
 }
 
 .profile_body_l_media {
@@ -389,6 +390,10 @@ hr {
   padding: 1rem;
   width: 100%;
   border-radius: 20px;
+  cursor: pointer;
+}
+.head_stt_input p:hover {
+  background-color: var(--this-background-color-hover);
 }
 .head_stt_input img {
   border-radius: 50%;
@@ -406,6 +411,7 @@ hr {
   column-gap: 1rem;
   background-color: var(--btnColor_2);
   border-radius: 10px;
+  cursor: pointer;
 }
 .stt_add_element:hover {
   background-color: var(--this-background-color-hover);
@@ -415,11 +421,12 @@ hr {
   height: 2rem;
   color: var(--speColor_1);
 }
-.ctt_ctn {
-  border-radius: 15px;
+.r_ctt_ctn {
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   margin: 2rem 0;
+  padding: 2rem 0;
   background-color: var(--this-background-color);
 }
 .ctt_ctn_head {
@@ -440,6 +447,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 0.5rem;
 }
 .ctt_ctn_head_m_name {
   font-size: 1.4rem;
@@ -453,12 +461,12 @@ hr {
   display: flex;
   align-items: center;
 }
-.ctt_ctn_head_r div {
+.ctt_ctn_head_r {
   cursor: pointer;
   border-radius: 50%;
   padding: 1rem;
 }
-.ctt_ctn_head_r div:hover {
+.ctt_ctn_head_r:hover {
   background-color: var(--this-background-color-hover);
 }
 .ctt_ctn_head_r {
@@ -473,7 +481,7 @@ hr {
 .ctt_ctn_body_txt {
   padding: 0 2rem;
   font-size: 1.4rem;
-  color: var(--this-color);
+  color: var(--txtColor_1);
   margin-top: 0.8rem;
 }
 .ctt_ctn_body_txt_more {
