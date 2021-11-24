@@ -31,6 +31,9 @@ svg {
   width: 1rem;
   height: 1rem;
 }
+hr {
+  color: var(--border_color_2);
+}
 /* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 /* -----PROFILE HEADER START ----- */
 /* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
@@ -142,6 +145,11 @@ svg {
 .mobile_menu_items {
   display: flex;
 }
+.hr_line {
+  height: 1px;
+  background-color: var(--border_color_3);
+  margin: 0.5rem 0;
+}
 .head_menu {
   flex-direction: column-reverse;
   padding-bottom: 5px;
@@ -229,9 +237,7 @@ svg {
   align-items: center;
   word-break: break-word;
 }
-.body_l_contact .button {
-  display: flex;
-}
+
 .body_l_contact div img {
   margin-left: 0.3rem;
   width: 2rem;
@@ -243,14 +249,17 @@ svg {
   height: 1.8rem;
   color: var(--speColor_1);
 }
-.thong-tin-ca-nhan-button {
+.contact_resume_btn {
   width: 100%;
   display: flex;
   justify-content: center;
   border-radius: 10px;
-  background-color: #d5d7db;
+  background-color: var(--btnColor_1);
   padding: 1rem;
   cursor: pointer;
+}
+.contact_resume_btn:hover {
+  background-color: var(--btnColor_hover_1);
 }
 .body_l_about i {
   flex-basis: 7%;
@@ -275,7 +284,7 @@ svg {
 }
 
 .body_l_certifi {
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: var(--this-background-color);
   padding: 2rem 2rem 2rem 2rem;
   margin: 2rem 0;
@@ -307,8 +316,9 @@ svg {
 
 .profile_body_l_media {
   padding: 1.5rem 2rem;
-  border-radius: 15px;
+  border-radius: 20px;
   background-color: var(--this-background-color);
+  margin: 2rem 0;
 }
 .body_l_media_head {
   margin: 0 0 1rem 0;
@@ -354,13 +364,62 @@ svg {
 .border-bottom-left img {
   border-radius: 0 0 0 10px;
 }
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/*----- TUTOR STATUS START -----*/
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 
-/* content container */
+.body_r_head {
+  background-color: var(--bgColor_1);
+  border-radius: 20px;
+}
+.r_head_stt {
+  padding: 1.5rem 2rem;
+}
+.head_stt_add,
+.head_stt_input {
+  display: flex;
+}
+.head_stt_input {
+  column-gap: 1rem;
+  align-items: center;
+}
+.head_stt_input p {
+  background-color: var(--btnColor_2);
+  margin: unset;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 20px;
+}
+.head_stt_input img {
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+}
+.head_stt_add {
+  row-gap: 0.5rem;
+  flex-direction: column;
+}
+.stt_add_element {
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  background-color: var(--btnColor_2);
+  border-radius: 10px;
+}
+.stt_add_element:hover {
+  background-color: var(--this-background-color-hover);
+}
+.stt_add_element svg {
+  width: 2rem;
+  height: 2rem;
+  color: var(--speColor_1);
+}
 .ctt_ctn {
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  padding: 2rem 0;
+  margin: 2rem 0;
   background-color: var(--this-background-color);
 }
 .ctt_ctn_head {
@@ -460,6 +519,11 @@ svg {
 .ctt_ctn_comment {
   padding: 0 2rem;
 }
+
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/*----- TUTOR STATUS START -----*/
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+
 /* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 /* -----PROFILE BODY END ----- */
 /* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
@@ -486,9 +550,14 @@ svg {
   .banner_edit_ctn {
     bottom: 115%;
   }
+  .stt_add_element,
   .head_menu_btn {
     flex-basis: 50%;
     justify-content: center;
+  }
+  .head_stt_add {
+    flex-direction: row;
+    column-gap: 0.5rem;
   }
 }
 @media only screen and (min-width: 740px) {
