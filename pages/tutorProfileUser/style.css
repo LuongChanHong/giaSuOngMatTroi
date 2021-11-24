@@ -321,7 +321,7 @@ svg {
 }
 .body_l_media_head span {
   font-size: 1.6rem;
-  color: #2e77dd;
+  color: var(--speColor_1);
   padding: 1rem 1.6rem;
   border-radius: 10px;
   cursor: pointer;
