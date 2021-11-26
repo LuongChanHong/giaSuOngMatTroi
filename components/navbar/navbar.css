@@ -100,7 +100,7 @@
   }
   .nav_phone {
     display: flex;
-    width: 9rem;
+    /* width: 9rem; */
     justify-content: space-between;
   }
   .nav_menu_btn,
