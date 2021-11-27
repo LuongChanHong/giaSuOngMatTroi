@@ -27,12 +27,26 @@
 .head_content_ctn {
   padding: 0 16px;
 }
+.bg_this_bg_color {
+  background-color: var(--bgColor_1);
+}
 svg {
   width: 1rem;
   height: 1rem;
 }
 hr {
   color: var(--border_color_2);
+}
+table,
+thead,
+tbody,
+tr,
+td {
+  margin: 0;
+  padding: 0;
+  /* border-collapse: collapse; */
+  border-spacing: 0;
+  /* border: 1 none; */
 }
 /* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 /* -----PROFILE HEADER START ----- */
@@ -145,6 +159,9 @@ hr {
 .mobile_menu_items {
   display: flex;
 }
+.head_menu_items {
+  position: relative;
+}
 .hr_line {
   height: 1px;
   background-color: var(--border_color_3);
@@ -177,9 +194,26 @@ hr {
   cursor: pointer;
   margin: 0.5rem 0.2rem;
 }
-.m_menu_option,
 .tablet_menu_items {
   display: none;
+}
+.m_menu_option {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 10rem;
+  background-color: var(--this-background-color);
+  border: 1px solid var(--border_color_3);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: var(--speColor_5) var(--tranColor);
+}
+.m_menu_option::-webkit-scrollbar {
+  width: 3px;
+}
+.m_menu_option::-webkit-scrollbar-thumb {
+  background-color: var(--speColor_5);
 }
 #button-follow {
   margin-left: auto;
@@ -216,9 +250,6 @@ hr {
 }
 .body_l_contact,
 .body_l_about {
-  border-radius: 20px;
-  background-color: var(--this-background-color);
-  padding: 2rem;
   margin: 2rem 0;
   display: flex;
   flex-direction: column;
@@ -282,11 +313,8 @@ hr {
   background-color: #ffffff;
   color: var(--text-for-background-color);
 }
-
 .body_l_certifi {
-  border-radius: 20px;
-  background-color: var(--this-background-color);
-  padding: 2rem 2rem 2rem 2rem;
+  padding-bottom: 3.5rem;
   margin: 2rem 0;
   display: flex;
   flex-direction: column;
@@ -313,13 +341,6 @@ hr {
 .event_ctt_body {
   font-size: 1rem;
   color: var(--txtColor_1);
-}
-
-.profile_body_l_media {
-  padding: 1.5rem 2rem;
-  border-radius: 20px;
-  background-color: var(--this-background-color);
-  /* margin: 2rem 0; */
 }
 .body_l_media_head {
   margin: 0 0 1rem 0;
@@ -366,12 +387,7 @@ hr {
   border-radius: 0 0 0 10px;
 }
 .body_r_head {
-  background-color: var(--bgColor_1);
-  border-radius: 20px;
   margin-top: 2rem;
-}
-.r_head_stt {
-  padding: 1.5rem 2rem;
 }
 .head_stt_add,
 .head_stt_input {
@@ -528,9 +544,9 @@ hr {
   border-radius: 20px;
   padding: 2rem;
 }
-/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
-/* -----RATING AND REVIEWS START ----- */
-/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+.r_reviews_title {
+  font-size: 2rem;
+}
 .review_info_ctn,
 .review_info,
 .review_u,
@@ -660,8 +676,64 @@ hr {
 .fewer_review {
   display: none;
 }
+.body_r_teachTime {
+  margin: 2rem 0;
+  padding: 1.5rem 1rem;
+}
+.r_teachTime_title {
+  font-size: 2rem;
+}
+.tb_l_border {
+  border-left: 1px solid var(--border_color_3);
+}
+.tb_r_border {
+  border-right: 1px solid var(--border_color_3);
+}
+.tb_t_border {
+  border-top: 1px solid var(--border_color_3);
+}
+.tb_b_border {
+  border-bottom: 1px solid var(--border_color_3);
+}
+.r_fee_table,
+.r_sched_table {
+  width: 100%;
+  table-layout: fixed;
+  margin-top: 1rem;
+}
+.r_sched_table svg {
+  color: var(--btnColor_1);
+}
+.sched_tb_td {
+  background-color: var(--this-background-color-hover);
+}
+.sched_tb_day,
+.sched_tb_td,
+.sched_tb_th,
+.fee_tb_td,
+.fee_tb_th {
+  text-align: center;
+}
+.sched_tb_day,
+.sched_tb_th,
+.fee_tb_td,
+.fee_tb_th {
+  padding: 0.5rem 1rem;
+}
+.sched_off > svg {
+  display: none;
+}
+.sched_on {
+  background-color: var(--tranColor);
+}
 /* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
-/* -----RATING AND REVIEWS END ----- */
+/* -----TUTOR FEE START ----- */
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+.r_fee_title {
+  font-size: 2rem;
+}
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/* -----TUTOR FEE END ----- */
 /* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 /* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 /* -----PROFILE BODY END ----- */
@@ -698,6 +770,9 @@ hr {
   .head_stt_add {
     flex-direction: row;
     column-gap: 0.5rem;
+  }
+  .body_r_teachTime {
+    padding: 1.5rem 2rem;
   }
 }
 @media only screen and (min-width: 740px) {

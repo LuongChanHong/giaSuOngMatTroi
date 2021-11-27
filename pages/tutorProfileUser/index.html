@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link rel="stylesheet" href="/components/variable/variable.css">
-    <link rel="stylesheet" href="/components/element/element.css">
     <link rel="stylesheet" href="/components/footer/footer1.css">
     <link rel="stylesheet" href="/components/navbar/navbar.css">
     <link rel="stylesheet" href="/gridLibrary/gridBasic.css">
@@ -22,13 +21,14 @@
 
     <link rel="stylesheet" href="common.css">
 
+    <link rel="stylesheet" href="/components/element/element.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div style="height: 200rem;">
         <!-- -----NAVBAR START----- -->
-        <div id="nav_ctn" class="">
+        <div id="nav_ctn">
             <div class="nav d_flex">
                 <button class="nav_menu_btn d_flex">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
@@ -182,7 +182,10 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <div class="m_menu_option">
+                                <div class="m_menu_option" style="display: none;">
+                                    <div class="head_menu_item">Bài viết</div>
+                                    <div class="head_menu_item">Tài liệu</div>
+                                    <div class="head_menu_item">Ảnh/Video</div>
                                     <div class="head_menu_item">Bài viết</div>
                                     <div class="head_menu_item">Tài liệu</div>
                                     <div class="head_menu_item">Ảnh/Video</div>
@@ -231,7 +234,7 @@
             <div class="profile_body">
                 <div class="profile_body_l">
                     <!-- TUTOR CONTACT START -->
-                    <div class="body_l_contact">
+                    <div class="body_l_contact component_ctn_stl1">
                         <div class="title">Liên lạc:</div>
                         <div>
                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone"
@@ -277,7 +280,7 @@
                     </div>
                     <!-- TUTOR CONTACT END -->
                     <!-- TUTOR INFO START -->
-                    <div class="body_l_about">
+                    <div class="body_l_about component_ctn_stl1">
                         <div class="title">Giới thiệu:</div>
                         <div>
                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marker-alt"
@@ -343,7 +346,7 @@
                     </div>
                     <!-- TUTOR INFO END -->
                     <!-- CERTIFICATE START -->
-                    <div class="body_l_certifi">
+                    <div class="body_l_certifi component_ctn_stl1">
                         <div class="title">Bằng cấp/ Thành tích:</div>
                         <div class="block_event">
                             <div class="event_char">
@@ -380,7 +383,7 @@
                     <div class="body_l_review"></div>
                     <div class="body_l_history"></div>
                     <!-- IMAGES START -->
-                    <div class="profile_body_l_media">
+                    <div class="profile_body_l_media component_ctn_stl1">
                         <div class="body_l_media_head">
                             <div class="title">Ảnh/Video</div>
                             <span>Xem tất cả</span>
@@ -404,7 +407,7 @@
 
                 <div class="profile_body_r">
                     <!-- TUTOR ADD STATUS START -->
-                    <div class="body_r_head">
+                    <div class="body_r_head component_ctn_stl1">
                         <div class="r_head_stt">
                             <div class="head_stt_input">
                                 <img src="/assets/img/sun-sunglasses.jpg" alt="avatar">
@@ -486,12 +489,10 @@
                             </div>
                             <!-- <hr class="ctt_ctn_hr"> -->
                         </div>
-
-
                     </div>
                     <!-- TUTOR STATUS END -->
                     <!-- TUTOR RATINGS AND REVIEWS START -->
-                    <div class="body_r_reviews">
+                    <div class="body_r_reviews component_ctn_stl1">
                         <div class="r_reviews_title"><span>Nhận xét từ phụ huynh</span></div>
                         <div class="hr_line"></div>
                         <!-- REVIEW RATING QUANTITY > 0 START -->
@@ -1216,19 +1217,296 @@
                         <!-- REVIEW RATING QUANTITY = 0 END -->
                     </div>
                     <!-- TUTOR RATINGS AND REVIEWS END -->
-                    <div class="body_r_qualify"></div>
-                    <div class="body_r_teachTime"></div>
-                    <div class="body_r_fee"></div>
+                    <!-- TUTOR SCHEDULE START -->
+                    <div class="body_r_teachTime component_ctn_stl1">
+                        <div class="r_teachTime_title"><span>Lịch nhận lớp</span></div>
+                        <!-- SCHEDULE TABLE START -->
+                        <table class="r_sched_table">
+                            <thead>
+                                <tr>
+                                    <th class="tb_r_border tb_b_border"></th>
+                                    <th class="sched_tb_th tb_l_border tb_b_border">Sáng</th>
+                                    <th class="sched_tb_th tb_l_border tb_b_border">Chiều</th>
+                                    <th class="sched_tb_th tb_l_border tb_b_border">Tối</th>
+                                </tr>
+                            </thead>
+                            <tbody class="sched_body">
+                                <tr>
+                                    <th class=" sched_tb_day tb_t_border tb_r_border">T2</th>
+                                    <td class=" sched_tb_td sched_off tb_l_border tb_t_border">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                            class="svg-inline--fa fa-check fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                            </path>
+                                        </svg>
+                                    </td>
+                                    <td class=" sched_tb_td sched_off tb_l_border tb_t_border">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                            class="svg-inline--fa fa-check fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                            </path>
+                                        </svg>
+                                    </td>
+                                    <td class=" sched_tb_td sched_on tb_l_border tb_t_border">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                            class="svg-inline--fa fa-check fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                            </path>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class=" sched_tb_day tb_t_border tb_r_border">T3</th>
+                                    <td class=" sched_tb_td sched_off tb_l_border tb_t_border"><svg aria-hidden="true"
+                                            focusable="false" data-prefix="fas" data-icon="check"
+                                            class="svg-inline--fa fa-check fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                            </path>
+                                        </svg></td>
+                                    <td class=" sched_tb_td sched_off tb_l_border tb_t_border"><svg aria-hidden="true"
+                                            focusable="false" data-prefix="fas" data-icon="check"
+                                            class="svg-inline--fa fa-check fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                            </path>
+                                        </svg></td>
+                                    <td class=" sched_tb_td  sched_on tb_l_border tb_t_border">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                            class="svg-inline--fa fa-check fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                            </path>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class=" sched_tb_day tb_t_border tb_r_border">T4</th>
+                                    <td class=" sched_tb_td sched_off tb_l_border tb_t_border"><svg aria-hidden="true"
+                                            focusable="false" data-prefix="fas" data-icon="check"
+                                            class="svg-inline--fa fa-check fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                            </path>
+                                        </svg></td>
+                                    <td class=" sched_tb_td sched_off tb_l_border tb_t_border"><svg aria-hidden="true"
+                                            focusable="false" data-prefix="fas" data-icon="check"
+                                            class="svg-inline--fa fa-check fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                            </path>
+                                        </svg></td>
+                                    <td class=" sched_tb_td  sched_on tb_l_border tb_t_border">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                            class="svg-inline--fa fa-check fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                            </path>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class=" sched_tb_day tb_t_border tb_r_border">T5</th>
+                                    <td class=" sched_tb_td sched_off tb_l_border tb_t_border"><svg aria-hidden="true"
+                                            focusable="false" data-prefix="fas" data-icon="check"
+                                            class="svg-inline--fa fa-check fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                            </path>
+                                        </svg></td>
+                                    <td class=" sched_tb_td sched_off tb_l_border tb_t_border"><svg aria-hidden="true"
+                                            focusable="false" data-prefix="fas" data-icon="check"
+                                            class="svg-inline--fa fa-check fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                            </path>
+                                        </svg></td>
+                                    <td class=" sched_tb_td  sched_on tb_l_border tb_t_border">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                            class="svg-inline--fa fa-check fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                            </path>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class=" sched_tb_day tb_t_border tb_r_border">T6</th>
+                                    <td class=" sched_tb_td sched_off tb_l_border tb_t_border"><svg aria-hidden="true"
+                                            focusable="false" data-prefix="fas" data-icon="check"
+                                            class="svg-inline--fa fa-check fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                            </path>
+                                        </svg></td>
+                                    <td class=" sched_tb_td sched_off tb_l_border tb_t_border"><svg aria-hidden="true"
+                                            focusable="false" data-prefix="fas" data-icon="check"
+                                            class="svg-inline--fa fa-check fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                            </path>
+                                        </svg></td>
+                                    <td class=" sched_tb_td  sched_on tb_l_border tb_t_border">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                            class="svg-inline--fa fa-check fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                            </path>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class=" sched_tb_day tb_t_border tb_r_border">T7</th>
+                                    <td class=" sched_tb_td sched_on tb_l_border tb_t_border">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                            class="svg-inline--fa fa-check fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                            </path>
+                                        </svg>
+                                    </td>
+                                    <td class=" sched_tb_td sched_on tb_l_border tb_t_border">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                            class="svg-inline--fa fa-check fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                            </path>
+                                        </svg>
+                                    </td>
+                                    <td class=" sched_tb_td sched_on tb_l_border tb_t_border">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                            class="svg-inline--fa fa-check fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                            </path>
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class=" sched_tb_day tb_t_border tb_r_border">CN</th>
+                                    <td class=" sched_tb_td sched_on tb_l_border tb_t_border">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                            class="svg-inline--fa fa-check fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                            </path>
+                                        </svg>
+                                    </td>
+                                    <td class=" sched_tb_td sched_on tb_l_border tb_t_border">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                            class="svg-inline--fa fa-check fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                            </path>
+                                        </svg>
+                                    </td>
+                                    <td class=" sched_tb_td sched_on tb_l_border tb_t_border">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                            class="svg-inline--fa fa-check fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                            </path>
+                                        </svg>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- SCHEDULE TABLE END -->
+                    </div>
+                    <!-- TUTOR SCHEDULE END -->
+                    <!-- TUTOR FEE START -->
+                    <div class="body_r_fee component_ctn_stl1">
+                        <div class="r_fee_title"><span>Học phí</span></div>
+                        <table class="r_fee_table">
+                            <thead>
+                                <tr>
+                                    <th class="fee_tb_th tb_r_border tb_b_border">Môn</th>
+                                    <th class="fee_tb_th tb_l_border tb_b_border bg_this_bg_color">Trình độ</th>
+                                    <th class="fee_tb_th tb_l_border tb_b_border">Học phí</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fee_tb_td tb_r_border tb_t_border">Toán</td>
+                                    <td class="fee_tb_td tb_l_border tb_t_border">Cấp 1</td>
+                                    <td class="fee_tb_td tb_l_border tb_t_border">50k/giờ</td>
+                                </tr>
+                                <tr>
+                                    <td class="fee_tb_td tb_r_border tb_t_border">Toán</td>
+                                    <td class="fee_tb_td tb_l_border tb_t_border">Cấp 2</td>
+                                    <td class="fee_tb_td tb_l_border tb_t_border">70k/giờ</td>
+                                </tr>
+                                <tr>
+                                    <td class="fee_tb_td tb_r_border tb_t_border">Toán</td>
+                                    <td class="fee_tb_td tb_l_border tb_t_border">Cấp 3</td>
+                                    <td class="fee_tb_td tb_l_border tb_t_border">90k/giờ</td>
+                                </tr>
+                                <tr>
+                                    <td class="fee_tb_td tb_r_border tb_t_border">Toán</td>
+                                    <td class="fee_tb_td tb_l_border tb_t_border">Luyện thi đại học</td>
+                                    <td class="fee_tb_td tb_l_border tb_t_border">110k/giờ</td>
+                                </tr>
+                                <tr>
+                                    <td class="fee_tb_td tb_r_border tb_t_border">Lý</td>
+                                    <td class="fee_tb_td tb_l_border tb_t_border">Cấp 2</td>
+                                    <td class="fee_tb_td tb_l_border tb_t_border">70k/giờ</td>
+                                </tr>
+                                <tr>
+                                    <td class="fee_tb_td tb_r_border tb_t_border">Lý</td>
+                                    <td class="fee_tb_td tb_l_border tb_t_border">Cấp 3</td>
+                                    <td class="fee_tb_td tb_l_border tb_t_border">90k/giờ</td>
+                                </tr>
+                                <tr>
+                                    <td class="fee_tb_td tb_r_border tb_t_border">Lý</td>
+                                    <td class="fee_tb_td tb_l_border tb_t_border">Luyện thi đại học</td>
+                                    <td class="fee_tb_td tb_l_border tb_t_border">110k/giờ</td>
+                                </tr>
+                                <tr>
+                                    <td class="fee_tb_td tb_r_border tb_t_border">Hóa</td>
+                                    <td class="fee_tb_td tb_l_border tb_t_border">Cấp 2</td>
+                                    <td class="fee_tb_td tb_l_border tb_t_border">70k/giờ</td>
+                                </tr>
+                                <tr>
+                                    <td class="fee_tb_td tb_r_border tb_t_border">Hóa</td>
+                                    <td class="fee_tb_td tb_l_border tb_t_border">Cấp 3</td>
+                                    <td class="fee_tb_td tb_l_border tb_t_border">90k/giờ</td>
+                                </tr>
+                                <tr>
+                                    <td class="fee_tb_td tb_r_border tb_t_border">Hóa</td>
+                                    <td class="fee_tb_td tb_l_border tb_t_border">Luyện thi đại học</td>
+                                    <td class="fee_tb_td tb_l_border tb_t_border">110k/giờ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- TUTOR FEE END -->
                 </div>
             </div>
         </div>
-
-        <!-- Phần bên phải nội dung profile  -->
-        <div>
-
-            <!--  -->
-        </div>
-
         <!-- -----FOOTER START----- -->
         <footer class="footer_ctn">
             <div class="footer">
@@ -1295,6 +1573,7 @@
     </div>
 
     <script src="/components/navbar/navbar.js"></script>
+    <script src="/components/element/element.js"></script>
 </body>
 
 </html>

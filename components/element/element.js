@@ -8,22 +8,38 @@
 
 // VALIRABLE
 let isOptionListShow = false;
-
-// SHOW AND HIDE OPTION LIST - START
-// function showOptionList(element) {
-//   if (element.style.display == "block") {
-//     element.style.display = "none";
-//     console.log("element.style.display => none");
-//   } else if (element.style.display == "none") {
-//     element.style.display = "block";
-//     console.log("element.style.display => block");
-//   }
-//   console.log("element.style.display:", element.style.display);
-// }
-function showOptionList(element) {
+// SHOW AND HIDE ELEMENT - START
+function showElement(element) {
   element.style.display = "block";
 }
-
+function hideElement(element) {
+  element.style.display = "none";
+}
+function showAndHideSwitch(element, classOrId) {
+  switch (classOrId) {
+    case "class":
+      let domClass = document.getElementsByClassName(element)[0];
+      let classDisplay = domClass.style.display;
+      if (classDisplay == "none") {
+        showElement(domClass);
+      } else {
+        hideElement(domClass);
+      }
+      break;
+    case "id":
+      let domId = document.getElementById(element);
+      let idDisplay = domId.style.display;
+      if (idDisplay == "none") {
+        showElement(domId);
+      } else {
+        hideElement(domId);
+      }
+      break;
+    default:
+      console.log("showAndHideSwitch function error::classOrId param error");
+      break;
+  }
+}
 function hideAllOptionList(className) {
   let filter_selects = document.getElementsByClassName(className);
   for (let i = 0; i < filter_selects.length; i++) {
@@ -31,10 +47,8 @@ function hideAllOptionList(className) {
     filter_select.style.display = "none";
   }
 }
-function hideOptionList(element) {
-  element.style.display = "none";
-}
-// SHOW AND HIDE OPTION LIST - END
+
+// SHOW AND HIDE ELEMENT - END
 
 // ACTIVE EFFECT - START
 function activeElement(element, classNameList, styleClassName) {
@@ -66,7 +80,7 @@ function option_click(element) {
   let option_list = element.parentElement.parentElement;
   let filter_select =
     option_list.parentElement.getElementsByClassName("select_item_ctn")[0];
-  hideOptionList(option_list); //Ẩn đi select
+  hideElement(option_list); //Ẩn đi select
   filter_select.getElementsByClassName("select_option")[0].innerHTML =
     element.innerHTML; //Bỏ text được chọn vào select title
   turnUnactive(filter_select); //Bỏ đi outline
@@ -81,11 +95,11 @@ for (let i = 0; i < filter_selects.length; i++) {
   filter_select.addEventListener("click", function () {
     hideAllOptionList("select_case_ctn");
     if (!isOptionListShow) {
-      showOptionList(filter_select.nextElementSibling);
+      showElement(filter_select.nextElementSibling);
       isOptionListShow = true;
       // console.log("isOptionListShow =>", isOptionListShow);
     } else {
-      hideOptionList(filter_select.nextElementSibling);
+      hideElement(filter_select.nextElementSibling);
       isOptionListShow = false;
       // console.log("isOptionListShow =>", isOptionListShow);
     }
@@ -171,3 +185,10 @@ document.addEventListener("click", function (evt) {
   turnAllUnactive();
 });
 // UNACTIVE ALL FILTER WHEN CLICK OUTSIDE - END
+
+// TUTOR PROFILE HEADER HIDE/ SHOW MENU - START
+const profileShowMoreBtn = document.getElementsByClassName("m_menu_btn")[0];
+profileShowMoreBtn.addEventListener("click", () =>
+  showAndHideSwitch("m_menu_option", "class")
+);
+// TUTOR PROFILE HEADER HIDE/ SHOW MENU - END

@@ -15,6 +15,14 @@
 }
 /* ACTIVE STYLE - END */
 
+/* COMPONENT CONTAINER STYLE - START */
+.component_ctn_stl1 {
+  background-color: var(--bgColor_1);
+  border-radius: 20px;
+  padding: 1.5rem 2rem;
+}
+/* COMPONENT CONTAINER STYLE - END */
+
 /* Buttom Style 1 */
 .btn_stl1 {
   color: black;
