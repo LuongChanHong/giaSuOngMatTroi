@@ -88,7 +88,6 @@
 .select_case::-webkit-scrollbar {
   width: 3px;
 }
-
 .select_case::-webkit-scrollbar-thumb {
   background-color: var(--speColor_5);
 }

@@ -174,13 +174,19 @@ td {
 .mobile_menu_items {
   justify-content: space-evenly;
 }
+.menu_option_item,
 .head_menu_item {
   padding: 1.2rem;
-  border-radius: 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
   column-gap: 0.5rem;
+}
+.head_menu_item {
+  border-radius: 10px;
+}
+.menu_option_item:hover {
+  background-color: var(--btnColor_1);
 }
 .head_menu_item:hover {
   background-color: var(--this-background-color-hover);
@@ -552,6 +558,7 @@ td {
 .review_u,
 .review_u_info,
 .show_more_reviews,
+.more_review_txt,
 .r_review_card,
 .r_rating_star_ctn,
 .r_ratings_ctn,
@@ -666,15 +673,8 @@ td {
 .show_more_reviews:hover {
   opacity: 0.7;
 }
-.more_review_icn {
-  margin-bottom: 0.5rem;
-}
-.fewer_review_icn {
-  margin-top: 0.5rem;
-}
-.fewer_review_icn,
-.fewer_review {
-  display: none;
+.fewer_review svg {
+  margin: 0.3rem 0 0 0.3rem;
 }
 .body_r_teachTime {
   margin: 2rem 0;

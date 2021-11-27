@@ -188,7 +188,55 @@ document.addEventListener("click", function (evt) {
 
 // TUTOR PROFILE HEADER HIDE/ SHOW MENU - START
 const profileShowMoreBtn = document.getElementsByClassName("m_menu_btn")[0];
+const headMenuOption = document.getElementsByClassName("m_menu_option")[0];
 profileShowMoreBtn.addEventListener("click", () =>
   showAndHideSwitch("m_menu_option", "class")
 );
+// Nếu profile menu đang mở bị thay đổi chiều dài màn hình thì option list tự ẩn
+const profileHeadMenu = document.getElementById("mobile_menu_items");
+const headMenuDisplay = profileHeadMenu.style.display;
+if (headMenuDisplay == "none") {
+  hideElement(headMenuOption);
+}
 // TUTOR PROFILE HEADER HIDE/ SHOW MENU - END
+
+// TUTOR PROFILE MENU ITEM HANDLER - START
+const headMenuItems = document.getElementsByClassName("menu_option_item");
+for (let i = 0; i < headMenuItems.length; i++) {
+  let headMenuItem = headMenuItems[i];
+  headMenuItem.addEventListener("click", () => {
+    hideElement(headMenuOption);
+  });
+}
+// TUTOR PROFILE MENU ITEM HANDLER - END
+
+// TUTOR PROFILE SHOW MORE REVIEW HANDLER - START
+// const showMoreBtn = document.getElementsByClassName("show_more_reviews")[0];
+const moreReviewTxt = document.getElementsByClassName("more_review")[0];
+const moreReviewIcon = document.getElementsByClassName("more_review_icn")[0];
+const fewerReviewTxt = document.getElementsByClassName("fewer_review")[0];
+const fewerReviewIcon = document.getElementsByClassName("fewer_review_icn")[0];
+const reviewCards = document.getElementsByClassName("r_review_card");
+hideElement(fewerReviewTxt);
+for (let i = reviewCards.length - 3; i >= 0; i--) {
+  // Mặc định chỉ hiện 2 comment đầu tiên, còn lại ẩn
+  let reviewCard = reviewCards[i];
+  hideElement(reviewCard);
+}
+moreReviewTxt.addEventListener("click", () => {
+  for (let i = 0; i < reviewCards.length; i++) {
+    let reviewCard = reviewCards[i];
+    showElement(reviewCard);
+  }
+  fewerReviewTxt.style.display = "flex";
+  hideElement(moreReviewTxt);
+});
+fewerReviewTxt.addEventListener("click", () => {
+  for (let i = reviewCards.length - 3; i >= 0; i--) {
+    let reviewCard = reviewCards[i];
+    hideElement(reviewCard);
+  }
+  moreReviewTxt.style.display = "flex";
+  hideElement(fewerReviewTxt);
+});
+// TUTOR PROFILE SHOW MORE REVIEW HANDLER - END
