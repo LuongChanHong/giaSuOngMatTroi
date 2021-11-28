@@ -90,7 +90,7 @@
 }
 .select_item span {
   padding: 1rem;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 .select_item:hover {
   background-color: var(--btnColor_1);

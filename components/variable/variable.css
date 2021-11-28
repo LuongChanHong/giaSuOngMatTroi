@@ -58,11 +58,11 @@
   --box-shadow1: -1px 5px 10px var(--shadow-color1);
 }
 html {
+  font-family: "Mitr", sans-serif;
   font-size: 15px;
   padding: 0;
   margin: 0;
   /* font-family: "Noto Sans", sans-serif; */
-  font-family: "Mitr", sans-serif;
 }
 .d_none {
   display: none;

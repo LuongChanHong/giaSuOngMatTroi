@@ -231,7 +231,7 @@
 .tutor_out_btn span,
 .tutor_out_btn svg,
 .tutor_out_num {
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 .tutor_out_btn svg {
   width: 1.5rem;
@@ -257,6 +257,7 @@
 }
 .contact_phone_ipt input {
   width: 100%;
+  height: 100%;
   padding: 1rem;
   font-size: 1rem;
   font-weight: bold;
@@ -298,7 +299,7 @@
 .contact_num_ctn .contact_numstl1_phone {
   display: flex;
   column-gap: 0.3rem;
-  font-weight: bold;
+  /* font-weight: bold; */
   justify-content: center;
 }
 /* TUTOR CONTACT END */

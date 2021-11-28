@@ -33,7 +33,7 @@
 .banner_txt {
   color: var(--txtColor_1);
   text-shadow: 2px 2px 5px var(--box_shadow);
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 .banner_find_ctn {
   flex-direction: column;
@@ -68,7 +68,7 @@
 .banner_find {
   background-color: var(--btnColor_1);
   text-align: center;
-  font-weight: bold;
+  /* font-weight: bold; */
   cursor: pointer;
 }
 .banner_contact {
@@ -86,7 +86,7 @@
 }
 .banner_contact_zalo span {
   color: var(--txtColor_2);
-  font-weight: bold;
+  /* font-weight: bold; */
   align-self: center;
 }
 .banner_contact_phone {
@@ -102,7 +102,7 @@
 }
 .banner_contact_phone span {
   text-decoration: underline;
-  font-weight: bold;
+  /* font-weight: bold; */
   cursor: pointer;
 }
 /* -----BANNER MOBILE END----- */

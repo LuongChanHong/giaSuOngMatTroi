@@ -47,7 +47,7 @@
 }
 .footer_info_title {
   color: var(--speColor_1);
-  font-weight: bold;
+  /* font-weight: bold; */
   width: fit-content;
 }
 .info_about_criterion,
