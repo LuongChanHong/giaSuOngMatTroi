@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
 * {
-  font-family: "Mitr", sans-serif;
+  box-sizing: border-box;
 }
 :root {
   --test-bgColor: seagreen;
@@ -14,6 +14,7 @@
   --txtColor_2: #3c8aff;
   --txtColor_3: #a15a79;
   --txtColor_4: #8d8989;
+  --txtColor_5: #000000;
 
   --speColor_1: #d51165;
   --speColor_2: #a56e01;
@@ -57,11 +58,11 @@
   --box-shadow1: -1px 5px 10px var(--shadow-color1);
 }
 html {
-  box-sizing: border-box;
   font-size: 15px;
   padding: 0;
   margin: 0;
-  font-family: "Noto Sans", sans-serif;
+  /* font-family: "Noto Sans", sans-serif; */
+  font-family: "Mitr", sans-serif;
 }
 .d_none {
   display: none;
