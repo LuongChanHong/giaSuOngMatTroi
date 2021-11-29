@@ -6,6 +6,46 @@
 //   });
 // pattern
 
+// TESTING CAROUSEL - START
+window.onload = function () {
+  // var slides = document.getElementsByClassName("carousel-item"),
+  //   addActive = function (slide) {
+  //     slide.classList.add("active");
+  //   },
+  //   removeActive = function (slide) {
+  //     slide.classList.remove("active");
+  //   };
+  // addActive(slides[0]);
+  var slides = document.getElementsByClassName("carousel-item");
+  function addActive(slide) {
+    slide.classList.add("active");
+  }
+  function removeActive(slide) {
+    slide.classList.remove("active");
+  }
+  addActive(slides[0]);
+
+  setInterval(function () {
+    for (var i = 0; i < slides.length; i++) {
+      // Đến slide cuối cùng, active slide đầu tiên, unactive slide cuối
+      if (i + 1 == slides.length) {
+        addActive(slides[0]); // Active slide đầu tiên
+        slides[0].style.zIndex = 100; // Đảm bảo slide vừa active ưu tiên hiện,  không bị che
+        setTimeout(removeActive(slides[i]), 350); // Unactive silde cuối cùng //Doesn't be worked in IE-9
+        break;
+      }
+      // Khi 1 slide đang active, unactive slide đó, active slide kế tiếp
+      if (slides[i].classList.contains("active")) {
+        slides[i].removeAttribute("style"); // Unactive slide i
+        setTimeout(removeActive(slides[i]), 350); // Unactive slide i lần 2 ??? //Doesn't be worked in IE-9
+        addActive(slides[i + 1]); // Active slide kế
+        break;
+      }
+    }
+  }, 1000);
+};
+// TESTING CAROUSEL - END
+
 // VALIRABLE
 let isOptionListShow = false;
 // SHOW AND HIDE ELEMENT - START
