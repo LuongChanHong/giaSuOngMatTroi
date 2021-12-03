@@ -16,7 +16,6 @@ body {
   height: 12rem;
   justify-content: space-evenly;
 }
-
 .render_item_ctn {
   background-color: yellowgreen;
   flex-basis: 33.33%;
@@ -25,13 +24,11 @@ body {
   border: 1px solid tomato;
   font-size: 4rem;
 }
-
 .btnGroup {
   display: flex;
   column-gap: 1rem;
   margin-top: 1rem;
 }
-
 .l_btn button,
 .r_btn button {
   padding: 1rem 2rem;
@@ -39,7 +36,6 @@ body {
   border-radius: 5px;
   background-color: orange;
 }
-
 .l_btn button:hover,
 .r_btn button:hover {
   background-color: orangered;
