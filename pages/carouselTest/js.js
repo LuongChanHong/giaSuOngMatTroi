@@ -12,22 +12,25 @@ const imgList = [
 ];
 // Mảng dử liệu gốc
 const dataList = [
-  { content: "A0", queue: "1" },
-  { content: "A1", queue: "2" },
-  { content: "A2", queue: "3" },
-  { content: "A3", queue: "4" },
-  { content: "A4", queue: "5" },
-  { content: "A5", queue: "6" },
-  { content: "A6", queue: "7" },
-  { content: "A7", queue: "8" },
-  { content: "A8", queue: "9" },
-  { content: "A9", queue: "10" },
+  { content: "A0" },
+  { content: "A1" },
+  { content: "A2" },
+  { content: "A3" },
+  { content: "A4" },
+  { content: "A5" },
+  { content: "A6" },
+  { content: "A7" },
+  { content: "A8" },
+  { content: "A9" },
 ];
 
-const activeSlideQuantity = 3;
+const activeSlideQuantity = 4;
+const _activeSlideQuantity = activeSlideQuantity - 1;
+console.log("_activeSlideQuantity:", _activeSlideQuantity);
 const renderContainer = document.getElementsByClassName("render_ctn")[0];
 const renderItems = renderContainer.getElementsByClassName("render_item_ctn");
 
+// HIỆN MẶC ĐỊNH CÁC SLIDE BAN ĐẦU
 function defaultRenderItems() {
   for (let i = 0; i < renderItems.length; i++) {
     renderItems[i].innerHTML = dataList[i].content;
@@ -36,7 +39,7 @@ function defaultRenderItems() {
 
 defaultRenderItems();
 
-// Tìm index đầu hoặc cuối mảng đang render, để xác định item nào trong mảng gốc cần hiện tiếp theo
+// TÌM INDEX ĐẦU/ CUỐI MẢNG ĐANG RENDER, XÁC ĐỊNH ITEM NÀO CỦA MẢNG GỐC CẦN HIỆN TIẾP THEO
 function anchorIndexHandler(lastOrFirst) {
   let renderItem = "";
   switch (lastOrFirst) {
@@ -88,7 +91,51 @@ do {
 } while (isReturn == false);
 console.log("dotButtonQuantity: ", dotButtonQuantity);
 
+// RENDER CÁC NÚT PAGINATION CỦA CAROUSEL
+let dotButtonContainer = document.getElementsByClassName("dot_btn_ctn")[0];
+let dotButtonContainer_content = ``;
+for (let i = 0; i < dotButtonQuantity; i++) {
+  dotButtonContainer_content += `<div class="dot_btn"></div>`;
+}
+dotButtonContainer.innerHTML = dotButtonContainer_content;
+
+// Hiện lại các slide mặc định sau khi đếm các dot button
 defaultRenderItems();
+
+// CHIA CÁC ITEM VÀO CÁC MẢNG NHỎ, SAU NÀY SẼ HIỆN TƯƠNG ỨNG KHI NHẤN DOT BUTTON
+let eleWrapInDotButton = [];
+for (let i = 0; i < dotButtonQuantity; i++) {
+  eleWrapInDotButton.push([]);
+}
+let dataListIndex = 0;
+for (let i = 0; i < dotButtonQuantity; i++) {
+  for (let j = 0; j < activeSlideQuantity; j++) {
+    if (dataListIndex >= 0) {
+      eleWrapInDotButton[i].push(dataList[dataListIndex]);
+    } else {
+      let _dataListIndex = dataListIndex + dataList.length;
+      eleWrapInDotButton[i].push(dataList[_dataListIndex]);
+    }
+    dataListIndex = dataListIndex + 1;
+    if (dataListIndex >= dataList.length) {
+      dataListIndex = dataListIndex - dataList.length;
+    }
+  }
+  dataListIndex = dataListIndex - 1;
+}
+console.log("eleWrapInDotButton:", eleWrapInDotButton);
+// console.log("eleWrapInDotButton[0][2].content:", eleWrapInDotButton[0][2].content);
+
+// GÁN SỰ KIỆN SLICK CHO DOT BUTTON, THAY ĐỔI NỘI DUNG SLIDE HIỂN THỊ
+const dotButtons = document.getElementsByClassName("dot_btn");
+for (let i = 0; i < dotButtons.length; i++) {
+  let dotButton = dotButtons[i];
+  dotButton.addEventListener("click", () => {
+    for (let j = 0; i < eleWrapInDotButton[i].length; j++) {
+      renderItems[j].innerHTML = eleWrapInDotButton[i][j].content;
+    }
+  });
+}
 
 // CÁC XỬ LÝ TRONG NÚT QUA PHẢI
 document.getElementsByClassName("r_btn")[0].addEventListener("click", () => {
@@ -110,7 +157,7 @@ document.getElementsByClassName("l_btn")[0].addEventListener("click", () => {
   let anchorIndex = anchorIndexHandler("first");
 
   for (let i = 0; i < renderItems.length; i++) {
-    let dataListIndex = anchorIndex + i - (activeSlideQuantity - 1);
+    let dataListIndex = anchorIndex + i - _activeSlideQuantity;
     if (dataListIndex < 0) {
       dataListIndex = dataList.length + dataListIndex;
     }
@@ -121,24 +168,16 @@ document.getElementsByClassName("l_btn")[0].addEventListener("click", () => {
 });
 
 // CÁC XỬ LÝ AUTO SLIDE
-
 // setInterval(() => {
-//   const lastRenderItem = renderItems[renderItems.length - 1].innerHTML;
-//   // console.log("lastRenderItem: ", lastRenderItem);
-//   let anchorIndex = "";
-//   for (let i = 0; i < dataList.length; i++) {
-//     if (dataList[i] === lastRenderItem) {
-//       anchorIndex = i;
-//       // console.log("anchorIndex: ", anchorIndex);
-//       break;
-//     }
-//   }
+//   let anchorIndex = anchorIndexHandler("last");
+
 //   for (let i = renderItems.length - 1; i >= 0; i--) {
 //     let dataListIndex = i + anchorIndex;
 //     if (dataListIndex >= dataList.length) {
 //       dataListIndex = dataListIndex - dataList.length;
 //     }
-//     renderItems[i].innerHTML = dataList[dataListIndex];
-//     // console.log("renderItems[", i, "].innerHTML: ", renderItems[i].innerHTML);
+//     renderItems[i].innerHTML = dataList[dataListIndex].content;
+//     console.log("renderItems[", i, "].innerHTML: ", renderItems[i].innerHTML);
 //   }
-// }, 2000);
+//   console.log("R RUN");
+// }, 1000);
