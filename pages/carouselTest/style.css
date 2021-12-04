@@ -23,6 +23,11 @@ body {
   line-height: 11rem;
   border: 1px solid tomato;
   font-size: 4rem;
+  opacity: 0;
+  transition: 0.3s opacity ease-in-out;
+}
+.activeSlide {
+  opacity: 1;
 }
 .btnGroup {
   display: flex;

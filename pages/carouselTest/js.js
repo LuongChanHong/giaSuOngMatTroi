@@ -25,6 +25,9 @@ const dataList = [
 ];
 
 const activeSlideQuantity = 4;
+const buttonDelayTime = 200;
+const autoSlideDelayTime = buttonDelayTime + buttonDelayTime;
+
 const _activeSlideQuantity = activeSlideQuantity - 1;
 console.log("_activeSlideQuantity:", _activeSlideQuantity);
 const renderContainer = document.getElementsByClassName("render_ctn")[0];
@@ -138,18 +141,41 @@ for (let i = 0; i < dotButtons.length; i++) {
 }
 
 // CÁC XỬ LÝ TRONG NÚT QUA PHẢI
-document.getElementsByClassName("r_btn")[0].addEventListener("click", () => {
-  let anchorIndex = anchorIndexHandler("last");
+// document.getElementsByClassName("r_btn")[0].addEventListener("click", () => {
+//   let anchorIndex = anchorIndexHandler("last");
 
-  for (let i = renderItems.length - 1; i >= 0; i--) {
-    let dataListIndex = i + anchorIndex;
-    if (dataListIndex >= dataList.length) {
-      dataListIndex = dataListIndex - dataList.length;
+//   for (let i = renderItems.length - 1; i >= 0; i--) {
+//     let dataListIndex = i + anchorIndex;
+//     if (dataListIndex >= dataList.length) {
+//       dataListIndex = dataListIndex - dataList.length;
+//     }
+
+//     renderItems[i].innerHTML = dataList[dataListIndex].content;
+//     // console.log("renderItems[", i, "].innerHTML: ", renderItems[i].innerHTML);
+//   }
+//   // console.log("R RUN");
+// });
+document.getElementsByClassName("r_btn")[0].addEventListener("click", () => {
+  setTimeout(() => {
+    let anchorIndex = anchorIndexHandler("last");
+
+    for (let i = renderItems.length - 1; i >= 0; i--) {
+      let dataListIndex = i + anchorIndex;
+      if (dataListIndex >= dataList.length) {
+        dataListIndex = dataListIndex - dataList.length;
+      }
+      renderItems[i].classList.remove("activeSlide");
+      setTimeout(() => {
+        renderItems[i].classList.add("activeSlide");
+      }, buttonDelayTime);
+      setTimeout(() => {
+        renderItems[i].innerHTML = dataList[dataListIndex].content;
+      }, buttonDelayTime);
+
+      // console.log("renderItems[", i, "].innerHTML: ", renderItems[i].innerHTML);
     }
-    renderItems[i].innerHTML = dataList[dataListIndex].content;
-    console.log("renderItems[", i, "].innerHTML: ", renderItems[i].innerHTML);
-  }
-  console.log("R RUN");
+    console.log("R RUN");
+  }, buttonDelayTime);
 });
 
 // CÁC XỬ LÝ TRONG NÚT QUA TRÁI
@@ -161,23 +187,31 @@ document.getElementsByClassName("l_btn")[0].addEventListener("click", () => {
     if (dataListIndex < 0) {
       dataListIndex = dataList.length + dataListIndex;
     }
-    renderItems[i].innerHTML = dataList[dataListIndex].content;
-    console.log("renderItems[", i, "].innerHTML: ", renderItems[i].innerHTML);
+    renderItems[i].classList.remove("activeSlide");
+    setTimeout(() => {
+      renderItems[i].classList.add("activeSlide");
+    }, buttonDelayTime);
+    setTimeout(() => {
+      renderItems[i].innerHTML = dataList[dataListIndex].content;
+    }, buttonDelayTime);
+    // console.log("renderItems[", i, "].innerHTML: ", renderItems[i].innerHTML);
   }
-  console.log("L RUN");
+  // console.log("L RUN");
 });
 
 // CÁC XỬ LÝ AUTO SLIDE
-// setInterval(() => {
-//   let anchorIndex = anchorIndexHandler("last");
+function autoSlide() {
+  setInterval(() => {
+    let anchorIndex = anchorIndexHandler("last");
 
-//   for (let i = renderItems.length - 1; i >= 0; i--) {
-//     let dataListIndex = i + anchorIndex;
-//     if (dataListIndex >= dataList.length) {
-//       dataListIndex = dataListIndex - dataList.length;
-//     }
-//     renderItems[i].innerHTML = dataList[dataListIndex].content;
-//     console.log("renderItems[", i, "].innerHTML: ", renderItems[i].innerHTML);
-//   }
-//   console.log("R RUN");
-// }, 1000);
+    for (let i = renderItems.length - 1; i >= 0; i--) {
+      let dataListIndex = i + anchorIndex;
+      if (dataListIndex >= dataList.length) {
+        dataListIndex = dataListIndex - dataList.length;
+      }
+      renderItems[i].innerHTML = dataList[dataListIndex].content;
+      // console.log("renderItems[", i, "].innerHTML: ", renderItems[i].innerHTML);
+    }
+  }, autoSlideDelayTime);
+}
+// autoSlide();
