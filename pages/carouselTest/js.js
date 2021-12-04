@@ -10,7 +10,7 @@ const imgList = [
   "img/9.jpg",
   "img/10.jpg",
 ];
-// Mảng dử liệu gốc
+// Mảng dữ liệu gốc
 const dataList = [
   { content: "A0" },
   { content: "A1" },
@@ -26,12 +26,22 @@ const dataList = [
 
 const activeSlideQuantity = 3;
 const buttonDelayTime = 200;
-const autoSlideDelayTime = 3000;
+const autoSlideDelayTime = 2000;
 
 const _activeSlideQuantity = activeSlideQuantity - 1;
 const dotButtons = document.getElementsByClassName("dot_btn");
 const renderContainer = document.getElementsByClassName("render_ctn")[0];
 const renderItems = renderContainer.getElementsByClassName("render_item_ctn");
+
+// TẠO CÁC ITEM CAROUSEL CẦN HIỂN THỊ THEO activeSlideQuantity
+function renderCarouselItem() {
+  let renderHTML = "";
+  for (let i = 0; i < activeSlideQuantity; i++) {
+    renderHTML += `<div class="render_item_ctn activeSlide"></div>`;
+  }
+  renderContainer.innerHTML = renderHTML;
+}
+renderCarouselItem();
 
 // HIỆN MẶC ĐỊNH CÁC SLIDE BAN ĐẦU
 function defaultRenderItems() {
@@ -39,7 +49,6 @@ function defaultRenderItems() {
     renderItems[i].innerHTML = dataList[i].content;
   }
 }
-
 defaultRenderItems();
 
 // TÌM INDEX ĐẦU/ CUỐI MẢNG ĐANG RENDER, XÁC ĐỊNH ITEM NÀO CỦA MẢNG GỐC CẦN HIỆN TIẾP THEO
@@ -68,66 +77,78 @@ function anchorIndexHandler(lastOrFirst) {
 
 // ĐẾM SỐ DOT BUTTON
 let dotButtonQuantity = 1;
-do {
-  isReturn = false;
-  dotButtonQuantity = dotButtonQuantity + 1;
+function dotButtonCounter() {
+  do {
+    isReturn = false;
+    dotButtonQuantity = dotButtonQuantity + 1;
 
-  let anchorIndex = anchorIndexHandler("last");
-  for (let i = renderItems.length - 1; i >= 0; i--) {
-    let dataListIndex = i + anchorIndex;
-    if (dataListIndex >= dataList.length) {
-      dataListIndex = dataListIndex - dataList.length;
-    }
-    renderItems[i].innerHTML = dataList[dataListIndex].content;
-    // console.log("renderItems[", i, "].innerHTML: ", renderItems[i].innerHTML);
-  }
-
-  for (let i = renderItems.length - 1; i >= 0; i--) {
-    if (renderItems[i].innerHTML === dataList[0].content) {
-      // console.log("RUN");
-      // console.log("dataList[0].content: ", dataList[0].content);
+    // Cho chạy thử đếm số lần cần chạy để quay lại từ đầu mảng dữ liệu gốc
+    let anchorIndex = anchorIndexHandler("last");
+    for (let i = renderItems.length - 1; i >= 0; i--) {
+      // Xử lí index, nếu > length mảng gốc thì cần - length đó để lấy index 0,1,2,...
+      let dataListIndex = i + anchorIndex;
+      if (dataListIndex >= dataList.length) {
+        dataListIndex = dataListIndex - dataList.length;
+      }
+      renderItems[i].innerHTML = dataList[dataListIndex].content;
       // console.log("renderItems[", i, "].innerHTML: ", renderItems[i].innerHTML);
-      isReturn = true;
-      break;
     }
-  }
-} while (isReturn == false);
-console.log("dotButtonQuantity: ", dotButtonQuantity);
 
-// RENDER CÁC NÚT PAGINATION CỦA CAROUSEL
-let dotButtonContainer = document.getElementsByClassName("dot_btn_ctn")[0];
-let dotButtonContainer_content = ``;
-for (let i = 0; i < dotButtonQuantity; i++) {
-  dotButtonContainer_content += `<div class="dot_btn"></div>`;
+    // Nếu item đang hiện giống như phần tử 0 mảng dữ liệu gốc => đã biết được cần bao nhiêu dot button
+    for (let i = renderItems.length - 1; i >= 0; i--) {
+      if (renderItems[i].innerHTML === dataList[0].content) {
+        // console.log("RUN");
+        // console.log("renderItems[", i, "].innerHTML: ", renderItems[i].innerHTML);
+        isReturn = true;
+        break;
+      }
+    }
+  } while (isReturn == false);
+  console.log("dotButtonQuantity: ", dotButtonQuantity);
 }
-dotButtonContainer.innerHTML = dotButtonContainer_content;
+dotButtonCounter();
+
+// RENDER CÁC NÚT DOT BUTTON CỦA CAROUSEL
+function renderDotButton() {
+  let dotButtonContainer = document.getElementsByClassName("dot_btn_ctn")[0];
+  let dotButtonContainer_content = ``;
+  for (let i = 0; i < dotButtonQuantity; i++) {
+    dotButtonContainer_content += `<div class="dot_btn"></div>`;
+  }
+  dotButtonContainer.innerHTML = dotButtonContainer_content;
+  dotButtons[0].classList.add("active_dot");
+}
+renderDotButton();
 
 // Hiện lại các slide mặc định sau khi đếm các dot button
 defaultRenderItems();
 
 // CHIA CÁC ITEM VÀO CÁC MẢNG NHỎ, SAU NÀY SẼ HIỆN TƯƠNG ỨNG KHI NHẤN DOT BUTTON
 let eleWrapInDotButton = [];
-for (let i = 0; i < dotButtonQuantity; i++) {
-  eleWrapInDotButton.push([]);
-}
-let dataListIndex = 0;
-for (let i = 0; i < dotButtonQuantity; i++) {
-  for (let j = 0; j < activeSlideQuantity; j++) {
-    if (dataListIndex >= 0) {
-      eleWrapInDotButton[i].push(dataList[dataListIndex]);
-    } else {
-      let _dataListIndex = dataListIndex + dataList.length;
-      eleWrapInDotButton[i].push(dataList[_dataListIndex]);
-    }
-    dataListIndex = dataListIndex + 1;
-    if (dataListIndex >= dataList.length) {
-      dataListIndex = dataListIndex - dataList.length;
-    }
+function shareDataInDotButton() {
+  for (let i = 0; i < dotButtonQuantity; i++) {
+    eleWrapInDotButton.push([]);
   }
-  dataListIndex = dataListIndex - 1;
+  let dataListIndex = 0;
+  for (let i = 0; i < dotButtonQuantity; i++) {
+    for (let j = 0; j < activeSlideQuantity; j++) {
+      if (dataListIndex >= 0) {
+        eleWrapInDotButton[i].push(dataList[dataListIndex]);
+      } else {
+        let _dataListIndex = dataListIndex + dataList.length;
+        eleWrapInDotButton[i].push(dataList[_dataListIndex]);
+      }
+      dataListIndex++;
+      if (dataListIndex >= dataList.length) {
+        dataListIndex = dataListIndex - dataList.length;
+      }
+    }
+    dataListIndex = dataListIndex - 1;
+  }
+  console.log("eleWrapInDotButton:", eleWrapInDotButton);
+  // console.log("eleWrapInDotButton[0][2].content:", eleWrapInDotButton[0][2].content);
 }
-console.log("eleWrapInDotButton:", eleWrapInDotButton);
-// console.log("eleWrapInDotButton[0][2].content:", eleWrapInDotButton[0][2].content);
+shareDataInDotButton();
 
 // HÀM XỬ LÍ ACTIVE CHO CÁC SLIDE
 function handleActiveSlide(activeIndex, activeContent) {
@@ -140,13 +161,32 @@ function handleActiveSlide(activeIndex, activeContent) {
   }, buttonDelayTime);
 }
 
-function unactiveDotButton() {
+// XỬ LÍ ACTIVE DOT BUTTON
+function handleActiveDotButton(activeDotButton) {
   for (let i = 0; i < dotButtons.length; i++) {
     let dotButton = dotButtons[i];
     if (dotButton.classList.contains("active_dot")) {
       dotButton.classList.remove("active_dot");
     }
   }
+  activeDotButton.classList.add("active_dot");
+}
+
+// TỰ ĐỘNG ACTIVE DOT BUTTON
+function autoActiveDotButton() {
+  let activeButtonIndex;
+  for (let i = 0; i < eleWrapInDotButton.length; i++) {
+    if (renderItems[0].innerHTML == eleWrapInDotButton[i][0].content) {
+      activeButtonIndex = i;
+      break;
+    }
+  }
+  activeButtonIndex += 1;
+  if (activeButtonIndex >= eleWrapInDotButton.length) {
+    activeButtonIndex -= eleWrapInDotButton.length;
+  }
+  handleActiveDotButton(dotButtons[activeButtonIndex]);
+  console.log("activeButtonIndex:", activeButtonIndex);
 }
 
 // GÁN SỰ KIỆN SLICK CHO DOT BUTTON, THAY ĐỔI NỘI DUNG SLIDE HIỂN THỊ
@@ -156,8 +196,6 @@ for (let i = 0; i < dotButtons.length; i++) {
     for (let j = 0; j < eleWrapInDotButton[i].length; j++) {
       handleActiveSlide(j, eleWrapInDotButton[i][j].content);
     }
-    unactiveDotButton();
-    dotButton.classList.add("active_dot");
   });
 }
 
@@ -172,6 +210,7 @@ document.getElementsByClassName("r_btn")[0].addEventListener("click", () => {
     handleActiveSlide(i, dataList[dataListIndex].content);
     // console.log("renderItems[", i, "].innerHTML: ", renderItems[i].innerHTML);
   }
+  autoActiveDotButton();
   // console.log("R RUN");
 });
 
@@ -186,6 +225,7 @@ document.getElementsByClassName("l_btn")[0].addEventListener("click", () => {
     handleActiveSlide(i, dataList[dataListIndex].content);
     // console.log("renderItems[", i, "].innerHTML: ", renderItems[i].innerHTML);
   }
+  autoActiveDotButton();
   // console.log("L RUN");
 });
 
@@ -201,6 +241,8 @@ function autoSlide() {
       handleActiveSlide(i, dataList[dataListIndex].content);
       // console.log("renderItems[", i, "].innerHTML: ", renderItems[i].innerHTML);
     }
+
+    autoActiveDotButton();
   }, autoSlideDelayTime);
 }
-// autoSlide();
+autoSlide();
