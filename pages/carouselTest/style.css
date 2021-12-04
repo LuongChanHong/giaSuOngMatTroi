@@ -62,6 +62,7 @@ img {
   background-color: indigo;
   cursor: pointer;
 }
+.active_dot,
 .dot_btn:hover {
   background-color: blueviolet;
 }

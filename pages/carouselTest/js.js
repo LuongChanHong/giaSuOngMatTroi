@@ -24,12 +24,12 @@ const dataList = [
   { content: "A9" },
 ];
 
-const activeSlideQuantity = 4;
+const activeSlideQuantity = 3;
 const buttonDelayTime = 200;
-const autoSlideDelayTime = buttonDelayTime + buttonDelayTime;
+const autoSlideDelayTime = 3000;
 
 const _activeSlideQuantity = activeSlideQuantity - 1;
-console.log("_activeSlideQuantity:", _activeSlideQuantity);
+const dotButtons = document.getElementsByClassName("dot_btn");
 const renderContainer = document.getElementsByClassName("render_ctn")[0];
 const renderItems = renderContainer.getElementsByClassName("render_item_ctn");
 
@@ -129,71 +129,61 @@ for (let i = 0; i < dotButtonQuantity; i++) {
 console.log("eleWrapInDotButton:", eleWrapInDotButton);
 // console.log("eleWrapInDotButton[0][2].content:", eleWrapInDotButton[0][2].content);
 
+// HÀM XỬ LÍ ACTIVE CHO CÁC SLIDE
+function handleActiveSlide(activeIndex, activeContent) {
+  renderItems[activeIndex].classList.remove("activeSlide");
+  setTimeout(() => {
+    renderItems[activeIndex].classList.add("activeSlide");
+  }, buttonDelayTime);
+  setTimeout(() => {
+    renderItems[activeIndex].innerHTML = activeContent;
+  }, buttonDelayTime);
+}
+
+function unactiveDotButton() {
+  for (let i = 0; i < dotButtons.length; i++) {
+    let dotButton = dotButtons[i];
+    if (dotButton.classList.contains("active_dot")) {
+      dotButton.classList.remove("active_dot");
+    }
+  }
+}
+
 // GÁN SỰ KIỆN SLICK CHO DOT BUTTON, THAY ĐỔI NỘI DUNG SLIDE HIỂN THỊ
-const dotButtons = document.getElementsByClassName("dot_btn");
 for (let i = 0; i < dotButtons.length; i++) {
   let dotButton = dotButtons[i];
   dotButton.addEventListener("click", () => {
-    for (let j = 0; i < eleWrapInDotButton[i].length; j++) {
-      renderItems[j].innerHTML = eleWrapInDotButton[i][j].content;
+    for (let j = 0; j < eleWrapInDotButton[i].length; j++) {
+      handleActiveSlide(j, eleWrapInDotButton[i][j].content);
     }
+    unactiveDotButton();
+    dotButton.classList.add("active_dot");
   });
 }
 
 // CÁC XỬ LÝ TRONG NÚT QUA PHẢI
-// document.getElementsByClassName("r_btn")[0].addEventListener("click", () => {
-//   let anchorIndex = anchorIndexHandler("last");
-
-//   for (let i = renderItems.length - 1; i >= 0; i--) {
-//     let dataListIndex = i + anchorIndex;
-//     if (dataListIndex >= dataList.length) {
-//       dataListIndex = dataListIndex - dataList.length;
-//     }
-
-//     renderItems[i].innerHTML = dataList[dataListIndex].content;
-//     // console.log("renderItems[", i, "].innerHTML: ", renderItems[i].innerHTML);
-//   }
-//   // console.log("R RUN");
-// });
 document.getElementsByClassName("r_btn")[0].addEventListener("click", () => {
-  setTimeout(() => {
-    let anchorIndex = anchorIndexHandler("last");
-
-    for (let i = renderItems.length - 1; i >= 0; i--) {
-      let dataListIndex = i + anchorIndex;
-      if (dataListIndex >= dataList.length) {
-        dataListIndex = dataListIndex - dataList.length;
-      }
-      renderItems[i].classList.remove("activeSlide");
-      setTimeout(() => {
-        renderItems[i].classList.add("activeSlide");
-      }, buttonDelayTime);
-      setTimeout(() => {
-        renderItems[i].innerHTML = dataList[dataListIndex].content;
-      }, buttonDelayTime);
-
-      // console.log("renderItems[", i, "].innerHTML: ", renderItems[i].innerHTML);
+  let anchorIndex = anchorIndexHandler("last");
+  for (let i = renderItems.length - 1; i >= 0; i--) {
+    let dataListIndex = i + anchorIndex;
+    if (dataListIndex >= dataList.length) {
+      dataListIndex = dataListIndex - dataList.length;
     }
-    console.log("R RUN");
-  }, buttonDelayTime);
+    handleActiveSlide(i, dataList[dataListIndex].content);
+    // console.log("renderItems[", i, "].innerHTML: ", renderItems[i].innerHTML);
+  }
+  // console.log("R RUN");
 });
 
 // CÁC XỬ LÝ TRONG NÚT QUA TRÁI
 document.getElementsByClassName("l_btn")[0].addEventListener("click", () => {
   let anchorIndex = anchorIndexHandler("first");
-
   for (let i = 0; i < renderItems.length; i++) {
     let dataListIndex = anchorIndex + i - _activeSlideQuantity;
     if (dataListIndex < 0) {
       dataListIndex = dataList.length + dataListIndex;
     }
-    renderItems[i].classList.remove("activeSlide");
-    setTimeout(() => {
-      renderItems[i].classList.add("activeSlide");
-    }, buttonDelayTime);
-    setTimeout(() => {
-      renderItems[i].innerHTML = dataList[dataListIndex].content;
-    }, buttonDelayTime);
+    handleActiveSlide(i, dataList[dataListIndex].content);
     // console.log("renderItems[", i, "].innerHTML: ", renderItems[i].innerHTML);
   }
   // console.log("L RUN");
@@ -203,13 +193,12 @@ document.getElementsByClassName("l_btn")[0].addEventListener("click", () => {
 function autoSlide() {
   setInterval(() => {
     let anchorIndex = anchorIndexHandler("last");
-
     for (let i = renderItems.length - 1; i >= 0; i--) {
       let dataListIndex = i + anchorIndex;
       if (dataListIndex >= dataList.length) {
         dataListIndex = dataListIndex - dataList.length;
       }
-      renderItems[i].innerHTML = dataList[dataListIndex].content;
+      handleActiveSlide(i, dataList[dataListIndex].content);
       // console.log("renderItems[", i, "].innerHTML: ", renderItems[i].innerHTML);
     }
   }, autoSlideDelayTime);
