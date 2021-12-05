@@ -1,0 +1,141 @@
+body {
+  background-color: var(--bgColor_4);
+  font-family: "Times New Roman", Josefin Sans;
+}
+.e_tutor_ctn {
+  margin-top: 7rem;
+  display: flex;
+  row-gap: 2rem;
+  flex-direction: column;
+}
+svg {
+  width: 1rem;
+  height: 1rem;
+}
+.e_tutor_header {
+  padding: 0 5px;
+}
+/* ------------------------------------------------------------------------------------------ */
+/* -----IELTS TUTOR MOBILE - START----- */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----IELTS TUTOR PAGE HEADER - START----- */
+/* ------------------------------------------------------------------------------------------ */
+
+.header_btns_fee button,
+.header_btns_advise button,
+.tutor_header_btns,
+.tutor_header_address,
+.header_contact_hcm,
+.header_contact_hn,
+.tutor_header_contact,
+.tutor_header_logo,
+.e_tutor_header {
+  display: flex;
+}
+.tutor_header_logo {
+  justify-content: center;
+}
+.tutor_header_ttl,
+.tutor_header_num {
+  font-weight: bold;
+}
+.tutor_header_btns,
+.header_contact_hcm,
+.header_contact_hn,
+.tutor_header_contact {
+  flex-direction: column;
+}
+.header_contact_hcm,
+.header_contact_hn,
+.tutor_header_contact {
+  align-items: center;
+  row-gap: 0.5rem;
+}
+.tutor_header_btns,
+.e_tutor_header {
+  width: 100%;
+  row-gap: 1rem;
+  font-size: 1.1rem;
+}
+.tutor_header_btns button,
+.tutor_header_btns button span {
+  color: var(--btnColor_2);
+  font-size: 1.2rem;
+  opacity: unset;
+}
+.tutor_header_btns button {
+  width: 100%;
+  border: unset;
+  justify-content: center;
+  column-gap: 1rem;
+  padding: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+}
+.tutor_header_btns button:hover {
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+.tutor_header_btns svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.header_btns_fee button {
+  background-color: var(--btnColor_1);
+}
+.header_btns_fee button:hover {
+  background-color: var(--btnColor_hover_1);
+}
+.header_btns_advise button {
+  background-color: var(--speColor_7);
+}
+.header_btns_advise button:hover {
+  background-color: var(--btnColor_hover_2);
+}
+.e_tutor_header span {
+  color: var(--txtColor_5);
+  opacity: 0.7;
+}
+.tutor_header_num {
+  color: var(--speColor_7);
+}
+.tutor_header_address {
+  row-gap: 1rem;
+  flex-direction: column;
+}
+.tutor_header_logo img {
+  height: 9rem;
+  width: 9rem;
+}
+.section {
+  height: 25rem;
+  font-size: 4rem;
+  text-align: center;
+}
+.s1,
+.s3,
+.s5,
+.s7,
+.s9,
+.s11,
+.s13 {
+  background-color: yellowgreen;
+}
+.s2,
+.s4,
+.s6,
+.s8,
+.s10,
+.s12,
+.s14 {
+  background-color: orange;
+}
+/* ------------------------------------------------------------------------------------------ */
+/* -----IELTS TUTOR PAGE HEADER - END----- */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----IELTS TUTOR MOBILE - END----- */
+/* ------------------------------------------------------------------------------------------ */
