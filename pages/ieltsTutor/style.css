@@ -3,7 +3,7 @@ body {
   font-family: "Times New Roman", Josefin Sans;
 }
 .e_tutor_ctn {
-  margin-top: 7rem;
+  margin-top: 5.5rem;
   display: flex;
   row-gap: 2rem;
   flex-direction: column;
@@ -22,7 +22,7 @@ svg {
 /* ------------------------------------------------------------------------------------------ */
 /* -----IELTS TUTOR PAGE HEADER - START----- */
 /* ------------------------------------------------------------------------------------------ */
-
+.tutor_header_img,
 .header_btns_fee button,
 .header_btns_advise button,
 .tutor_header_btns,
@@ -34,6 +34,7 @@ svg {
 .e_tutor_header {
   display: flex;
 }
+.tutor_header_img,
 .tutor_header_logo {
   justify-content: center;
 }
@@ -69,10 +70,11 @@ svg {
   width: 100%;
   border: unset;
   justify-content: center;
-  column-gap: 1rem;
-  padding: 0.5rem;
+  column-gap: 0.5rem;
+  padding: 0.5rem 1rem;
   align-items: center;
   cursor: pointer;
+  border-radius: 5px;
 }
 .tutor_header_btns button:hover {
   opacity: 0.7;
@@ -138,4 +140,58 @@ svg {
 
 /* ------------------------------------------------------------------------------------------ */
 /* -----IELTS TUTOR MOBILE - END----- */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----IELTS TUTOR TABLET - START----- */
+/* ------------------------------------------------------------------------------------------ */
+@media only screen and (min-width: 740px) {
+  .e_tutor_ctn {
+    margin-top: 7rem;
+  }
+  .e_tutor_header {
+    align-items: center;
+  }
+  .tutor_header_btns,
+  .e_tutor_header {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .tutor_header_logo img {
+    height: 6rem;
+    width: 6rem;
+  }
+  .tutor_header_img img {
+    height: 6rem;
+    width: 8rem;
+  }
+  .tutor_header_btns svg {
+    display: none;
+  }
+}
+/* ------------------------------------------------------------------------------------------ */
+/* -----IELTS TUTOR TABLET - END----- */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----IELTS TUTOR PC - START----- */
+/* ------------------------------------------------------------------------------------------ */
+@media only screen and (min-width: 1024px) {
+  .tutor_header_btns svg {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1100px) {
+}
+@media only screen and (min-width: 1200px) {
+}
+@media only screen and (min-width: 1300px) {
+}
+@media only screen and (min-width: 1400px) {
+}
+@media only screen and (min-width: 1500px) {
+}
+/* ------------------------------------------------------------------------------------------ */
+/* -----IELTS TUTOR PC - END----- */
 /* ------------------------------------------------------------------------------------------ */
