@@ -1,6 +1,18 @@
+:root {
+  --color_red_1: var(--speColor_7);
+  --color_red_2: var(--btnColor_hover_2);
+  --color_gray_1: var(--txtColor_5);
+  --color_green_1: var(--btnColor_1);
+  --color_green_2: var(--btnColor_hover_1);
+}
 body {
   background-color: var(--bgColor_4);
-  font-family: "Times New Roman", Josefin Sans;
+  /* font-family: "Montserrat", Josefin Sans;
+  font-family: "Roboto Slab", Josefin Sans;
+  font-family: "Quicksand", Josefin Sans;
+  font-family: "Times New Roman", Josefin Sans; */
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif;
 }
 .e_tutor_ctn {
   margin-top: 5.5rem;
@@ -12,8 +24,32 @@ svg {
   width: 1rem;
   height: 1rem;
 }
+.section {
+  height: 25rem;
+  font-size: 4rem;
+  text-align: center;
+}
+.e_tutor_promise,
 .e_tutor_header {
-  padding: 0 5px;
+  padding: 0 10px;
+}
+.s1,
+.s3,
+.s5,
+.s7,
+.s9,
+.s11,
+.s13 {
+  background-color: yellowgreen;
+}
+.s2,
+.s4,
+.s6,
+.s8,
+.s10,
+.s12,
+.s14 {
+  background-color: orange;
 }
 /* ------------------------------------------------------------------------------------------ */
 /* -----IELTS TUTOR MOBILE - START----- */
@@ -22,6 +58,7 @@ svg {
 /* ------------------------------------------------------------------------------------------ */
 /* -----IELTS TUTOR PAGE HEADER - START----- */
 /* ------------------------------------------------------------------------------------------ */
+
 .tutor_header_img,
 .header_btns_fee button,
 .header_btns_advise button,
@@ -33,6 +70,7 @@ svg {
 .tutor_header_logo,
 .e_tutor_header {
   display: flex;
+  text-align: center;
 }
 .tutor_header_img,
 .tutor_header_logo {
@@ -85,23 +123,23 @@ svg {
   height: 1.5rem;
 }
 .header_btns_fee button {
-  background-color: var(--btnColor_1);
+  background-color: var(--color_green_1);
 }
 .header_btns_fee button:hover {
-  background-color: var(--btnColor_hover_1);
+  background-color: var(--color_green_2);
 }
 .header_btns_advise button {
-  background-color: var(--speColor_7);
+  background-color: var(--color_red_1);
 }
 .header_btns_advise button:hover {
-  background-color: var(--btnColor_hover_2);
+  background-color: var(--color_red_2);
 }
 .e_tutor_header span {
-  color: var(--txtColor_5);
+  color: var(--color_gray_1);
   opacity: 0.7;
 }
 .tutor_header_num {
-  color: var(--speColor_7);
+  color: var(--color_red_1);
 }
 .tutor_header_address {
   row-gap: 1rem;
@@ -111,31 +149,56 @@ svg {
   height: 9rem;
   width: 9rem;
 }
-.section {
-  height: 25rem;
-  font-size: 4rem;
-  text-align: center;
-}
-.s1,
-.s3,
-.s5,
-.s7,
-.s9,
-.s11,
-.s13 {
-  background-color: yellowgreen;
-}
-.s2,
-.s4,
-.s6,
-.s8,
-.s10,
-.s12,
-.s14 {
-  background-color: orange;
-}
+
 /* ------------------------------------------------------------------------------------------ */
 /* -----IELTS TUTOR PAGE HEADER - END----- */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----IELTS TUTOR PROMISE - START----- */
+/* ------------------------------------------------------------------------------------------ */
+
+.promise_txt_item,
+.promise_txt_group {
+  display: flex;
+}
+.promise_txt_item,
+.promise_txt_group {
+  flex-direction: column;
+}
+.promise_txt_group {
+  margin-top: 1rem;
+  row-gap: 2rem;
+}
+.promise_txt_item {
+  row-gap: 0.5rem;
+  align-items: center;
+}
+.promise_txt_item svg {
+  color: var(--color_red_1);
+}
+.tutor_promise_ctt {
+  text-align: center;
+}
+.tutor_promise_ttl p {
+  font-family: "Roboto Slab", Josefin Sans;
+  color: var(--color_red_1);
+  font-size: 2rem;
+}
+.tutor_promise_sub_ttl {
+  font-family: "Montserrat", Josefin Sans;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.tutor_promise_sub_ttl span {
+  font-weight: 700;
+}
+.tutor_promise_line {
+  margin: 0 auto;
+  width: 40%;
+}
+/* ------------------------------------------------------------------------------------------ */
+/* -----IELTS TUTOR PROMISE - END----- */
 /* ------------------------------------------------------------------------------------------ */
 
 /* ------------------------------------------------------------------------------------------ */
@@ -168,6 +231,8 @@ svg {
   }
   .tutor_header_btns svg {
     display: none;
+  }
+  .tutor_promise_ttl p {
   }
 }
 /* ------------------------------------------------------------------------------------------ */
