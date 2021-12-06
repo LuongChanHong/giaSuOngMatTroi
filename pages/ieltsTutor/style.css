@@ -4,6 +4,7 @@
   --color_gray_1: var(--txtColor_5);
   --color_green_1: var(--btnColor_1);
   --color_green_2: var(--btnColor_hover_1);
+  --color_black_1: var(--border_color_2);
 }
 body {
   background-color: var(--bgColor_4);
@@ -179,6 +180,9 @@ svg {
 }
 .tutor_promise_ctt {
   text-align: center;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
 }
 .tutor_promise_ttl p {
   font-family: "Roboto Slab", Josefin Sans;
@@ -195,7 +199,10 @@ svg {
 }
 .tutor_promise_line {
   margin: 0 auto;
-  width: 40%;
+  width: 30%;
+}
+.tutor_promise_line hr {
+  background-color: var(--color_black_1);
 }
 /* ------------------------------------------------------------------------------------------ */
 /* -----IELTS TUTOR PROMISE - END----- */
@@ -215,12 +222,15 @@ svg {
   .e_tutor_header {
     align-items: center;
   }
+  .e_tutor_promise,
+  .e_tutor_header {
+    padding: 0 0;
+  }
   .tutor_header_btns,
   .e_tutor_header {
     font-size: 1.1rem;
     text-align: center;
   }
-
   .tutor_header_logo img {
     height: 6rem;
     width: 6rem;
@@ -233,6 +243,22 @@ svg {
     display: none;
   }
   .tutor_promise_ttl p {
+    font-size: 2.9rem;
+  }
+  .tutor_promise_sub_ttl {
+    font-size: 2.2rem;
+  }
+  .promise_txt_item {
+    flex-direction: row;
+    text-align: left;
+    column-gap: 1rem;
+  }
+  .promise_txt_item svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .promise_txt {
+    width: 30rem;
   }
 }
 /* ------------------------------------------------------------------------------------------ */
