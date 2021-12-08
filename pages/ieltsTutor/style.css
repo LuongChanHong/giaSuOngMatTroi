@@ -27,7 +27,6 @@ body {
 .e_tutor_ctn {
   margin-top: 5.5rem;
   display: flex;
-  row-gap: 2rem;
   flex-direction: column;
 }
 svg {
@@ -42,10 +41,17 @@ h1 {
   font-size: 4rem;
   text-align: center;
 }
+.e_tutor_congrats,
 .tutor_list_banner,
 .e_tutor_promise,
 .e_tutor_header {
   padding: 0 10px;
+}
+.e_tutor_congrats_ctn,
+.e_tutor_list_ctn,
+.e_tutor_achieve_ctn,
+.e_tutor_promise_ctn {
+  margin-top: 1.5rem;
 }
 .s1,
 .s3,
@@ -433,6 +439,65 @@ h1 {
 /* ------------------------------------------------------------------------------------------ */
 
 /* ------------------------------------------------------------------------------------------ */
+/* -----CONGRATULATIONS - START----- */
+/* ------------------------------------------------------------------------------------------ */
+
+.congrats_arrow_img,
+.tutor_congrats_txts,
+.e_tutor_congrats {
+  display: flex;
+}
+.e_tutor_congrats {
+  flex-direction: column-reverse;
+}
+.tutor_congrats_txts h1,
+.tutor_congrats_arrow p {
+  font-family: "Times New Roman", Josefin Sans;
+}
+.e_tutor_congrats_ctn {
+  margin-bottom: 2rem;
+}
+.tutor_congrats_img {
+  width: 100%;
+  height: 18rem;
+}
+.tutor_congrats_img img {
+  width: 100%;
+  height: 100%;
+}
+.tutor_congrats_txts {
+  margin: 2rem 0;
+  row-gap: 1rem;
+  flex-direction: column;
+}
+.tutor_congrats_txts p {
+  font-size: 1.4rem;
+  color: var(--color_black_1);
+  opacity: 0.6;
+}
+.tutor_congrats_txts h1 {
+  font-size: 2.3rem;
+  color: var(--color_blue_2);
+}
+.tutor_congrats_txts h3 {
+  font-size: 1.3rem;
+  color: var(--color_blue_1);
+}
+.tutor_congrats_arrow p {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--color_gray_1);
+  opacity: 0.7;
+}
+.congrats_arrow_img {
+  justify-content: center;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----CONGRATULATIONS - END----- */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------ */
 /* -----IELTS TUTOR MOBILE - END----- */
 /* ------------------------------------------------------------------------------------------ */
 
@@ -513,6 +578,18 @@ h1 {
   .special_ctt_item {
     padding: 0 1rem;
   }
+  .e_tutor_congrats {
+    flex-direction: row;
+  }
+  .tutor_congrats_img {
+    position: relative;
+    height: 100%;
+  }
+  .tutor_congrats_img img {
+    position: absolute;
+    height: 15rem;
+    bottom: 0;
+  }
 }
 /* ------------------------------------------------------------------------------------------ */
 /* -----IELTS TUTOR TABLET - END----- */
@@ -527,6 +604,10 @@ h1 {
   }
   .tutor_special_ttl {
     padding-bottom: 2rem;
+  }
+  .tutor_congrats_arrow {
+    display: flex;
+    flex-direction: row;
   }
 }
 @media only screen and (min-width: 1100px) {
