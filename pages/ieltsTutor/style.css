@@ -1,11 +1,13 @@
 :root {
   --color_red_1: var(--speColor_7);
   --color_red_2: var(--btnColor_hover_2);
-  --color_green_1: var(--btnColor_1);
-  --color_green_2: var(--btnColor_hover_1);
+  --color_green_1: var(--speColor_11);
+  --color_green_2: var(--btnColor_1);
+  --color_green_3: var(--speColor_5);
   --color_black_1: var(--border_color_2);
   --color_black_2: var(--border_color_3);
   --color_blue_1: var(--speColor_8);
+  --color_blue_3: var(--speColor_12);
 
   --color_gray_1: var(--txtColor_5);
 
@@ -219,6 +221,7 @@ h1 {
 .tutor_promise_line {
   margin: 0 auto;
   width: 30%;
+  padding: 1rem 0;
 }
 .tutor_promise_line hr {
   background-color: var(--color_black_1);
@@ -386,8 +389,6 @@ h1 {
 /* -----SPECIAL TUTOR - START----- */
 /* ------------------------------------------------------------------------------------------ */
 
-.e_tutor_special_ctn {
-}
 .special_ctt_item {
   display: flex;
 }
@@ -495,6 +496,105 @@ h1 {
 
 /* ------------------------------------------------------------------------------------------ */
 /* -----CONGRATULATIONS - END----- */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----INTERACT - START----- */
+/* ------------------------------------------------------------------------------------------ */
+
+.improve_bg_img,
+.improve_document,
+.interact_ctt,
+.interact_txt,
+.interact_item {
+  display: flex;
+  flex-direction: column;
+}
+.interact_ctt {
+  row-gap: 1.2rem;
+}
+.improve_document,
+.interact_txt,
+.interact_item {
+  row-gap: 0.8rem;
+}
+.e_tutor_interact_ctn {
+  color: var(--color_white_1);
+}
+.e_tutor_interact_bg {
+  background-color: var(--color_blue_2);
+}
+.tutor_interact {
+  background-image: url(/assets/img/background-day-ielts-1-kem-1-min.jpg);
+  background-size: cover;
+}
+.interact_bg {
+  background-color: var(--color_blue_2);
+  padding: 2rem 10px;
+}
+.txt_r {
+  text-align: right;
+}
+.interact_ttl {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 4px 3px var(--color_blue_1);
+}
+.interact_ttl span {
+  color: var(--color_yellow_1);
+}
+.interact_hr {
+  margin: 0 auto;
+  width: 30%;
+  padding: 1rem 0;
+}
+.interact_hr hr {
+  background-color: var(--color_white_1);
+}
+.interact_icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+.improve_txt p,
+.interact_txt p {
+  line-height: 1.5rem;
+  font-family: "Times New Roman", Josefin Sans;
+  font-size: 1.2rem;
+}
+.interact_txt h3 {
+  font-size: 1.3rem;
+}
+.improve_document,
+.improve_ttl {
+  padding: 1rem;
+}
+.improve_bg_img {
+  align-items: center;
+}
+.improve_btn {
+  padding-bottom: 2rem;
+}
+.improve_btn button {
+  border: unset;
+  color: var(--color_white_1);
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  background-color: var(--color_green_1);
+  box-shadow: 0px 10px 0px var(--color_green_3);
+  cursor: pointer;
+  transition: width 1s, height 1s, background-color 1s, transform 1s;
+}
+.improve_btn button:hover {
+  background-color: var(--color_blue_3);
+  box-shadow: 0px 10px 0px var(--color_blue_1);
+  transform: scale(1.2);
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----INTERACT - END----- */
 /* ------------------------------------------------------------------------------------------ */
 
 /* ------------------------------------------------------------------------------------------ */
@@ -608,6 +708,37 @@ h1 {
   .tutor_congrats_arrow {
     display: flex;
     flex-direction: row;
+  }
+  .interact_bg {
+    padding: 2rem;
+  }
+  .interact_item,
+  .interact_ttl {
+    text-align: left;
+  }
+  .interact_hr {
+    margin: unset;
+  }
+  .interact_item {
+    flex-direction: row;
+    column-gap: 1rem;
+  }
+  .interact_txt p,
+  .interact_txt h3 {
+    font-size: 1.5rem;
+  }
+  .interact_txt p {
+    line-height: 2.3rem;
+  }
+  .improve_btn {
+    padding: 2rem;
+  }
+  .improve_bg_img {
+    background-image: url(/assets/img/gia-su-ielts-bat-dung-benh-chua-dung-bai-min.jpg);
+    background-position: center center;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 @media only screen and (min-width: 1100px) {
