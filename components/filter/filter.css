@@ -133,17 +133,17 @@
 }
 @media only screen and (min-width: 740px) and (max-width: 1023px) {
   .select_case {
-    width: 13.2rem;
+    width: 12rem;
   }
 }
 @media only screen and (min-width: 1024px) {
   .select_case {
-    width: 9.7rem;
+    width: 9rem;
   }
 }
 @media only screen and (min-width: 1240px) {
   .select_case {
-    width: 12.5rem;
+    width: 12rem;
   }
 }
 /* -----FILTER MOBILE END----- */

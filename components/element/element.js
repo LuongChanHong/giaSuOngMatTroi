@@ -240,3 +240,27 @@ fewerReviewTxt.addEventListener("click", () => {
   hideElement(fewerReviewTxt);
 });
 // TUTOR PROFILE SHOW MORE REVIEW HANDLER - END
+
+// IELTS TUTOR PAGE RADIO BUTTON HANDLER - START
+// let ielstTutorRadioButtons = document.getElementsByClassName(
+//   "tutor_list_radio_btn"
+// );
+
+// let button = document.getElementsByClassName("list_form_btn")[0];
+// button.addEventListener("click", () => {
+//   for (let i = 0; i < ielstTutorRadioButtons.length; i++) {
+//     let ielstTutorRadioButton = ielstTutorRadioButtons[i];
+//     if (ielstTutorRadioButton.checked) {
+//       console.log("IF RUN");
+//       console.log("value:", ielstTutorRadioButton.value);
+//     }
+//     console.log("FOR RUN");
+//   }
+//   console.log("RUN");
+// });
+const _button = document.getElementsByClassName("list_btn")[0];
+_button.addEventListener("click", () => {
+  console.log("RUN");
+});
+
+// IELTS TUTOR PAGE RADIO BUTTON HANDLER - END

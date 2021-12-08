@@ -1,10 +1,19 @@
 :root {
   --color_red_1: var(--speColor_7);
   --color_red_2: var(--btnColor_hover_2);
-  --color_gray_1: var(--txtColor_5);
   --color_green_1: var(--btnColor_1);
   --color_green_2: var(--btnColor_hover_1);
   --color_black_1: var(--border_color_2);
+  --color_black_2: var(--border_color_3);
+  --color_blue_1: var(--speColor_8);
+
+  --color_gray_1: var(--txtColor_5);
+
+  --color_yellow_1: var(--speColor_9);
+  --color_white_1: var(--btnColor_2);
+  --color_orange_1: var(--speColor_3);
+
+  --color_bg_1: var(--bgColor_3);
 }
 body {
   background-color: var(--bgColor_4);
@@ -25,11 +34,15 @@ svg {
   width: 1rem;
   height: 1rem;
 }
+h1 {
+  margin: 0;
+}
 .section {
   height: 25rem;
   font-size: 4rem;
   text-align: center;
 }
+.tutor_list_banner,
 .e_tutor_promise,
 .e_tutor_header {
   padding: 0 10px;
@@ -187,11 +200,11 @@ svg {
 .tutor_promise_ttl p {
   font-family: "Roboto Slab", Josefin Sans;
   color: var(--color_red_1);
-  font-size: 2rem;
+  font-size: 2.8rem;
 }
 .tutor_promise_sub_ttl {
   font-family: "Montserrat", Josefin Sans;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 .tutor_promise_sub_ttl span {
@@ -206,6 +219,217 @@ svg {
 }
 /* ------------------------------------------------------------------------------------------ */
 /* -----IELTS TUTOR PROMISE - END----- */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----IELTS TUTOR ACHIEVE - START----- */
+/* ------------------------------------------------------------------------------------------ */
+.e_tutor_achieve_ctn {
+  background-color: var(--color_blue_1);
+}
+.tutor_achieve_ctt h1 {
+  color: var(--color_white_1);
+  margin: 0;
+  word-spacing: 0.5rem;
+}
+.tutor_achieve_ctt p {
+  color: var(--color_yellow_1);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.tutor_achieve_ctt {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  line-height: 2rem;
+}
+/* ------------------------------------------------------------------------------------------ */
+/* -----IELTS TUTOR ACHIEVE - END----- */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----IELTS TUTOR LIST - START----- */
+/* ------------------------------------------------------------------------------------------ */
+.tutor_list_banner {
+  text-align: center;
+}
+.tutor_list_ctt,
+.e_tutor_list_ctn,
+.list_form_ttl,
+.list_form_btn button,
+.form_area_group,
+.form_input_group,
+.list_form_fill,
+.list_banner_ctt {
+  display: flex;
+}
+.tutor_list_ctt,
+.e_tutor_list_ctn,
+.list_form_ttl,
+.form_area_group,
+.form_input_group,
+.list_form_fill,
+.list_banner_ctt {
+  flex-direction: column;
+}
+.tutor_list_ctt,
+.e_tutor_list_ctn,
+.form_input_group,
+.list_banner_ctt {
+  row-gap: 1rem;
+}
+.list_banner_ctt h1 {
+  color: var(--color_blue_1);
+  opacity: 0.9;
+  font-size: 1.8rem;
+}
+.list_banner_ctt p {
+  color: var(--color_gray_1);
+  font-size: 1.5rem;
+  opacity: 0.7;
+  font-weight: 500;
+}
+.tutor_list_ctt_bg {
+  background-color: var(--color_bg_1);
+}
+.tutor_list_ctt {
+  padding: 3rem 10px;
+}
+.tutor_list_form_ctn {
+  overflow: hidden;
+  border-radius: 10px;
+}
+.tutor_list_form {
+  position: relative;
+  border: 3px dashed var(--color_orange_1);
+  border-radius: 10px;
+  height: 39rem;
+}
+.list_form_ttl {
+  position: absolute;
+  inset: -5px -5px -5px;
+  background-color: var(--color_orange_1);
+  border-bottom-left-radius: 120px;
+  border-bottom-right-radius: 120px;
+  height: 14rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  justify-content: center;
+  color: var(--color_white_1);
+  font-family: "Times New Roman", Josefin Sans;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 2rem;
+}
+.list_form_ttl span {
+  text-decoration: underline;
+}
+.list_form_fill {
+  position: absolute;
+  bottom: 0;
+  padding: 2rem 1.5rem 3rem;
+  width: 100%;
+  row-gap: 2rem;
+}
+.list_form_input input {
+  width: 100%;
+  background-color: var(--color_white_1);
+  border: 1px solid var(--color_black_2);
+  padding: 0.8rem 1rem;
+  outline: 1px solid transparent;
+}
+.form_area_group {
+  row-gap: 0.5rem;
+}
+.form_area_group p,
+.form_area_group label {
+  color: var(--color_gray_1);
+  opacity: 0.7;
+}
+.form_area_group p {
+  font-style: italic;
+  text-decoration: underline;
+  font-size: 1.2rem;
+}
+.form_area_group input {
+  transform: scale(1.4);
+  cursor: pointer;
+}
+.list_form_btn button {
+  width: 100%;
+  border: unset;
+  background-color: var(--color_green_1);
+  padding: 0.8rem 1rem;
+  color: var(--color_white_1);
+  align-items: center;
+  opacity: unset;
+  border-radius: 5px;
+  justify-content: center;
+  column-gap: 0.5rem;
+  cursor: pointer;
+}
+.list_form_btn button:hover {
+  background-color: var(--color_green_2);
+}
+/* ------------------------------------------------------------------------------------------ */
+/* -----IELTS TUTOR LIST - END----- */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----SPECIAL TUTOR - START----- */
+/* ------------------------------------------------------------------------------------------ */
+
+.e_tutor_special_ctn {
+}
+.special_ctt_item {
+  display: flex;
+}
+.special_ctt_item {
+  flex-direction: column;
+}
+.e_tutor_special_bg {
+  background-color: var(--color_blue_2);
+  padding: 4rem 10px;
+  color: var(--color_white_1);
+}
+.tutor_special_ttl {
+  margin-bottom: 1rem;
+}
+.special_ttl_txt {
+  font-size: 2.4rem;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Times New Roman", Josefin Sans;
+  line-height: 3.5rem;
+  padding: 0 1rem;
+}
+.special_ctt_item {
+  padding: 2rem;
+  align-items: center;
+}
+.special_item_img {
+  max-width: 10rem;
+  max-height: 10rem;
+  margin-bottom: 2rem;
+}
+.special_item_img img {
+  width: 100%;
+  height: 100%;
+}
+.special_item_ttl {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.special_item_txt {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----SPECIAL TUTOR - END----- */
 /* ------------------------------------------------------------------------------------------ */
 
 /* ------------------------------------------------------------------------------------------ */
@@ -259,6 +483,35 @@ svg {
   }
   .promise_txt {
     width: 30rem;
+    font-size: 1.2rem;
+  }
+  .tutor_achieve_ctt {
+    text-align: center;
+    line-height: 2.5rem;
+  }
+  .tutor_achieve_ctt h1 {
+    font-size: 2rem;
+  }
+  .tutor_achieve_ctt p {
+    font-size: 1.8rem;
+  }
+  .list_form_btn button {
+    padding: 0.8rem 0.5rem;
+  }
+  .tutor_list_form {
+    height: 42rem;
+  }
+  .list_form_ttl {
+    height: 17rem;
+  }
+  .list_form_fill {
+    padding: 1.5rem;
+  }
+  .tutor_list_ctt {
+    flex-direction: row;
+  }
+  .special_ctt_item {
+    padding: 0 1rem;
   }
 }
 /* ------------------------------------------------------------------------------------------ */
@@ -272,12 +525,23 @@ svg {
   .tutor_header_btns svg {
     display: block;
   }
+  .tutor_special_ttl {
+    padding-bottom: 2rem;
+  }
 }
 @media only screen and (min-width: 1100px) {
 }
 @media only screen and (min-width: 1200px) {
 }
 @media only screen and (min-width: 1300px) {
+  .tutor_list_ctt,
+  .wide {
+    width: 940px;
+    margin: 0 auto !important;
+  }
+  .tutor_list_ctt {
+    width: 1200px;
+  }
 }
 @media only screen and (min-width: 1400px) {
 }
