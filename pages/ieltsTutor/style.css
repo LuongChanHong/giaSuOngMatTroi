@@ -632,6 +632,7 @@ h1 {
   position: absolute;
   left: 0;
   bottom: -10px;
+  width: 100%;
 }
 .e_tutor_motiva_bottom svg {
   width: 100%;
@@ -765,6 +766,16 @@ h1 {
     position: absolute;
     height: 15rem;
     bottom: 0;
+  }
+  .e_tutor_motiva_bg {
+    height: 35rem;
+  }
+  .tutor_motiva_img {
+    position: relative;
+  }
+  .tutor_motiva_img img {
+    position: absolute;
+    transform: translateY(50%);
   }
 }
 /* ------------------------------------------------------------------------------------------ */
