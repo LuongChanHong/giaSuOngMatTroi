@@ -727,6 +727,80 @@ h1 {
 /* ------------------------------------------------------------------------------------------ */
 
 /* ------------------------------------------------------------------------------------------ */
+/* -----GOAL - START----- */
+/* ------------------------------------------------------------------------------------------ */
+
+.e_tutor_goal {
+  background-color: var(--color_blue_2);
+  padding: 1rem 2rem;
+  color: var(--color_white_1);
+  text-align: center;
+  font-family: "Times New Roman", Josefin Sans;
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----GOAL - END----- */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----PURPOSE - START----- */
+/* ------------------------------------------------------------------------------------------ */
+
+.purpose_block_score li {
+  display: flex;
+}
+.e_tutor_purpose_bg {
+  background-image: url(/assets/img/background-luyen-thi-ielts-1-kem-1-min.jpg);
+  background-size: cover;
+}
+.e_tutor_purpose {
+  padding: 2rem;
+  color: var(--color_blue_2);
+  font-family: "Times New Roman", Josefin Sans;
+}
+.purpose_block_ttl {
+  width: 12rem;
+  padding: 1rem 0;
+}
+.purpose_block_ttl p {
+  font-size: 2rem;
+  font-weight: bold;
+  border-right: 2px solid var(--color_blue_2);
+}
+.purpose_block_subttl {
+  font-size: 1.2rem;
+}
+.purpose_block_score ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+  column-gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0.2rem 0;
+}
+.purpose_block_score li {
+  column-gap: 0.5rem;
+  color: var(--color_black_1);
+  align-items: center;
+}
+.purpose_block_icn svg {
+  width: 2rem;
+  height: 2rem;
+}
+.purpose_block_txt {
+  opacity: 0.6;
+}
+.tutor_purpose_hr {
+  padding: 2rem 0;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----PURPOSE - END----- */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------ */
 /* -----IELTS TUTOR MOBILE - END----- */
 /* ------------------------------------------------------------------------------------------ */
 
@@ -843,6 +917,13 @@ h1 {
   .row_reverse {
     flex-direction: row-reverse;
   }
+  .e_tutor_purpose_bg {
+    flex-direction: row;
+    display: flex;
+  }
+  .e_tutor_purpose {
+    padding: 2rem 0;
+  }
 }
 /* ------------------------------------------------------------------------------------------ */
 /* -----IELTS TUTOR TABLET - END----- */
@@ -895,6 +976,9 @@ h1 {
   }
   .tutor_receive_img img {
     transform: translateY(55%);
+  }
+  .tutor_purpose_block {
+    padding: 0 3rem;
   }
 }
 @media only screen and (min-width: 1100px) {
