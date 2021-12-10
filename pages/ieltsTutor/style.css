@@ -1,16 +1,19 @@
 :root {
   --color_red_1: var(--speColor_7);
   --color_red_2: var(--btnColor_hover_2);
+  --color_red_3: var(--speColor_13);
+
   --color_green_1: var(--speColor_11);
   --color_green_2: var(--btnColor_1);
   --color_green_3: var(--speColor_5);
+
   --color_black_1: var(--border_color_2);
   --color_black_2: var(--border_color_3);
+
   --color_blue_1: var(--speColor_8);
   --color_blue_3: var(--speColor_12);
 
   --color_gray_1: var(--txtColor_5);
-
   --color_yellow_1: var(--speColor_9);
   --color_white_1: var(--btnColor_2);
   --color_orange_1: var(--speColor_3);
@@ -60,7 +63,8 @@ h1 {
 .s7,
 .s9,
 .s11,
-.s13 {
+.s13,
+.s15 {
   background-color: yellowgreen;
 }
 .s2,
@@ -631,7 +635,7 @@ h1 {
 .e_tutor_motiva_bottom {
   position: absolute;
   left: 0;
-  bottom: -10px;
+  bottom: -11px;
   width: 100%;
 }
 .e_tutor_motiva_bottom svg {
@@ -645,7 +649,7 @@ h1 {
   fill: var(--color_white_1);
 }
 .tutor_motiva {
-  padding: 0.8rem 2rem;
+  padding: 2rem;
   color: var(--color_white_1);
 }
 .tutor_motiva h3 {
@@ -672,6 +676,54 @@ h1 {
 
 /* ------------------------------------------------------------------------------------------ */
 /* -----MOTIVATION - END----- */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----RECEVICE - START----- */
+/* ------------------------------------------------------------------------------------------ */
+
+.e_tutor_receive {
+  padding: 2rem 0;
+}
+.tutor_receive_block {
+  display: flex;
+}
+.tutor_receive_block {
+  flex-direction: column-reverse;
+}
+.receive_block_ctt {
+  padding: 1rem 2rem;
+}
+.tutor_receive_img {
+  position: relative;
+  width: 100%;
+}
+.tutor_receive_img img {
+  width: 100%;
+}
+.receive_block_ttl {
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2.3rem;
+  font-family: "Montserrat", Josefin Sans;
+  margin-bottom: 1rem;
+}
+.receive_tip_ttl {
+  color: var(--color_red_3);
+}
+.icon_blue,
+.receive_exam_ttl {
+  color: var(--color_blue_2);
+}
+.icon_red {
+  color: var(--color_red_1);
+}
+.txt_fade {
+  opacity: 0.6;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----RECEVICE - END----- */
 /* ------------------------------------------------------------------------------------------ */
 
 /* ------------------------------------------------------------------------------------------ */
@@ -770,12 +822,26 @@ h1 {
   .e_tutor_motiva_bg {
     height: 35rem;
   }
+  .tutor_receive_img,
   .tutor_motiva_img {
     position: relative;
   }
   .tutor_motiva_img img {
     position: absolute;
     transform: translateY(50%);
+  }
+  .e_tutor_motiva_bottom {
+    bottom: -12px;
+  }
+  .tutor_receive_block {
+    flex-direction: row;
+  }
+  .tutor_receive_img img {
+    top: 50%;
+    transform: translateY(180%);
+  }
+  .row_reverse {
+    flex-direction: row-reverse;
   }
 }
 /* ------------------------------------------------------------------------------------------ */
@@ -826,6 +892,9 @@ h1 {
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .tutor_receive_img img {
+    transform: translateY(55%);
   }
 }
 @media only screen and (min-width: 1100px) {
