@@ -30,6 +30,7 @@ body {
     Helvetica Neue, Arial, Noto Sans, sans-serif;
 }
 .e_tutor_ctn {
+  position: relative;
   margin-top: 5.5rem;
   display: flex;
   flex-direction: column;
@@ -78,6 +79,36 @@ h1 {
 }
 /* ------------------------------------------------------------------------------------------ */
 /* -----IELTS TUTOR MOBILE - START----- */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----ADVISE BUTTON - START----- */
+/* ------------------------------------------------------------------------------------------ */
+
+.advise_button {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+}
+.advise_btn {
+  border: none;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: var(--color_green_1);
+  color: var(--color_white_1);
+  border-radius: 20px;
+}
+.advise_btn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----ADVISE BUTTON - END----- */
 /* ------------------------------------------------------------------------------------------ */
 
 /* ------------------------------------------------------------------------------------------ */
@@ -954,7 +985,14 @@ h1 {
   .tutor_header_btns,
   .e_tutor_header {
     font-size: 1.1rem;
+  }
+  .tutor_header_btns,
+  .e_tutor_header,
+  .tutor_achieve_ctt {
     text-align: center;
+  }
+  .tutor_achieve_ctt {
+    line-height: 2.5rem;
   }
   .tutor_header_logo img {
     height: 6rem;
@@ -964,6 +1002,7 @@ h1 {
     height: 6rem;
     width: 8rem;
   }
+  .advise_button,
   .tutor_header_btns svg {
     display: none;
   }
@@ -973,8 +1012,19 @@ h1 {
   .tutor_promise_sub_ttl {
     font-size: 2.2rem;
   }
+  .e_tutor_purpose_bg,
+  .tutor_receive_block,
+  .e_tutor_summary,
+  .contentsTable_ctt,
+  .e_tutor_congrats,
+  .tutor_list_ctt,
   .promise_txt_item {
     flex-direction: row;
+  }
+  .e_tutor_purpose_bg {
+    display: flex;
+  }
+  .promise_txt_item {
     text-align: left;
     column-gap: 1rem;
   }
@@ -985,10 +1035,6 @@ h1 {
   .promise_txt {
     width: 30rem;
     font-size: 1.2rem;
-  }
-  .tutor_achieve_ctt {
-    text-align: center;
-    line-height: 2.5rem;
   }
   .tutor_achieve_ctt h1 {
     font-size: 2rem;
@@ -1008,40 +1054,33 @@ h1 {
   .list_form_fill {
     padding: 1.5rem;
   }
-  .tutor_list_ctt {
-    flex-direction: row;
-  }
   .special_ctt_item {
     padding: 0 1rem;
   }
-  .e_tutor_congrats {
-    flex-direction: row;
-  }
   .tutor_congrats_img {
-    position: relative;
     height: 100%;
   }
+  .tutor_motiva_img img,
   .tutor_congrats_img img {
     position: absolute;
+  }
+  .tutor_congrats_img img {
     height: 15rem;
     bottom: 0;
+  }
+  .tutor_motiva_img img {
+    transform: translateY(50%);
   }
   .e_tutor_motiva_bg {
     height: 35rem;
   }
+  .tutor_congrats_img,
   .tutor_receive_img,
   .tutor_motiva_img {
     position: relative;
   }
-  .tutor_motiva_img img {
-    position: absolute;
-    transform: translateY(50%);
-  }
   .e_tutor_motiva_bottom {
     bottom: -12px;
-  }
-  .tutor_receive_block {
-    flex-direction: row;
   }
   .tutor_receive_img img {
     top: 50%;
@@ -1050,15 +1089,8 @@ h1 {
   .row_reverse {
     flex-direction: row-reverse;
   }
-  .e_tutor_purpose_bg {
-    flex-direction: row;
-    display: flex;
-  }
   .e_tutor_purpose {
     padding: 2rem 0;
-  }
-  .e_tutor_summary {
-    flex-direction: row;
   }
 }
 /* ------------------------------------------------------------------------------------------ */
@@ -1079,6 +1111,10 @@ h1 {
     display: flex;
     flex-direction: row;
   }
+  .interact_item {
+    flex-direction: row;
+    column-gap: 1rem;
+  }
   .interact_bg {
     padding: 2rem;
   }
@@ -1088,10 +1124,6 @@ h1 {
   }
   .interact_hr {
     margin: unset;
-  }
-  .interact_item {
-    flex-direction: row;
-    column-gap: 1rem;
   }
   .interact_txt p,
   .interact_txt h3 {
