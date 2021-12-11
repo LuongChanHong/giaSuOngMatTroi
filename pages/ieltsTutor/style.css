@@ -801,6 +801,139 @@ h1 {
 /* ------------------------------------------------------------------------------------------ */
 
 /* ------------------------------------------------------------------------------------------ */
+/* -----SUMMARY - START----- */
+/* ------------------------------------------------------------------------------------------ */
+
+.contentsTable h1,
+.tutor_summary_receive,
+.e_tutor_summary,
+.summary_compare_omt,
+.summary_compare_other,
+.tutor_summary_compare {
+  display: flex;
+}
+.tutor_summary_receive,
+.e_tutor_summary,
+.summary_compare_omt,
+.summary_compare_other,
+.tutor_summary_compare {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.e_tutor_summary_ctn {
+  padding: 2rem 0;
+}
+.tutor_summary_receive h3,
+.summary_receive_banner,
+.tutor_summary_compare {
+  text-align: center;
+  font-family: "Times New Roman", Josefin Sans;
+}
+.e_tutor_summary {
+  padding: 0 2rem;
+}
+.summary_compare_other h1 {
+  color: var(--color_blue_2);
+}
+.summary_compare_other p {
+  opacity: 0.6;
+  text-decoration: line-through;
+  font-family: "Roboto Slab", Josefin Sans;
+  font-size: 2.5rem;
+}
+.summary_compare_omt p,
+.summary_compare_other p {
+  line-height: 3rem;
+}
+.summary_compare_omt p {
+  font-size: 3rem;
+  color: var(--color_red_1);
+}
+.summary_compare_omt h1 {
+  font-size: 1.5rem;
+}
+.compare_omt_banner {
+  border: 1px solid var(--color_red_1);
+  border-radius: 20px;
+  padding: 1rem;
+}
+.compare_omt_banner p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+.tutor_summary_receive h3 {
+  color: blueviolet;
+  text-decoration: underline;
+}
+.tutor_summary_receive li {
+  font-size: 1rem;
+  padding: 0.2rem 0;
+}
+.summary_receive_banner {
+  border: 1px solid var(--color_gray_1);
+  padding: 1rem;
+  opacity: 0.6;
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  border-radius: 20px;
+}
+.tutor_summary_ttl {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.contentsTable {
+  border: 1px solid var(--color_green_1);
+  border-radius: 20px;
+  padding: 1rem;
+}
+.contentsTable h1 {
+  flex-direction: row;
+  column-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  border: unset;
+  color: var(--color_white_1);
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0.8rem 1rem;
+  border-radius: 20px;
+  background-color: var(--color_green_1);
+  box-shadow: 0px 10px 0px var(--color_green_3);
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.contentsTable ul {
+  counter-reset: item;
+  list-style: none;
+  padding: 0;
+}
+.contentsTable_ctt {
+  transition: width 1s, height 1s, background-color 2s, box-shadow 2s,
+    transform 1s;
+  display: none;
+  height: 0;
+}
+.contentsTable li {
+  padding: 0.3rem 0;
+  padding-left: 1rem;
+}
+.contentsTable ul a::before,
+.contentsTable li a::before {
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+}
+.contentsTable a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--color_gray_1);
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----SUMMARY - END----- */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------ */
 /* -----IELTS TUTOR MOBILE - END----- */
 /* ------------------------------------------------------------------------------------------ */
 
@@ -923,6 +1056,9 @@ h1 {
   }
   .e_tutor_purpose {
     padding: 2rem 0;
+  }
+  .e_tutor_summary {
+    flex-direction: row;
   }
 }
 /* ------------------------------------------------------------------------------------------ */

@@ -48,6 +48,24 @@ function hideAllOptionList(className) {
   }
 }
 
+// IELTS TUTOR PAGE CONTENT TABLE - START
+
+const contentsTable_btn =
+  document.getElementsByClassName("contentsTable_btn")[0];
+const contentsTable_ctt =
+  document.getElementsByClassName("contentsTable_ctt")[0];
+contentsTable_btn.addEventListener("click", () => {
+  if (contentsTable_ctt.style.display == "block") {
+    contentsTable_ctt.style.display = "none";
+    contentsTable_ctt.style.height = 0;
+  } else {
+    contentsTable_ctt.style.display = "block";
+    contentsTable_ctt.style.height = "fit-content";
+  }
+});
+
+// IELTS TUTOR PAGE CONTENT TABLE - END
+
 // SHOW AND HIDE ELEMENT - END
 
 // ACTIVE EFFECT - START
@@ -264,3 +282,35 @@ _button.addEventListener("click", () => {
 });
 
 // IELTS TUTOR PAGE RADIO BUTTON HANDLER - END
+
+// IELTS TUTOR PAGE SMOOTH SCROLL - START
+// Grab all the scroll class anchor elements, use whatever class you like
+const scrollElems = document.querySelectorAll(".scroll");
+// Now add an event listeners to those element
+for (let i = 0; i < scrollElems.length; i++) {
+  const elem = scrollElems[i];
+
+  elem.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // 1. Get the element id to which you want to scroll
+    const scrollElemId = e.target.href.split("#")[1];
+
+    // 2. find that node from the document
+    const scrollEndElem = document.getElementById(scrollElemId);
+
+    // 3. and well animate to that node..
+    const anim = requestAnimationFrame((timestamp) => {
+      const stamp = timestamp || new Date().getTime();
+      const duration = 1200;
+      const start = stamp;
+
+      const startScrollOffset = window.pageYOffset;
+      const scrollEndElemTop = scrollEndElem.getBoundingClientRect().top;
+
+      scrollToElem(start, stamp, duration, scrollEndElemTop, startScrollOffset);
+    });
+  });
+}
+
+// IELTS TUTOR PAGE SMOOTH SCROLL - END
