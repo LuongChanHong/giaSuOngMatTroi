@@ -50,32 +50,18 @@ p {
 
   --box_shadow: #c3d2ce;
   --txt_shadow: #bdb6b9;
-
-  /* DEMO PAGE COLOR */
-  --background-color: #f7f2ed;
-  --backgroun-color1: #ebfaf8;
-  --nav-background: #f7f2ed;
-  --special-color-1: #03ccbb;
-  --special-text-1: #039c90;
-  --special-color-2: #ffac00;
-  --special-text-2: #a56e01;
-  --special-color-3: #ffa4cb;
-  --special-text-3: #a15a79;
-  --logo-color: #d51165;
-  --text-color: #555452;
-  --text-color-2: #181357;
-  --text-color-clear: #000000;
-  --text-color-special-1: #00c2b2;
-  --border-color: #e9e3dd;
-  --border-color-for-background-color: #b9b5b0;
-
-  --shadow-color1: rgb(174, 197, 193);
-  --box-shadow1: -1px 5px 10px var(--shadow-color1);
 }
 body {
   font-family: "Mitr", sans-serif;
   font-size: 15px;
   /* font-family: "Noto Sans", sans-serif; */
+}
+svg {
+  width: 1rem;
+  height: 1rem;
+}
+h1 {
+  margin: 0;
 }
 .d_none {
   display: none;

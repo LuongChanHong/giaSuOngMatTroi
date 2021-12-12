@@ -15,6 +15,41 @@
 }
 /* ACTIVE STYLE - END */
 
+/* ------------------------------------------------------------------------------------------ */
+/* -----ADVISE BUTTON - START----- */
+/* ------------------------------------------------------------------------------------------ */
+
+.advise_button {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+}
+.advise_btn {
+  border: none;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: var(--speColor_11);
+  color: white;
+  border-radius: 20px;
+}
+.advise_btn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+@media only screen and (min-width: 740px) {
+  .advise_button {
+    display: none;
+  }
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----ADVISE BUTTON - END----- */
+/* ------------------------------------------------------------------------------------------ */
+
 /* COMPONENT CONTAINER STYLE - START */
 .component_ctn_stl1 {
   background-color: var(--bgColor_1);
@@ -22,6 +57,21 @@
   padding: 1.5rem 2rem;
 }
 /* COMPONENT CONTAINER STYLE - END */
+
+/* PAGE CONTAINER STYLE - START */
+.page_ctn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+/* PAGE CONTAINER STYLE - END */
+
+/* FIRST PAGE SECTION WITH STICKY MENU - START */
+.first_section {
+  margin-top: 4.5rem;
+  padding-top: 2.5rem;
+}
+/* FIRST PAGE SECTION WITH STICKY MENU - END */
 
 /* Buttom Style 1 */
 .btn_stl1 {
@@ -41,7 +91,7 @@
   cursor: pointer;
 }
 .btn_stl1:hover {
-  background-color: #037c72;
+  background-color: var(--speColor_5);
   transition: 0.5s;
 }
 .btn_stl2 {
@@ -153,6 +203,8 @@
   cursor: pointer;
   display: flex;
   justify-content: space-between;
+  outline: 1px solid transparent;
+  border: unset;
 }
 .input_stl1_ipt svg {
   align-self: center;
