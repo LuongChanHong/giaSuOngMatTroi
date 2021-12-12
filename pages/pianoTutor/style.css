@@ -17,12 +17,6 @@ body {
 .pianoTutor_contact {
   padding: 0 10px;
 }
-.pianoTutor_contact_ctn {
-  position: relative;
-}
-.pianoTutor_contact_bg {
-  position: absolute;
-}
 .form_fill_btn,
 .contact_form_fill,
 .pianoTutor_contact_form {
@@ -89,13 +83,10 @@ body {
 /* ------------------------------------------------------------------------------------------ */
 
 .pianoTutor_contact_ctn {
-  height: 42rem;
-}
-.pianoTutor_contact_bg {
-  inset: 0;
   background-image: url(/assets/img/background-dang-ky-gia-su-piano-min.png);
   background-size: cover;
   background-repeat: no-repeat;
+  padding-bottom: 1rem;
 }
 .pianoTutor_contact_img img,
 .pianoTutor_contact_img {
@@ -127,6 +118,9 @@ body {
 /* -----PIANO TUTOR CONTACT - END----- */
 /* ------------------------------------------------------------------------------------------ */
 
+@media only screen and (min-width: 530px) {
+}
+
 /* ------------------------------------------------------------------------------------------ */
 /* -----PIANO TUTOR MOBILE - END----- */
 /* ------------------------------------------------------------------------------------------ */
@@ -136,6 +130,29 @@ body {
 /* ------------------------------------------------------------------------------------------ */
 
 @media only screen and (min-width: 740px) {
+  .pianoTutor_contact {
+    padding: 0;
+  }
+  .pianoTutor_contact_ctn {
+    height: 30rem;
+  }
+  .pianoTutor_contact_ctn {
+    background-image: unset;
+    position: relative;
+  }
+  .pianoTutor_contact_bg {
+    background-image: url(/assets/img/background-dang-ky-gia-su-piano-min.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 22rem;
+    padding-top: 2rem;
+  }
+  .pianoTutor_contact_img,
+  .pianoTutor_contact_form {
+    padding: 0 0.5rem;
+  }
 }
 
 /* ------------------------------------------------------------------------------------------ */

@@ -486,7 +486,12 @@
   }
   /* căn giữa, chọn vị trí cho các column - end */
 }
-
+@media (min-width: 1300px) {
+  .wide {
+    width: 1100px;
+    margin: 0 auto;
+  }
+}
 /* hight resolution PC screen */
 @media (min-width: 1400px) {
   .wide {
