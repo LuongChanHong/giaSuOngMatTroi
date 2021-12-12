@@ -36,6 +36,8 @@ p {
   --speColor_11: #1d978e;
   --speColor_12: #1c5e93;
   --speColor_13: #db6159;
+  --speColor_14: #3953a1;
+  --speColor_15: #f3edee;
 
   --tranColor: transparent;
 
@@ -62,6 +64,17 @@ svg {
 }
 h1 {
   margin: 0;
+}
+table,
+thead,
+tbody,
+tr,
+td {
+  margin: 0;
+  padding: 0;
+  /* border-collapse: collapse; */
+  border-spacing: 0;
+  /* border: 1 none; */
 }
 .d_none {
   display: none;

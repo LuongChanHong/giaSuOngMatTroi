@@ -568,24 +568,6 @@ body {
 .improve_btn {
   padding-bottom: 2rem;
 }
-.improve_btn button {
-  border: unset;
-  color: var(--btnColor_2);
-  font-weight: bold;
-  font-size: 1.5rem;
-  padding: 2rem 3rem;
-  border-radius: 20px;
-  background-color: var(--speColor_11);
-  box-shadow: 0px 10px 0px var(--speColor_5);
-  cursor: pointer;
-  transition: width 1s, height 1s, background-color 2s, box-shadow 2s,
-    transform 1s;
-}
-.improve_btn button:hover {
-  background-color: var(--speColor_12);
-  box-shadow: 0px 10px 0px var(--speColor_8);
-  transform: scale(1.2);
-}
 
 /* ------------------------------------------------------------------------------------------ */
 /* -----INTERACT - END----- */

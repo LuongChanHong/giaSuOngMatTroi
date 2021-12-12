@@ -105,6 +105,24 @@
   background-color: var(--btnColor_1);
   transition: 0.5s;
 }
+.btn_stl3 {
+  border: unset;
+  color: var(--btnColor_2);
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  background-color: var(--speColor_11);
+  box-shadow: 0px 10px 0px var(--speColor_5);
+  cursor: pointer;
+  transition: width 1s, height 1s, background-color 2s, box-shadow 2s,
+    transform 1s;
+}
+.btn_stl3:hover {
+  background-color: var(--speColor_12);
+  box-shadow: 0px 10px 0px var(--speColor_8);
+  transform: scale(1.2);
+}
 /* Selection Style 1 */
 .select_stl1 {
   color: black;
