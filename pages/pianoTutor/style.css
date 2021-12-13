@@ -5,7 +5,8 @@ body {
   font-family: "Roboto Slab", Josefin Sans;
   font-family: "Quicksand", Josefin Sans;
   font-family: "Times New Roman", Josefin Sans; */
-  /* font-family: "Baloo Bhaina 2", Josefin Sans; */
+  /* font-family: "Baloo Bhaina", Josefin Sans; */
+  /* font-family: "Sigmar One", Josefin Sans; */
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Helvetica Neue, Arial, Noto Sans, sans-serif;
 }
@@ -14,19 +15,32 @@ body {
 /* -----PIANO TUTOR MOBILE - START----- */
 /* ------------------------------------------------------------------------------------------ */
 
+.pianoTutor_list,
+.pianoTutor_distinc_bg,
 .pianoTutor_price_ctn,
 .pianoTutor_contact {
   padding: 0 10px;
 }
+.pianoTutor_distinc,
 .pianoTutor_price_ctn {
   padding-top: 2rem;
 }
+.pianoTutor_list_warpper,
+.distinc_other_txt,
+.distinc_icon,
+.distinc_block,
+.distinc_table,
+.distinc_table .col,
 .demoVideo,
 .form_fill_btn,
 .contact_form_fill,
 .pianoTutor_contact_form {
   display: flex;
 }
+.distinc_other_txt,
+.distinc_block,
+.distinc_table,
+.distinc_table .col,
 .contact_form_fill,
 .pianoTutor_contact_form {
   flex-direction: column;
@@ -35,17 +49,29 @@ body {
 .form_fill_btn {
   flex-direction: row;
 }
+.pianoTutor_distinc_ctn,
 .pianoTutor_price_ctn {
   position: relative;
 }
+.pianoTutor_distinc_bottom,
 .pianoTutor_price_bottom {
   position: absolute;
+}
+.pianoTutor_distinc_bottom,
+.pianoTutor_price_bottom {
+  left: 0;
+  right: 0;
+  bottom: -15px;
 }
 .form_fill_btn svg,
 .form_fill_btn,
 .contact_form_ttl {
   color: white;
 }
+.pianoTutor_list_img img,
+.pianoTutor_distinc_bottom svg,
+.pianoTutor_price_bottom svg,
+.distinc_other_img img,
 .pianoTutor_price_img img,
 .pianoTutor_contact_img img,
 .pianoTutor_contact_img,
@@ -57,21 +83,38 @@ body {
 .form_fill_input {
   border-radius: 20px;
 }
+.distinc_block,
+.distinc_icon,
 .demoVideo,
 .form_fill_btn {
   justify-content: center;
 }
+.distinc_icon,
+.distinc_block,
+.distinc_ttl,
 .form_fill_btn {
   align-items: center;
+}
+.distinc_banner h1,
+.distinc_ttl h1 {
+  font-family: "Sigmar One", Josefin Sans;
 }
 .pianoTutor_price_intro {
   font-family: "Times New Roman", Josefin Sans;
 }
+.pianoTutor_list_more,
+.pianoTutor_list_intro,
+.distinc_ttl p,
 .pianoTutor_price_free,
 .pianoTutor_price_ttl,
 .contact_form_ttl {
-  font-family: "Baloo Bhaina 2", Josefin Sans;
+  font-family: "Baloo Bhaina", Josefin Sans;
 }
+.pianoTutor_list_more,
+.pianoTutor_list_intro,
+.distinc_banner h1,
+.distinc_table .col,
+.distinc_ttl,
 .pianoTutor_price_free,
 .pianoTutor_price_ttl,
 .contact_form_ttl {
@@ -82,12 +125,19 @@ body {
 .contact_form_ttl {
   line-height: 3rem;
 }
+.pianoTutor_list_warpper,
+.distinc_block,
+.distinc_table,
+.distinc_table .col,
 .pianoTutor_contact_form {
   row-gap: 1rem;
 }
+.distinc_other_txt,
 .contact_form_fill {
   row-gap: 0.5rem;
 }
+.distinc_other_txt p,
+.distinc_ttl,
 .pianoTutor_price_free,
 .pianoTutor_price_ttl {
   color: var(--speColor_14);
@@ -158,7 +208,7 @@ body {
   font-size: 2.2rem;
 }
 .pianoTutor_price_ctn {
-  height: 80rem;
+  height: 94rem;
 }
 .pianoTutor_price_img {
   width: 30%;
@@ -193,11 +243,12 @@ body {
   border-bottom: 1px solid var(--speColor_5);
 }
 .pianoTutor_price_free {
-  padding: 0.5rem 0;
+  padding: 1rem 0;
 }
 .demoVideo_btn {
   background-color: var(--speColor_13);
   box-shadow: 0 10px 0 var(--speColor_7);
+  padding: 1.2rem;
 }
 .demoVideo_btn:hover {
   background-color: var(--speColor_13);
@@ -207,22 +258,162 @@ body {
   padding: 1rem;
   align-items: center;
 }
-.pianoTutor_price_bottom {
-  left: 0;
-  right: 0;
-  bottom: -15px;
-}
 .pianoTutor_price_bottom svg {
-  width: 100%;
-  height: 3rem;
+  fill: var(--bgColor_1);
   transform: rotate(180deg);
-  fill: var(--speColor_6);
+  height: 3rem;
 }
 
 /* ------------------------------------------------------------------------------------------ */
 /* -----PRICE TABLE - END----- */
 /* ------------------------------------------------------------------------------------------ */
 
+/* ------------------------------------------------------------------------------------------ */
+/* -----DISTINCTIVE THINGS - START----- */
+/* ------------------------------------------------------------------------------------------ */
+
+.pianoTutor_distinc_ctn {
+  height: 217rem;
+}
+.pianoTutor_distinc_bg {
+  background-color: var(--bgColor_1);
+  height: 100%;
+}
+.distinc_ttl {
+  padding: 0 0.5rem;
+}
+.distinc_ttl h1 {
+  margin-bottom: 1rem;
+  font-size: 2.3rem;
+}
+.distinc_ttl p {
+  font-size: 1.7rem;
+}
+.distinc_table {
+  padding: 2rem 0.5rem;
+}
+.distinc_block {
+  background-color: var(--speColor_14);
+  color: white;
+  padding: 1rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  box-shadow: 0px 0px 12px black;
+  height: 16rem;
+}
+.distinc_icon {
+  border: 2px solid var(--speColor_9);
+  color: var(--speColor_9);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.distinc_icon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.distinc_other,
+.distinc_banner {
+  padding: 0 0.5rem;
+}
+.distinc_banner h1 {
+  border: 2px solid var(--speColor_3);
+  color: var(--speColor_3);
+  padding: 1rem;
+  font-size: 2.2rem;
+  width: 100%;
+}
+.distinc_other_img,
+.distinc_other {
+  padding-top: 1rem;
+}
+.distinc_other_img {
+  height: 100%;
+}
+.distinc_other_txt p {
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+.pianoTutor_distinc_bottom svg {
+  height: 5rem;
+  fill: white;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----DISTINCTIVE THINGS - END----- */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----PIANO TUTOR LIST - START----- */
+/* ------------------------------------------------------------------------------------------ */
+
+.pianoTutor_list_intro {
+  padding: 0 1rem;
+  font-size: 1.2rem;
+}
+.pianoTutor_list_warpper {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+.pianoTutor_list_more {
+  padding: 1rem;
+  color: var(--txtColor_6);
+}
+/* Tutor item - start */
+
+.pianoTutor_list_item {
+  border-radius: 20px;
+  box-shadow: 0 0 5px black;
+  overflow: hidden;
+  width: 220px;
+  padding-bottom: 0.5rem;
+}
+.pianoTutor_list_more_info,
+.pianoTutor_list_name,
+.pianoTutor_list_role,
+.pianoTutor_list_tip {
+  padding: 0 0.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+.pianoTutor_list_item a {
+  text-decoration: unset;
+}
+.pianoTutor_list_name a,
+.pianoTutor_list_name {
+  color: var(--txtColor_1);
+  font-size: 1.5rem;
+}
+.pianoTutor_list_name {
+  padding: 0.5rem 0;
+}
+.pianoTutor_list_tip a {
+  font-size: 1.2rem;
+}
+.pianoTutor_list_more_info a,
+.pianoTutor_list_tip a {
+  color: var(--speColor_1);
+}
+.pianoTutor_list_more_info a:hover,
+.pianoTutor_list_tip a:hover {
+  color: var(--speColor_3);
+}
+
+/* Tutor item - end */
+
+/* ------------------------------------------------------------------------------------------ */
+/* -----PIANO TUTOR LIST - END----- */
+/* ------------------------------------------------------------------------------------------ */
+
+@media only screen and (min-width: 375px) {
+  .pianoTutor_price_ctn {
+    height: 83rem;
+  }
+  .pianoTutor_distinc_ctn {
+    height: 209rem;
+  }
+}
 @media only screen and (min-width: 530px) {
   .pianoTutor_price_ctn {
     height: 70rem;
@@ -238,11 +429,22 @@ body {
 /* ------------------------------------------------------------------------------------------ */
 
 @media only screen and (min-width: 740px) {
+  .distinc_table {
+    flex-direction: row;
+  }
+  .pianoTutor_contact_img,
+  .pianoTutor_contact_form,
+  .distinc_table .col {
+    padding: 0 0.5rem !important;
+  }
   .pianoTutor_contact {
     padding: 0;
   }
   .pianoTutor_contact_ctn {
     height: 30rem;
+  }
+  .pianoTutor_distinc_ctn {
+    height: 121rem;
   }
   .pianoTutor_contact_ctn {
     background-image: unset;
@@ -257,9 +459,8 @@ body {
     height: 22rem;
     padding-top: 2rem;
   }
-  .pianoTutor_contact_img,
-  .pianoTutor_contact_form {
-    padding: 0 0.5rem;
+  .distinc_other_txt {
+    padding: 0 1rem;
   }
 }
 
@@ -278,9 +479,23 @@ body {
   .pianoTutor_price_bottom svg {
     height: 5rem;
   }
+  .distinc_block {
+    height: 12rem;
+  }
+  .pianoTutor_distinc_ctn {
+    height: 101rem;
+  }
+  .pianoTutor_distinc_ctn svg {
+    height: 8rem;
+  }
 }
 
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1200px) {
+  .distinc_other_img img {
+    height: 620px;
+    width: 340px;
+    margin-left: 15%;
+  }
 }
 
 /* ------------------------------------------------------------------------------------------ */
